@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Lição do Hallyu Korean Fest em Curitiba</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Montserrat and Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon-hallyu.png" type="image/png">
+
+    <!-- Estilos Personalizados -->
+    <link rel="stylesheet" href=".css/style.css">
+    <style>
+        /* Estilos específicos do artigo */
+        .article-content h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--cor-vermelho-paixao);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .article-content p {
+            margin-bottom: 1.2rem;
+            line-height: 1.7;
+        }
+        .article-content blockquote {
+            border-left: 4px solid var(--cor-amarelo-nascente);
+            background: var(--cor-bege-pinhao);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--cor-preto-carvao);
+            border-radius: 0.5rem;
+        }
+        .article-img {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 2rem auto;
+            border-radius: 1rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Cabeçalho Padrão -->
+    <header class="bg-bege-pinhao/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm border-b border-white/20">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <img src="images/logo-hallyu-transparente.png" alt="Logo HallyuCuritiba" class="w-12 h-12 transition-transform group-hover:scale-105">
+                <span class="text-2xl font-extrabold text-preto-carvao">HallyuCuritiba</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 font-semibold">
+                <a href="index.html#inicio" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Início</a>
+                <a href="index.html#agenda" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Agenda</a>
+                <a href="index.html#artigos" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Artigos</a>
+                <a href="index.html#sobre" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Sobre</a>
+            </nav>
+            <button class="md:hidden text-gray-700 z-50 relative" onclick="toggleMobileMenu()">
+                <svg id="menu-open-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <svg id="menu-close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-bege-pinhao z-40 md:hidden">
+            <nav class="flex flex-col h-full justify-center items-center space-y-8">
+                <a href="index.html#inicio" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Início</a>
+                <a href="index.html#agenda" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Agenda</a>
+                <a href="index.html#artigos" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Artigos</a>
+                <a href="index.html#sobre" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Sobre</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo do Artigo -->
+    <main class="bg-white py-16 px-6">
+        <div class="container mx-auto max-w-3xl article-content">
+            <a href="index.html#artigos" class="font-bold text-azul-guia hover:text-vermelho-paixao transition-colors mb-8 inline-block">&larr; Voltar para todos os artigos</a>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">A Lição do Hallyu Korean Fest: Curitiba e a Força da Sua Onda</h1>
+            <p class="text-xl text-gray-600 mb-8">Uma reflexão sobre o impacto, os desafios e o futuro dos grandes eventos de cultura coreana na cidade.</p>
+            
+            <div class="article-img">
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@hallyucuritiba/video/7542157940430621958" data-video-id="7542157940430621958" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@hallyucuritiba" href="https://www.tiktok.com/@hallyucuritiba">@hallyucuritiba</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+            </div>
+
+            <p>
+                O fim de semana do primeiro Hallyu Korean Fest em Curitiba deveria ter sido uma celebração unânime. E, em muitos aspectos, foi. No entanto, para milhares de pessoas, a festa veio acompanhada de um sentimento agridoce: filas intermináveis, espaços intransitáveis e a frustração de não conseguir aproveitar o evento como se sonhava.
+            </p>
+            <blockquote>
+                A conclusão é inevitável: os organizadores miraram em uma feira de bairro e acertaram em uma metrópole cultural. A infraestrutura, mesmo com esforço, não acompanhou a dimensão do sucesso.
+            </blockquote>
+            <p>
+                Essa força não deveria ser surpresa. Vivemos em um mundo pós-"Parasita" e pós-"Squid Game", onde shows de K-pop se esgotam em minutos. A Onda Coreana não é mais um nicho; é um fenômeno consolidado que movimenta legiões de fãs.
+            </p>
+            <p>
+                O ecossistema Hallyu em Curitiba já pulsa de forma vibrante há anos. A cidade sedia eventos de cultura pop que atraem dezenas de milhares por edição, com o K-pop sendo uma de suas vertentes de destaque. A demanda por experiências Hallyu é diária e massiva.
+            </p>
+            <blockquote>
+                A verdade é que os idealizadores do festival, mesmo com a melhor das intenções, erraram na pesquisa. Planejaram uma "feira de quarta" e encontraram o equivalente ao bairro da Liberdade em São Paulo num sábado de sol.
+            </blockquote>
+            <p>
+                É neste ponto que a crítica precisa ser equilibrada com um sincero agradecimento. Tirar um evento dessa magnitude do papel é um ato de coragem. Aos idealizadores e a todos os envolvidos que, mesmo diante de desafios imensos, entregaram um festival que a cidade esperava há anos: nosso muito obrigado.
+            </p>
+            <p>
+                Que esta primeira edição sirva de lição. A comunidade Hallyu não é invisível; ela consome, engaja e precisa de espaços que a respeitem. Curitiba está no mapa da Hallyu. Agora, só falta a estrutura nos alcançar.
+            </p>
+        </div>
+    </main>
+
+    <!-- Rodapé Padrão -->
+    <footer class="bg-preto-carvao text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 HallyuCuritiba. Todos os direitos reservados.</p>
+            <p class="mt-2 text-sm">Feito com ❤️ para a comunidade Hallyu de Curitiba.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

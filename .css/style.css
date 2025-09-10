@@ -1,0 +1,75 @@
+:root {
+    --cor-vermelho-paixao: #D81E2C;
+    --cor-azul-guia: #0054A6;
+    --cor-amarelo-nascente: #FDB913;
+    --cor-laranja-poente: #F58220;
+    --cor-bege-pinhao: #F2EBE3;
+    --cor-preto-carvao: #231F20;
+}
+
+/* Habilita a rolagem suave para todo o site */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cor-bege-pinhao);
+    font-family: 'Inter', sans-serif;
+    color: var(--cor-preto-carvao);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Classes de cor personalizadas para Tailwind */
+.bg-vermelho-paixao { background-color: var(--cor-vermelho-paixao); }
+.text-vermelho-paixao { color: var(--cor-vermelho-paixao); }
+.bg-azul-guia { background-color: var(--cor-azul-guia); }
+.text-azul-guia { color: var(--cor-azul-guia); }
+.bg-bege-pinhao { background-color: var(--cor-bege-pinhao); }
+.text-amarelo-nascente { color: var(--cor-amarelo-nascente); }
+.bg-amarelo-nascente { background-color: var(--cor-amarelo-nascente); }
+.text-laranja-poente { color: var(--cor-laranja-poente); }
+.bg-laranja-poente { background-color: var(--cor-laranja-poente); }
+.text-preto-carvao { color: var(--cor-preto-carvao); }
+
+.gradient-hero {
+    background: linear-gradient(135deg, var(--cor-vermelho-paixao), var(--cor-azul-guia));
+}
+
+.card-hover {
+    transition: all 0.3s ease-in-out;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Otimização do Menu Mobile: Animação de deslize suave */
+.mobile-menu {
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+/* Efeito de sombra no texto do hero */
+.shadow-text {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Animação suave para botões */
+.btn-hover {
+    transition: all 0.3s ease;
+}
+
+.btn-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}

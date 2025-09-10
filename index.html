@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HallyuCuritiba - Seu Guia Definitivo da Onda Coreana</title>
+    <meta name="description" content="Descubra a Onda Coreana em Curitiba! Encontre a agenda de eventos, mapa de restaurantes, lojas de k-pop e artigos sobre a cultura Hallyu na cidade.">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -102,7 +103,7 @@
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <!-- Logo ATUALIZADA -->
             <a href="#inicio" class="flex items-center space-x-3 group">
-                <img src="logo-hallyu-transparente.png" alt="Logo HallyuCuritiba" class="w-12 h-12 transition-transform group-hover:scale-105">
+                <img src="images/logo-hallyu-transparente.png" alt="Logo HallyuCuritiba" class="w-12 h-12 transition-transform group-hover:scale-105">
                 <span class="text-2xl font-extrabold text-preto-carvao">HallyuCuritiba</span>
             </a>
             
@@ -166,53 +167,189 @@
             <div class="container mx-auto">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">Agenda Hallyu</h2>
-                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Não perca nenhum evento da cultura coreana em Curitiba.</p>
+                    <p class="text-xl text-gray-700 max-w-2xl mx-auto">Não perca nenhum evento da cultura coreana em Curitiba.</p>
                 </div>
 
                 <div class="grid lg:grid-cols-5 gap-12 items-start">
-                    <!-- Calendário Visual Melhorado -->
-                    <div class="lg:col-span-3 bg-white p-8 rounded-2xl shadow-xl">
-                        <div class="flex items-center justify-between mb-6">
-                            <button class="p-2 rounded-full hover:bg-gray-100 transition-colors text-2xl font-bold text-gray-400 hover:text-preto-carvao">‹</button>
-                            <h3 class="text-2xl font-bold text-preto-carvao">Setembro 2025</h3>
-                            <button class="p-2 rounded-full hover:bg-gray-100 transition-colors text-2xl font-bold text-gray-400 hover:text-preto-carvao">›</button>
+                    <!-- Calendário com Navegação -->
+                    <div class="lg:col-span-3 relative">
+                        <div id="calendar-container" class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory" style="scrollbar-width: none; -ms-overflow-style: none;">
+                            <!-- Setembro -->
+                            <div class="calendar-card flex-shrink-0 w-full snap-start bg-white p-8 rounded-2xl shadow-xl">
+                                <h3 class="text-2xl font-bold text-preto-carvao text-center mb-6">Setembro 2025</h3>
+                                <div class="grid grid-cols-7 gap-2 text-center font-bold text-gray-500 mb-4">
+                                    <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
+                                </div>
+                                <div class="grid grid-cols-7 gap-2 text-center text-lg">
+                                    <div class="text-gray-300 p-2">31</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">1</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">2</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">3</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">4</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">5</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">6</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">7</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">8</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">9</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">10</div>
+                                    <div class="font-bold text-azul-guia cursor-pointer hover:bg-blue-100 rounded-full p-2 transition-colors">11</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">12</div>
+                                    <div class="font-bold text-laranja-poente cursor-pointer hover:bg-orange-100 rounded-full p-2 transition-colors">13</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">14</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">15</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">16</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">17</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">18</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">19</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">20</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">21</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">22</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">23</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">24</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">25</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">26</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">27</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">28</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">29</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">30</div>
+                                </div>
+                            </div>
+                            <!-- Outubro -->
+                            <div class="calendar-card flex-shrink-0 w-full snap-start bg-white p-8 rounded-2xl shadow-xl ml-4">
+                                <h3 class="text-2xl font-bold text-preto-carvao text-center mb-6">Outubro 2025</h3>
+                                <div class="grid grid-cols-7 gap-2 text-center font-bold text-gray-500 mb-4">
+                                    <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
+                                </div>
+                                <div class="grid grid-cols-7 gap-2 text-center text-lg">
+                                    <div class="text-gray-300 p-2"></div>
+                                    <div class="text-gray-300 p-2"></div>
+                                    <div class="text-gray-300 p-2"></div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">1</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">2</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">3</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">4</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">5</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">6</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">7</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">8</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">9</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">10</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">11</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">12</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">13</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">14</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">15</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">16</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">17</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">18</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">19</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">20</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">21</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">22</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">23</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">24</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">25</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">26</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">27</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">28</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">29</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">30</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">31</div>
+                                </div>
+                            </div>
+                            <!-- Novembro -->
+                            <div class="calendar-card flex-shrink-0 w-full snap-start bg-white p-8 rounded-2xl shadow-xl ml-4">
+                                <h3 class="text-2xl font-bold text-preto-carvao text-center mb-6">Novembro 2025</h3>
+                                <div class="grid grid-cols-7 gap-2 text-center font-bold text-gray-500 mb-4">
+                                    <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
+                                </div>
+                                <div class="grid grid-cols-7 gap-2 text-center text-lg">
+                                    <div class="text-gray-300 p-2"></div>
+                                    <div class="text-gray-300 p-2"></div>
+                                    <div class="text-gray-300 p-2"></div>
+                                    <div class="text-gray-300 p-2"></div>
+                                    <div class="text-gray-300 p-2"></div>
+                                    <div class="text-gray-300 p-2"></div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">1</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">2</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">3</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">4</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">5</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">6</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">7</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">8</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">9</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">10</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">11</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">12</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">13</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">14</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">15</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">16</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">17</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">18</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">19</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">20</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">21</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">22</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">23</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">24</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">25</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">26</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">27</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">28</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">29</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">30</div>
+                                </div>
+                            </div>
+                            <!-- Dezembro -->
+                            <div class="calendar-card flex-shrink-0 w-full snap-start bg-white p-8 rounded-2xl shadow-xl ml-4">
+                                <h3 class="text-2xl font-bold text-preto-carvao text-center mb-6">Dezembro 2025</h3>
+                                <div class="grid grid-cols-7 gap-2 text-center font-bold text-gray-500 mb-4">
+                                    <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
+                                </div>
+                                <div class="grid grid-cols-7 gap-2 text-center text-lg">
+                                    <div class="text-gray-300 p-2"></div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">1</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">2</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">3</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">4</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">5</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">6</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">7</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">8</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">9</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">10</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">11</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">12</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">13</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">14</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">15</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">16</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">17</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">18</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">19</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">20</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">21</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">22</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">23</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">24</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">25</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">26</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">27</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">28</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">29</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">30</div>
+                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">31</div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="grid grid-cols-7 gap-2 text-center font-bold text-gray-500 mb-4">
-                            <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
-                        </div>
-                        <div class="grid grid-cols-7 gap-2 text-center text-lg">
-                            <div class="text-gray-300 p-2">31</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">1</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">2</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">3</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">4</div>
-                            <div class="font-bold text-vermelho-paixao cursor-pointer hover:bg-red-100 rounded-full p-2 transition-colors">5</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">6</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">7</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">8</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">9</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">10</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">11</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">12</div>
-                            <div class="font-bold text-laranja-poente cursor-pointer hover:bg-orange-100 rounded-full p-2 transition-colors">13</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">14</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">15</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">16</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">17</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">18</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">19</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">20</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">21</div>
-                            <div class="font-bold text-azul-guia cursor-pointer hover:bg-blue-100 rounded-full p-2 transition-colors">22</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">23</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">24</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">25</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">26</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">27</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">28</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">29</div>
-                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">30</div>
-                        </div>
+                        <button id="prev-month" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white/50 hover:bg-white rounded-full p-2 transition-colors z-10">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        </button>
+                        <button id="next-month" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white/50 hover:bg-white rounded-full p-2 transition-colors z-10">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </button>
                     </div>
 
                     <!-- Lista de Eventos Detalhados -->
@@ -220,14 +357,20 @@
                         <h3 class="text-3xl font-bold text-preto-carvao mb-6">Próximos Eventos</h3>
                         <div class="space-y-6">
                             <div class="bg-white p-5 rounded-xl shadow-lg flex items-start space-x-4 card-hover cursor-pointer">
-                                <div class="text-center bg-vermelho-paixao text-white rounded-lg px-4 py-2 flex-shrink-0">
-                                    <p class="font-black text-2xl">05</p>
+                                <div class="text-center bg-azul-guia text-white rounded-lg px-4 py-2 flex-shrink-0">
+                                    <p class="font-black text-2xl">11</p>
                                     <p class="text-xs font-bold">SET</p>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-lg text-preto-carvao">Show do Grupo YOUNITE</h4>
-                                    <p class="text-sm text-gray-600">📍 Teatro Positivo</p>
-                                    <p class="text-xs text-gray-500 mt-1">19:30 - R$ 120,00</p>
+                                    <h4 class="font-bold text-lg text-preto-carvao">Festival de Cinema Coreano – III Edição</h4>
+                                    <p class="text-sm text-gray-700">📍 Cine Passeio</p>
+                                    <p class="text-sm text-gray-700 mt-1">
+                                        <a href="https://www.instagram.com/koffko_/" target="_blank" class="text-azul-guia hover:underline">
+                                            <svg class="w-4 h-4 inline-block mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                            @koffko_
+                                        </a>
+                                    </p>
+                                    <p class="text-xs text-gray-500 mt-1">Gratuito</p>
                                 </div>
                             </div>
                             
@@ -237,21 +380,15 @@
                                     <p class="text-xs font-bold">SET</p>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-lg text-preto-carvao">Hallyu Korean Fest</h4>
-                                    <p class="text-sm text-gray-600">📍 Praça Afonso Botelho</p>
-                                    <p class="text-xs text-gray-500 mt-1">10:00 - 20:00 - Gratuito</p>
-                                </div>
-                            </div>
-                            
-                            <div class="bg-white p-5 rounded-xl shadow-lg flex items-start space-x-4 card-hover cursor-pointer">
-                                <div class="text-center bg-azul-guia text-white rounded-lg px-4 py-2 flex-shrink-0">
-                                    <p class="font-black text-2xl">22</p>
-                                    <p class="text-xs font-bold">SET</p>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-lg text-preto-carvao">Festival de Cinema Coreano</h4>
-                                    <p class="text-sm text-gray-600">📍 Cinemateca de Curitiba</p>
-                                    <p class="text-xs text-gray-500 mt-1">14:00 - 22:00 - R$ 15,00</p>
+                                    <h4 class="font-bold text-lg text-preto-carvao">Namjooning day</h4>
+                                    <p class="text-sm text-gray-700">📍 Lynk gastrô</p>
+                                    <p class="text-sm text-gray-700 mt-1">
+                                        <a href="https://www.instagram.com/korean_dreams_/" target="_blank" class="text-azul-guia hover:underline">
+                                            <svg class="w-4 h-4 inline-block mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                            @korean_dreams_
+                                        </a>
+                                    </p>
+                                    <p class="text-xs text-gray-500 mt-1">15:30 às 18:00 - R$38,00</p>
                                 </div>
                             </div>
                         </div>
@@ -265,34 +402,53 @@
             <div class="container mx-auto">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">Mapa da Hallyu</h2>
-                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Explore os principais pontos da cultura coreana em Curitiba.</p>
+                    <p class="text-xl text-gray-700 max-w-2xl mx-auto">Explore os principais pontos da cultura coreana em Curitiba.</p>
                 </div>
 
                 <div class="grid lg:grid-cols-3 gap-8 items-center">
                     <!-- Imagem do Mapa -->
                     <div class="lg:col-span-2 rounded-2xl shadow-2xl overflow-hidden h-96 lg:h-[500px]">
-                        <img src="https://i.imgur.com/b52syM3.png" alt="Mapa de Curitiba com pontos Hallyu" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <iframe src="https://www.google.com/maps/d/embed?mid=1B39IDcimyoaahs44GaQ37PuSz8Cs7fQ&ehbc=2E312F" width="100%" height="100%" title="Mapa interativo dos locais da cultura coreana em Curitiba"></iframe>
                     </div>
                     
                     <!-- Legenda do Mapa -->
                     <div class="bg-bege-pinhao p-8 rounded-2xl shadow-inner">
                         <h3 class="text-3xl font-bold mb-8 text-preto-carvao">Legenda</h3>
                         <ul class="space-y-5 font-semibold text-lg">
-                            <li class="flex items-center group cursor-pointer">
-                                <span class="w-6 h-6 rounded-full bg-vermelho-paixao mr-4 shadow-inner group-hover:scale-110 transition-transform"></span>
-                                <span class="group-hover:text-vermelho-paixao transition-colors">Restaurantes & Cafés</span>
+                            <li>
+                                <a href="artigo-gastronomia.html" class="flex items-center group">
+                                    <svg class="w-6 h-6 mr-4 text-vermelho-paixao" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="1.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a2.25 2.25 0 01-2.25 2.25H5.25a2.25 2.25 0 01-2.25-2.25v-8.25M12 4.875A3.375 3.375 0 0012 1.5v3.375m0 0a3.375 3.375 0 00-3.375 3.375h6.75A3.375 3.375 0 0012 4.875zm0 0a7.5 7.5 0 017.5 7.5H4.5a7.5 7.5 0 017.5-7.5z" />
+                                    </svg>
+                                    <span class="group-hover:text-vermelho-paixao transition-colors">Restaurantes & Cafés</span>
+                                </a>
                             </li>
-                            <li class="flex items-center group cursor-pointer">
-                                <span class="w-6 h-6 rounded-full bg-azul-guia mr-4 shadow-inner group-hover:scale-110 transition-transform"></span>
-                                <span class="group-hover:text-azul-guia transition-colors">Lojas & Mercados</span>
+                            <li>
+                                <a href="#guia" class="flex items-center group">
+                                    <svg class="w-6 h-6 mr-4 text-azul-guia" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M7.5 7.67001V6.70001C7.5 4.45001 9.31 2.24001 11.56 2.03001C14.24 1.77001 16.5 3.88001 16.5 6.51001V7.89001" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M15.44 16.94C15.04 18.28 13.63 19.34 12 19.34C10.37 19.34 8.96 18.28 8.56 16.94" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M9 22H15C19.02 22 19.74 20.39 19.95 18.43L20.7 12.43C20.97 9.99 20.27 8 16 8H8C3.73 8 3.03 9.99 3.3 12.43L4.05 18.43C4.26 20.39 4.98 22 9 22Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="group-hover:text-azul-guia transition-colors">Lojas & Mercados</span>
+                                </a>
                             </li>
-                            <li class="flex items-center group cursor-pointer">
-                                <span class="w-6 h-6 rounded-full bg-laranja-poente mr-4 shadow-inner group-hover:scale-110 transition-transform"></span>
-                                <span class="group-hover:text-laranja-poente transition-colors">Locais de Eventos</span>
+                            <li>
+                                <a href="#agenda" class="flex items-center group">
+                                    <svg class="w-6 h-6 mr-4 text-laranja-poente" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M12 13.43C13.7278 13.43 15.13 12.0278 15.13 10.3C15.13 8.57222 13.7278 7.17 12 7.17C10.2722 7.17 8.87 8.57222 8.87 10.3C8.87 12.0278 10.2722 13.43 12 13.43Z" stroke="currentColor" stroke-width="1.5"/>
+                                        <path d="M12 21.37C15.89 17.82 19.43 14.44 19.43 10.3C19.43 6.16 16.11 2.84 12 2.84C7.89 2.84 4.57 6.16 4.57 10.3C4.57 14.44 8.11 17.82 12 21.37Z" stroke="currentColor" stroke-width="1.5"/>
+                                    </svg>
+                                    <span class="group-hover:text-laranja-poente transition-colors">Locais de Eventos</span>
+                                </a>
                             </li>
-                            <li class="flex items-center group cursor-pointer">
-                                <span class="w-6 h-6 rounded-full bg-amarelo-nascente mr-4 shadow-inner group-hover:scale-110 transition-transform"></span>
-                                <span class="group-hover:text-yellow-600 transition-colors">Aulas & Cultura</span>
+                            <li>
+                                <a href="#guia" class="flex items-center group">
+                                    <svg class="w-6 h-6 mr-4 text-amarelo-nascente" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="1.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                                    </svg>
+                                    <span class="group-hover:text-yellow-600 transition-colors">Aulas & Cultura</span>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -305,7 +461,7 @@
             <div class="container mx-auto">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">Guia CWB</h2>
-                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Descubra os melhores lugares para vivenciar a cultura coreana.</p>
+                    <p class="text-xl text-gray-700 max-w-2xl mx-auto">Descubra os melhores lugares para vivenciar a cultura coreana.</p>
                 </div>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -313,14 +469,12 @@
                     <a href="#" class="text-center card-hover bg-white rounded-2xl p-8 block group">
                         <div class="w-24 h-24 mx-auto mb-6 flex items-center justify-center bg-vermelho-paixao/10 rounded-full transition-colors duration-300 group-hover:bg-vermelho-paixao">
                             <!-- Ícone SVG Personalizado: Restaurantes -->
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-vermelho-paixao transition-colors duration-300 group-hover:text-white">
-                                <path d="M13 3L3 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M14 4L4 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M20.782 14.3263C20.418 13.6063 19.872 12.9863 19.202 12.5563C18.532 12.1263 17.762 11.9063 16.972 11.9363C16.182 11.9063 15.412 12.1263 14.742 12.5563C14.072 12.9863 13.526 13.6063 13.162 14.3263L16.972 21.0663L20.782 14.3263Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-vermelho-paixao transition-colors duration-300 group-hover:text-white" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a2.25 2.25 0 01-2.25 2.25H5.25a2.25 2.25 0 01-2.25-2.25v-8.25M12 4.875A3.375 3.375 0 0012 1.5v3.375m0 0a3.375 3.375 0 00-3.375 3.375h6.75A3.375 3.375 0 0012 4.875zm0 0a7.5 7.5 0 017.5 7.5H4.5a7.5 7.5 0 017.5-7.5z" />
                             </svg>
                         </div>
                         <h3 class="text-2xl font-bold text-preto-carvao mb-2">Restaurantes</h3>
-                        <p class="text-gray-600">Saboreie a autêntica culinária coreana.</p>
+                        <p class="text-gray-700">Saboreie a autêntica culinária coreana.</p>
                     </a>
 
                     <!-- Card K-Stores -->
@@ -334,21 +488,19 @@
                             </svg>
                         </div>
                         <h3 class="text-2xl font-bold text-preto-carvao mb-2">K-Stores</h3>
-                        <p class="text-gray-600">Encontre K-beauty e produtos coreanos.</p>
+                        <p class="text-gray-700">Encontre K-beauty e produtos coreanos.</p>
                     </a>
 
                     <!-- Card Escolas/Aulas -->
                     <a href="#" class="text-center card-hover bg-white rounded-2xl p-8 block group">
                         <div class="w-24 h-24 mx-auto mb-6 flex items-center justify-center bg-amarelo-nascente/20 rounded-full transition-colors duration-300 group-hover:bg-amarelo-nascente">
                             <!-- Ícone SVG Personalizado: Escolas -->
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-amarelo-nascente transition-colors duration-300 group-hover:text-white">
-                                <path d="M15.5 14.5C15.5 16.71 13.71 18.5 11.5 18.5C9.29 18.5 7.5 16.71 7.5 14.5C7.5 12.29 9.29 10.5 11.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M11.5 10.5V6.5C11.5 6.22 11.72 6 12 6H13C13.55 6 14 5.55 14 5C14 4.45 13.55 4 13 4H9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M8 22H16C18.25 22 19.61 20.81 19.93 18.95L20.5 15.2C20.89 12.89 19.92 11 16 11H8C4.08 11 3.11 12.89 3.5 15.2L4.07 18.95C4.39 20.81 5.75 22 8 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-amarelo-nascente transition-colors duration-300 group-hover:text-white" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
                             </svg>
                         </div>
                         <h3 class="text-2xl font-bold text-preto-carvao mb-2">Aulas</h3>
-                        <p class="text-gray-600">Aprenda a dançar K-pop ou o idioma coreano.</p>
+                        <p class="text-gray-700">Aprenda a dançar K-pop ou o idioma coreano.</p>
                     </a>
 
                     <!-- Card Pontos de Encontro -->
@@ -361,7 +513,7 @@
                             </svg>
                         </div>
                         <h3 class="text-2xl font-bold text-preto-carvao mb-2">Encontros</h3>
-                        <p class="text-gray-600">Conecte-se com outros fãs da Hallyu.</p>
+                        <p class="text-gray-700">Conecte-se com outros fãs da Hallyu.</p>
                     </a>
                 </div>
             </div>
@@ -372,34 +524,25 @@
             <div class="container mx-auto">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">Últimos Artigos</h2>
-                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Análises, guias e notícias do universo Hallyu.</p>
+                    <p class="text-xl text-gray-700 max-w-2xl mx-auto">Análises, guias e notícias do universo Hallyu.</p>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <article class="bg-bege-pinhao rounded-2xl shadow-lg overflow-hidden card-hover group">
-                        <div class="p-8">
-                            <div class="text-sm text-azul-guia font-semibold mb-2 uppercase tracking-wide">K-POP</div>
-                            <h3 class="text-2xl font-bold text-preto-carvao mb-4 group-hover:text-vermelho-paixao transition-colors">Os Grupos Mais Esperados de 2025</h3>
-                            <p class="text-gray-600 mb-6">Descubra quais são os comebacks e debuts mais aguardados pelos fãs neste ano...</p>
-                            <a href="#" class="font-bold text-vermelho-paixao hover:text-red-700 transition-colors">Ler mais →</a>
-                        </div>
-                    </article>
-
-                    <article class="bg-bege-pinhao rounded-2xl shadow-lg overflow-hidden card-hover group">
-                        <div class="p-8">
-                            <div class="text-sm text-azul-guia font-semibold mb-2 uppercase tracking-wide">K-DRAMA</div>
-                            <h3 class="text-2xl font-bold text-preto-carvao mb-4 group-hover:text-vermelho-paixao transition-colors">Top 10 K-Dramas para Maratonar</h3>
-                            <p class="text-gray-600 mb-6">Nossa seleção dos melhores doramas que você não pode perder, dos clássicos aos lançamentos...</p>
-                            <a href="#" class="font-bold text-vermelho-paixao hover:text-red-700 transition-colors">Ler mais →</a>
-                        </div>
-                    </article>
-
+                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
                     <article class="bg-bege-pinhao rounded-2xl shadow-lg overflow-hidden card-hover group">
                         <div class="p-8">
                             <div class="text-sm text-azul-guia font-semibold mb-2 uppercase tracking-wide">GASTRONOMIA</div>
-                            <h3 class="text-2xl font-bold text-preto-carvao mb-4 group-hover:text-vermelho-paixao transition-colors">Guia Completo da Culinária Coreana</h3>
-                            <p class="text-gray-600 mb-6">Dos pratos mais tradicionais aos modernos, descubra os sabores que conquistaram o mundo...</p>
-                            <a href="#" class="font-bold text-vermelho-paixao hover:text-red-700 transition-colors">Ler mais →</a>
+                            <h3 class="text-2xl font-bold text-preto-carvao mb-4 group-hover:text-vermelho-paixao transition-colors">Guia Definitivo da Culinária Coreana em Curitiba</h3>
+                            <p class="text-gray-700 mb-6">Annyeong, Hallyu Fam! 🌊✨ Descubra os sabores, pratos e os melhores restaurantes coreanos na nossa cidade.</p>
+                            <a href="artigo-gastronomia.html" class="font-bold text-vermelho-paixao hover:text-red-700 transition-colors">Ler mais →</a>
+                        </div>
+                    </article>
+
+                    <article class="bg-bege-pinhao rounded-2xl shadow-lg overflow-hidden card-hover group">
+                        <div class="p-8">
+                            <div class="text-sm text-azul-guia font-semibold mb-2 uppercase tracking-wide">EVENTOS</div>
+                            <h3 class="text-2xl font-bold text-preto-carvao mb-4 group-hover:text-vermelho-paixao transition-colors">A Lição do Hallyu Korean Fest: Curitiba e a Força da Sua Onda</h3>
+                            <p class="text-gray-700 mb-6">Uma reflexão sobre o impacto, os desafios e o futuro dos grandes eventos de cultura coreana na cidade.</p>
+                            <a href="artigo-hallyu-fest.html" class="font-bold text-vermelho-paixao hover:text-red-700 transition-colors">Ler mais →</a>
                         </div>
                     </article>
                 </div>
@@ -434,44 +577,52 @@
             <div class="container mx-auto">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">Sobre Nós</h2>
-                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Conheça a história por trás do HallyuCuritiba.</p>
+                    <p class="text-xl text-gray-700 max-w-2xl mx-auto">Conheça a história por trás do HallyuCuritiba.</p>
                 </div>
 
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div>
                         <h3 class="text-3xl font-bold text-preto-carvao mb-6">Nossa Missão</h3>
-                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
                             Somos fãs apaixonados pela cultura coreana que decidiram criar um espaço centralizado para toda a comunidade Hallyu de Curitiba. Nosso objetivo é conectar pessoas, divulgar eventos e fortalecer os laços entre os amantes da cultura coreana na nossa cidade.
                         </p>
-                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        <p class="text-lg text-gray-700 mb-8 leading-relaxed">
                             Há mais de 6 anos acompanhamos de perto o crescimento da Onda Coreana em Curitiba, e agora queremos compartilhar todo esse conhecimento com vocês.
                         </p>
                         <div class="flex space-x-4">
                             <a href="https://instagram.com/HallyuCuritiba" target="_blank" class="bg-vermelho-paixao text-white px-6 py-3 rounded-full font-bold hover:bg-red-700 transition-colors btn-hover">
                                 Siga no Instagram
                             </a>
-                            <a href="#" class="border-2 border-azul-guia text-azul-guia px-6 py-3 rounded-full font-bold hover:bg-azul-guia hover:text-white transition-colors btn-hover">
+                            <a href="#contato" class="border-2 border-azul-guia text-azul-guia px-6 py-3 rounded-full font-bold hover:bg-azul-guia hover:text-white transition-colors btn-hover">
                                 Entre em Contato
                             </a>
                         </div>
                     </div>
                     <div class="bg-bege-pinhao p-8 rounded-2xl">
                         <h4 class="text-2xl font-bold text-preto-carvao mb-6">Por que criamos o HallyuCuritiba?</h4>
-                        <ul class="space-y-4 text-gray-600">
+                        <ul class="space-y-4 text-gray-700">
                             <li class="flex items-start">
-                                <span class="text-vermelho-paixao mr-3 text-xl">•</span>
+                                <svg class="w-6 h-6 text-vermelho-paixao mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="8" />
+                                </svg>
                                 <span>Para centralizar informações sobre eventos e locais</span>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-azul-guia mr-3 text-xl">•</span>
+                                <svg class="w-6 h-6 text-azul-guia mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                    <rect x="4" y="4" width="16" height="16" rx="2"/>
+                                </svg>
                                 <span>Para fortalecer a comunidade local de fãs</span>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-laranja-poente mr-3 text-xl">•</span>
+                                <svg class="w-6 h-6 text-laranja-poente mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2 L2 12 L12 22 L22 12 Z" />
+                                </svg>
                                 <span>Para divulgar estabelecimentos que apoiam a cultura coreana</span>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-amarelo-nascente mr-3 text-xl">•</span>
+                                <svg class="w-6 h-6 text-amarelo-nascente mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0 L14.5 9.5 L24 12 L14.5 14.5 L12 24 L9.5 14.5 L0 12 L9.5 9.5 Z" />
+                                </svg>
                                 <span>Para criar conteúdo de qualidade sobre o universo Hallyu</span>
                             </li>
                         </ul>
@@ -488,7 +639,7 @@
                 <!-- Logo e Descrição -->
                 <div class="md:col-span-2">
                     <div class="flex items-center space-x-3 mb-6">
-                        <img src="logo-hallyu-transparente.png" alt="Logo HallyuCuritiba" class="w-12 h-12">
+                        <img src="images/logo-hallyu-transparente.png" alt="Logo HallyuCuritiba" class="w-12 h-12">
                         <span class="text-2xl font-bold">HallyuCuritiba</span>
                     </div>
                     <p class="text-gray-400 mb-6 max-w-md leading-relaxed">
@@ -526,7 +677,7 @@
                 </div>
                 
                 <!-- Contato -->
-                <div>
+                <div id="contato">
                     <h3 class="text-lg font-bold mb-6">Contato</h3>
                     <ul class="space-y-3 text-gray-400">
                         <li class="flex items-center">
@@ -534,7 +685,7 @@
                                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
                             </svg>
-                            contato@hallyucuritiba.com
+                            hallyucuritiba@gmail.com
                         </li>
                         <li class="flex items-center">
                             <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -632,6 +783,44 @@
             card.style.transform = 'translateY(20px)';
             card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(card);
+        });
+
+        const calendarContainer = document.getElementById('calendar-container');
+        const prevMonthButton = document.getElementById('prev-month');
+        const nextMonthButton = document.getElementById('next-month');
+        const calendarCards = document.querySelectorAll('.calendar-card');
+        let currentMonth = 0;
+
+        function updateCalendar() {
+            calendarContainer.scrollTo({
+                left: calendarCards[currentMonth].offsetLeft,
+                behavior: 'smooth'
+            });
+        }
+
+        prevMonthButton.addEventListener('click', () => {
+            if (currentMonth > 0) {
+                currentMonth--;
+                updateCalendar();
+            }
+        });
+
+        nextMonthButton.addEventListener('click', () => {
+            if (currentMonth < calendarCards.length - 1) {
+                currentMonth++;
+                updateCalendar();
+            }
+        });
+
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) { // Adiciona a classe após 50px de rolagem
+                header.classList.add('bg-bege-pinhao', 'shadow-md');
+                header.classList.remove('bg-bege-pinhao/80', 'backdrop-blur-lg');
+            } else {
+                header.classList.remove('bg-bege-pinhao', 'shadow-md');
+                header.classList.add('bg-bege-pinhao/80', 'backdrop-blur-lg');
+            }
         });
     </script>
 </body>
