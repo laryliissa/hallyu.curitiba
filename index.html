@@ -12,89 +12,21 @@
     <!-- Google Fonts: Montserrat and Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet"></noscript>
     
     <!-- Favicon (ícone da aba ) -->
     <link rel="icon" href="favicon-hallyu.png" type="image/png">
 
     <!-- Estilos Personalizados e Cores da Marca -->
-    <style>
-        :root {
-            --cor-vermelho-paixao: #D81E2C;
-            --cor-azul-guia: #0054A6;
-            --cor-amarelo-nascente: #FDB913;
-            --cor-laranja-poente: #F58220;
-            --cor-bege-pinhao: #F2EBE3;
-            --cor-preto-carvao: #231F20;
-        }
-        
-        /* Habilita a rolagem suave para todo o site */
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            background-color: var(--cor-bege-pinhao);
-            font-family: 'Inter', sans-serif;
-            color: var(--cor-preto-carvao);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif;
-        }
-        
-        /* Classes de cor personalizadas para Tailwind */
-        .bg-vermelho-paixao { background-color: var(--cor-vermelho-paixao); }
-        .text-vermelho-paixao { color: var(--cor-vermelho-paixao); }
-        .bg-azul-guia { background-color: var(--cor-azul-guia); }
-        .text-azul-guia { color: var(--cor-azul-guia); }
-        .bg-bege-pinhao { background-color: var(--cor-bege-pinhao); }
-        .text-amarelo-nascente { color: var(--cor-amarelo-nascente); }
-        .bg-amarelo-nascente { background-color: var(--cor-amarelo-nascente); }
-        .text-laranja-poente { color: var(--cor-laranja-poente); }
-        .bg-laranja-poente { background-color: var(--cor-laranja-poente); }
-        .text-preto-carvao { color: var(--cor-preto-carvao); }
-        
-        .gradient-hero {
-            background: linear-gradient(135deg, var(--cor-vermelho-paixao), var(--cor-azul-guia));
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease-in-out;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-
-        /* Otimização do Menu Mobile: Animação de deslize suave */
-        .mobile-menu {
-            transform: translateX(100%);
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .mobile-menu.active {
-            transform: translateX(0);
-        }
-
-        /* Efeito de sombra no texto do hero */
-        .shadow-text {
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        /* Animação suave para botões */
-        .btn-hover {
-            transition: all 0.3s ease;
-        }
-
-        .btn-hover:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-    </style>
+    <link rel="stylesheet" href=".css/style.css">
+    
+    <!-- SVG Sprite for Instagram Icon -->
+    <svg style="display: none;">
+        <symbol id="instagram-icon" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        </symbol>
+    </svg>
 </head>
 <body class="antialiased">
 
@@ -154,242 +86,280 @@
                     <span class="text-amarelo-nascente">HallyuCuritiba</span>
                 </h1>
                 <p class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto font-medium opacity-95">
-                    Seu guia definitivo para a cultura coreana em Curitiba. Descubra eventos, restaurantes, lojas e tudo sobre a Onda Coreana na nossa cidade!
+                    Seu guia definitivo para a cultura coreana em Curitiba. <br>Descubra eventos, restaurantes, lojas e tudo sobre a Onda Coreana na nossa cidade!
                 </p>
-                <a href="#agenda" class="bg-amarelo-nascente text-preto-carvao px-10 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-all duration-300 shadow-lg btn-hover">
+                <a href="#eventos" class="bg-amarelo-nascente text-preto-carvao px-10 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-all duration-300 shadow-lg btn-hover">
                     Ver Agenda de Eventos
                 </a>
             </div>
         </section>
 
-        <!-- 3. Agenda Hallyu (Calendário Interativo) Otimizada -->
+        <!-- 3. Destaques e Agenda -->
         <section id="agenda" class="py-24 px-6">
             <div class="container mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">Agenda Hallyu</h2>
-                    <p class="text-xl text-gray-700 max-w-2xl mx-auto">Não perca nenhum evento da cultura coreana em Curitiba.</p>
-                </div>
-
-                <div class="grid lg:grid-cols-5 gap-12 items-start">
-                    <!-- Calendário com Navegação -->
-                    <div class="lg:col-span-3 relative">
-                        <div id="calendar-container" class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory" style="scrollbar-width: none; -ms-overflow-style: none;">
-                            <!-- Setembro -->
-                            <div class="calendar-card flex-shrink-0 w-full snap-start bg-white p-8 rounded-2xl shadow-xl">
-                                <h3 class="text-2xl font-bold text-preto-carvao text-center mb-6">Setembro 2025</h3>
-                                <div class="grid grid-cols-7 gap-2 text-center font-bold text-gray-500 mb-4">
-                                    <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
-                                </div>
-                                <div class="grid grid-cols-7 gap-2 text-center text-lg">
-                                    <div class="text-gray-300 p-2">31</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">1</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">2</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">3</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">4</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">5</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">6</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">7</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">8</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">9</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">10</div>
-                                    <div class="font-bold text-azul-guia cursor-pointer hover:bg-blue-100 rounded-full p-2 transition-colors">11</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">12</div>
-                                    <div class="font-bold text-laranja-poente cursor-pointer hover:bg-orange-100 rounded-full p-2 transition-colors">13</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">14</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">15</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">16</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">17</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">18</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">19</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">20</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">21</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">22</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">23</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">24</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">25</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">26</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">27</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">28</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">29</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">30</div>
-                                </div>
-                            </div>
-                            <!-- Outubro -->
-                            <div class="calendar-card flex-shrink-0 w-full snap-start bg-white p-8 rounded-2xl shadow-xl ml-4">
-                                <h3 class="text-2xl font-bold text-preto-carvao text-center mb-6">Outubro 2025</h3>
-                                <div class="grid grid-cols-7 gap-2 text-center font-bold text-gray-500 mb-4">
-                                    <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
-                                </div>
-                                <div class="grid grid-cols-7 gap-2 text-center text-lg">
-                                    <div class="text-gray-300 p-2"></div>
-                                    <div class="text-gray-300 p-2"></div>
-                                    <div class="text-gray-300 p-2"></div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">1</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">2</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">3</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">4</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">5</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">6</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">7</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">8</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">9</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">10</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">11</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">12</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">13</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">14</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">15</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">16</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">17</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">18</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">19</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">20</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">21</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">22</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">23</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">24</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">25</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">26</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">27</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">28</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">29</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">30</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">31</div>
-                                </div>
-                            </div>
-                            <!-- Novembro -->
-                            <div class="calendar-card flex-shrink-0 w-full snap-start bg-white p-8 rounded-2xl shadow-xl ml-4">
-                                <h3 class="text-2xl font-bold text-preto-carvao text-center mb-6">Novembro 2025</h3>
-                                <div class="grid grid-cols-7 gap-2 text-center font-bold text-gray-500 mb-4">
-                                    <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
-                                </div>
-                                <div class="grid grid-cols-7 gap-2 text-center text-lg">
-                                    <div class="text-gray-300 p-2"></div>
-                                    <div class="text-gray-300 p-2"></div>
-                                    <div class="text-gray-300 p-2"></div>
-                                    <div class="text-gray-300 p-2"></div>
-                                    <div class="text-gray-300 p-2"></div>
-                                    <div class="text-gray-300 p-2"></div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">1</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">2</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">3</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">4</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">5</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">6</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">7</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">8</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">9</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">10</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">11</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">12</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">13</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">14</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">15</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">16</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">17</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">18</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">19</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">20</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">21</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">22</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">23</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">24</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">25</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">26</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">27</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">28</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">29</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">30</div>
-                                </div>
-                            </div>
-                            <!-- Dezembro -->
-                            <div class="calendar-card flex-shrink-0 w-full snap-start bg-white p-8 rounded-2xl shadow-xl ml-4">
-                                <h3 class="text-2xl font-bold text-preto-carvao text-center mb-6">Dezembro 2025</h3>
-                                <div class="grid grid-cols-7 gap-2 text-center font-bold text-gray-500 mb-4">
-                                    <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
-                                </div>
-                                <div class="grid grid-cols-7 gap-2 text-center text-lg">
-                                    <div class="text-gray-300 p-2"></div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">1</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">2</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">3</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">4</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">5</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">6</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">7</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">8</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">9</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">10</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">11</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">12</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">13</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">14</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">15</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">16</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">17</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">18</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">19</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">20</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">21</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">22</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">23</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">24</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">25</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">26</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">27</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">28</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">29</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">30</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">31</div>
-                                </div>
-                            </div>
+                <div class="grid lg:grid-cols-2 gap-24 items-start">
+                    <!-- Destaques -->
+                    <div>
+                        <div class="text-center mb-16">
+                            <h2 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">Destaques</h2>
+                            <p class="text-xl text-gray-700 max-w-2xl mx-auto">Os artigos mais quentes da Hallyu.</p>
                         </div>
-                        <button id="prev-month" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white/50 hover:bg-white rounded-full p-2 transition-colors z-10">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                        </button>
-                        <button id="next-month" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white/50 hover:bg-white rounded-full p-2 transition-colors z-10">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                        </button>
-                    </div>
-
-                    <!-- Lista de Eventos Detalhados -->
-                    <div class="lg:col-span-2">
-                        <h3 class="text-3xl font-bold text-preto-carvao mb-6">Próximos Eventos</h3>
-                        <div class="space-y-6">
-                            <div class="bg-white p-5 rounded-xl shadow-lg flex items-start space-x-4 card-hover cursor-pointer">
-                                <div class="text-center bg-azul-guia text-white rounded-lg px-4 py-2 flex-shrink-0">
-                                    <p class="font-black text-2xl">11</p>
-                                    <p class="text-xs font-bold">SET</p>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-lg text-preto-carvao">Festival de Cinema Coreano – III Edição</h4>
-                                    <p class="text-sm text-gray-700">📍 Cine Passeio</p>
-                                    <p class="text-sm text-gray-700 mt-1">
-                                        <a href="https://www.instagram.com/koffko_/" target="_blank" class="text-azul-guia hover:underline">
-                                            <svg class="w-4 h-4 inline-block mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                                            @koffko_
-                                        </a>
-                                    </p>
-                                    <p class="text-xs text-gray-500 mt-1">Gratuito</p>
-                                </div>
+                        <article class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover group">
+                            <img src="https://i.imgur.com/cILMh5d.jpg" alt="Mesa coreana com pratos típicos" class="w-full h-64 object-cover">
+                            <div class="p-8">
+                                <div class="text-sm text-azul-guia font-semibold mb-2 uppercase tracking-wide">GASTRONOMIA</div>
+                                <h3 class="text-2xl font-bold text-preto-carvao mb-4 group-hover:text-vermelho-paixao transition-colors">Guia Definitivo da Culinária Coreana em Curitiba</h3>
+                                <p class="text-gray-700 mb-6">Annyeong, Hallyu Fam! 🌊✨ Descubra os sabores, pratos e os melhores restaurantes coreanos na nossa cidade.</p>
+                                <a href="artigo-gastronomia.html" class="font-bold text-vermelho-paixao hover:text-red-700 transition-colors">Ler mais →</a>
                             </div>
-                            
-                            <div class="bg-white p-5 rounded-xl shadow-lg flex items-start space-x-4 card-hover cursor-pointer">
-                                <div class="text-center bg-laranja-poente text-white rounded-lg px-4 py-2 flex-shrink-0">
-                                    <p class="font-black text-2xl">13</p>
-                                    <p class="text-xs font-bold">SET</p>
+                        </article>
+                    </div>
+                    <!-- Agenda -->
+                    <div>
+                        <div class="text-center mb-16">
+                            <h2 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">Agenda Hallyu</h2>
+                            <p class="text-xl text-gray-700 max-w-2xl mx-auto">Não perca nenhum evento da cultura coreana em Curitiba.</p>
+                        </div>
+
+                                                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                            <!-- Calendário com Navegação -->
+                            <div class="relative">
+                                <div id="calendar-container" class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory" style="scrollbar-width: none; -ms-overflow-style: none;">
+                                    <!-- Setembro -->
+                                    <div class="calendar-card flex-shrink-0 w-full snap-start bg-white p-8 rounded-2xl shadow-xl">
+                                        <h3 class="text-2xl font-bold text-preto-carvao text-center mb-6">Setembro 2025</h3>
+                                        <div class="grid grid-cols-7 gap-2 text-center font-bold text-gray-500 mb-4">
+                                            <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
+                                        </div>
+                                        <div class="grid grid-cols-7 gap-2 text-center text-lg">
+                                            <div class="text-gray-300 p-2">31</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">1</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">2</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">3</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">4</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">5</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">6</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">7</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">8</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">9</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">10</div>
+                                            <div class="font-bold text-azul-guia cursor-pointer hover:bg-blue-100 rounded-full p-2 transition-colors">11</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">12</div>
+                                            <div class="font-bold text-laranja-poente cursor-pointer hover:bg-orange-100 rounded-full p-2 transition-colors">13</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">14</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">15</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">16</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">17</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">18</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">19</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">20</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">21</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">22</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">23</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">24</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">25</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">26</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">27</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">28</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">29</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">30</div>
+                                        </div>
+                                    </div>
+                                    <!-- Outubro -->
+                                    <div class="calendar-card flex-shrink-0 w-full snap-start bg-white p-8 rounded-2xl shadow-xl ml-4">
+                                        <h3 class="text-2xl font-bold text-preto-carvao text-center mb-6">Outubro 2025</h3>
+                                        <div class="grid grid-cols-7 gap-2 text-center font-bold text-gray-500 mb-4">
+                                            <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
+                                        </div>
+                                        <div class="grid grid-cols-7 gap-2 text-center text-lg">
+                                            <div class="text-gray-300 p-2"></div>
+                                            <div class="text-gray-300 p-2"></div>
+                                            <div class="text-gray-300 p-2"></div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">1</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">2</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">3</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">4</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">5</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">6</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">7</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">8</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">9</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">10</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">11</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">12</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">13</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">14</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">15</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">16</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">17</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">18</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">19</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">20</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">21</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">22</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">23</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">24</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">25</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">26</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">27</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">28</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">29</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">30</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">31</div>
+                                        </div>
+                                    </div>
+                                    <!-- Novembro -->
+                                    <div class="calendar-card flex-shrink-0 w-full snap-start bg-white p-8 rounded-2xl shadow-xl ml-4">
+                                        <h3 class="text-2xl font-bold text-preto-carvao text-center mb-6">Novembro 2025</h3>
+                                        <div class="grid grid-cols-7 gap-2 text-center font-bold text-gray-500 mb-4">
+                                            <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
+                                        </div>
+                                        <div class="grid grid-cols-7 gap-2 text-center text-lg">
+                                            <div class="text-gray-300 p-2"></div>
+                                            <div class="text-gray-300 p-2"></div>
+                                            <div class="text-gray-300 p-2"></div>
+                                            <div class="text-gray-300 p-2"></div>
+                                            <div class="text-gray-300 p-2"></div>
+                                            <div class="text-gray-300 p-2"></div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">1</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">2</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">3</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">4</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">5</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">6</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">7</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">8</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">9</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">10</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">11</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">12</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">13</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">14</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">15</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">16</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">17</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">18</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">19</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">20</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">21</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">22</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">23</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">24</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">25</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">26</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">27</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">28</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">29</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">30</div>
+                                        </div>
+                                    </div>
+                                    <!-- Dezembro -->
+                                    <div class="calendar-card flex-shrink-0 w-full snap-start bg-white p-8 rounded-2xl shadow-xl ml-4">
+                                        <h3 class="text-2xl font-bold text-preto-carvao text-center mb-6">Dezembro 2025</h3>
+                                        <div class="grid grid-cols-7 gap-2 text-center font-bold text-gray-500 mb-4">
+                                            <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
+                                        </div>
+                                        <div class="grid grid-cols-7 gap-2 text-center text-lg">
+                                            <div class="text-gray-300 p-2"></div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">1</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">2</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">3</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">4</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">5</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">6</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">7</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">8</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">9</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">10</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">11</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">12</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">13</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">14</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">15</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">16</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">17</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">18</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">19</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">20</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">21</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">22</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">23</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">24</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">25</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">26</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">27</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">28</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">29</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">30</div>
+                                            <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">31</div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h4 class="font-bold text-lg text-preto-carvao">Namjooning day</h4>
-                                    <p class="text-sm text-gray-700">📍 Lynk gastrô</p>
-                                    <p class="text-sm text-gray-700 mt-1">
-                                        <a href="https://www.instagram.com/korean_dreams_/" target="_blank" class="text-azul-guia hover:underline">
-                                            <svg class="w-4 h-4 inline-block mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                                            @korean_dreams_
-                                        </a>
-                                    </p>
-                                    <p class="text-xs text-gray-500 mt-1">15:30 às 18:00 - R$38,00</p>
-                                </div>
+                                <button id="prev-month" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white/50 hover:bg-white rounded-full p-2 transition-colors z-10">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                                </button>
+                                <button id="next-month" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white/50 hover:bg-white rounded-full p-2 transition-colors z-10">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                </button>
+                            </div>
+
+                            <!-- Lista de Eventos Detalhados -->
+                            <div id="eventos">
+                                <h3 class="text-3xl font-bold text-preto-carvao mb-6">Próximos Eventos</h3>
+                                <div class="space-y-6">
+                                    <div class="bg-white p-5 rounded-xl shadow-lg flex items-start space-x-4 card-hover cursor-pointer">
+                                        <div class="text-center bg-azul-guia text-white rounded-lg px-4 py-2 flex-shrink-0">
+                                            <p class="font-black text-2xl">11</p>
+                                            <p class="text-xs font-bold">SET</p>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-lg text-preto-carvao">Festival de Cinema Coreano – III Edição</h4>
+                                            <p class="text-sm text-gray-700">📍 Cine Passeio</p>
+                                            <p class="text-sm text-gray-700 mt-1">
+                                                <a href="https://www.instagram.com/koffko_/" target="_blank" class="text-azul-guia hover:underline">
+                                                    <svg class="w-4 h-4 inline-block mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"'''/></svg>
+                                                    @koffko_
+                                                </a>
+                                            </p>
+                                            <p class="text-xs text-gray-500 mt-1">Gratuito</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="bg-white p-5 rounded-xl shadow-lg flex items-start space-x-4 card-hover cursor-pointer">
+                                        <div class="text-center bg-laranja-poente text-white rounded-lg px-4 py-2 flex-shrink-0">
+                                            <p class="font-black text-2xl">13</p>
+                                            <p class="text-xs font-bold">SET</p>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-lg text-preto-carvao">Namjooning day</h4>
+                                            <p class="text-sm text-gray-700">📍 Lynk gastrô</p>
+                                            <p class="text-sm text-gray-700 mt-1">
+                                                <a href="https://www.instagram.com/korean_dreams_/" target="_blank" class="text-azul-guia hover:underline">
+                                                    <svg class="w-4 h-4 inline-block mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"'''/></svg>
+                                                    @korean_dreams_
+                                                </a>
+                                            </p>
+                                            <p class="text-xs text-gray-500 mt-1">15:30 às 18:00 - R$38,00</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-white p-5 rounded-xl shadow-lg flex items-start space-x-4 card-hover cursor-pointer">
+                                        <div class="text-center bg-gray-400 text-white rounded-lg px-4 py-2 flex-shrink-0">
+                                            <p class="font-black text-2xl">14</p>
+                                            <p class="text-xs font-bold">SET</p>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-lg text-preto-carvao">1º Encontro de ATINY'S em Curitiba 🏴‍☠️</h4>
+                                            <p class="text-sm text-gray-700">📍 Yami Asian Food</p>
+                                            <p class="text-sm text-gray-700 mt-1">
+                                                <a href="https://www.instagram.com/halateezbr/" target="_blank" class="text-azul-guia hover:underline">
+                                                    <svg class="w-4 h-4 inline-block mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"'''/></svg>
+                                                    @halateezbr
+                                                </a>
+                                            </p>
+                                            <p class="text-xs text-gray-500 mt-1"><span class="bg-red-500 text-white font-bold py-1 px-2 rounded-full text-xs">ESGOTADO</span> 12:00 às 16:30 - R$30,00</p>
+                                        </div>
+                                    </div>
                             </div>
                         </div>
                     </div>
@@ -466,7 +436,7 @@
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Card Restaurantes -->
-                    <a href="#" class="text-center card-hover bg-white rounded-2xl p-8 block group">
+                    <a href="artigo-gastronomia.html" class="text-center card-hover bg-white rounded-2xl p-8 block group">
                         <div class="w-24 h-24 mx-auto mb-6 flex items-center justify-center bg-vermelho-paixao/10 rounded-full transition-colors duration-300 group-hover:bg-vermelho-paixao">
                             <!-- Ícone SVG Personalizado: Restaurantes -->
                             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-vermelho-paixao transition-colors duration-300 group-hover:text-white" stroke="currentColor" stroke-width="1.5">
@@ -478,7 +448,7 @@
                     </a>
 
                     <!-- Card K-Stores -->
-                    <a href="#" class="text-center card-hover bg-white rounded-2xl p-8 block group">
+                    <div data-target="k-stores-list" class="text-center card-hover bg-white rounded-2xl p-8 block group cursor-pointer">
                         <div class="w-24 h-24 mx-auto mb-6 flex items-center justify-center bg-azul-guia/10 rounded-full transition-colors duration-300 group-hover:bg-azul-guia">
                             <!-- Ícone SVG Personalizado: K-Stores -->
                             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-azul-guia transition-colors duration-300 group-hover:text-white">
@@ -489,10 +459,10 @@
                         </div>
                         <h3 class="text-2xl font-bold text-preto-carvao mb-2">K-Stores</h3>
                         <p class="text-gray-700">Encontre K-beauty e produtos coreanos.</p>
-                    </a>
+                    </div>
 
                     <!-- Card Escolas/Aulas -->
-                    <a href="#" class="text-center card-hover bg-white rounded-2xl p-8 block group">
+                    <div data-target="aulas-list" class="text-center card-hover bg-white rounded-2xl p-8 block group cursor-pointer">
                         <div class="w-24 h-24 mx-auto mb-6 flex items-center justify-center bg-amarelo-nascente/20 rounded-full transition-colors duration-300 group-hover:bg-amarelo-nascente">
                             <!-- Ícone SVG Personalizado: Escolas -->
                             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-amarelo-nascente transition-colors duration-300 group-hover:text-white" stroke="currentColor" stroke-width="1.5">
@@ -501,7 +471,7 @@
                         </div>
                         <h3 class="text-2xl font-bold text-preto-carvao mb-2">Aulas</h3>
                         <p class="text-gray-700">Aprenda a dançar K-pop ou o idioma coreano.</p>
-                    </a>
+                    </div>
 
                     <!-- Card Pontos de Encontro -->
                     <a href="#" class="text-center card-hover bg-white rounded-2xl p-8 block group">
@@ -519,6 +489,208 @@
             </div>
         </section>
 
+        <!-- Seção de Restaurantes (Oculta) -->
+        <section id="restaurantes-list" class="guia-content hidden py-24 px-6">
+            <div class="container mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">Restaurantes Coreanos</h2>
+                    <p class="text-xl text-gray-700 max-w-2xl mx-auto">Explore os sabores da Coreia em Curitiba.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-2xl shadow-lg card-hover">
+                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">Saiso</h3>
+                        <p class="text-gray-700 mb-4"><a href="https://www.instagram.com/saisokfood/" target="_blank" class="text-azul-guia hover:underline">@saisokfood</a></p>
+                        <p class="text-sm text-gray-600">📍 Rua Nunes Machado, 30, Curitiba, Brazil 80250-000</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg card-hover">
+                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">Yoribogo</h3>
+                        <p class="text-gray-700 mb-4"><a href="https://www.instagram.com/yoribogo_cwb/" target="_blank" class="text-azul-guia hover:underline">@yoribogo_cwb</a></p>
+                        <p class="text-sm text-gray-600">📍 R. Vicente Machado, 520 - loja 8 - Centro, Curitiba, Brazil 80420-010</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg card-hover">
+                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">K-dog Curitiba</h3>
+                        <p class="text-gray-700 mb-4"><a href="https://www.instagram.com/kdog.coreano/" target="_blank" class="text-azul-guia hover:underline">@kdog.coreano</a></p>
+                        <p class="text-sm text-gray-600">📍 Pedidos online via ifood/WhatsApp</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg card-hover">
+                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">YÜ COZINHA ORIENTAL</h3>
+                        <p class="text-gray-700 mb-4"><a href="https://www.instagram.com/yucozinhaoriental/" target="_blank" class="text-azul-guia hover:underline">@yucozinhaoriental</a></p>
+                        <p class="text-sm text-gray-600">📍 Praça general Osório 485, Curitiba, Brazil 80020-010</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg card-hover">
+                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">Shiny’s Kitchen Curitiba</h3>
+                        <p class="text-gray-700 mb-4"><a href="https://www.instagram.com/shinyskitchen_cwb/" target="_blank" class="text-azul-guia hover:underline">@shinyskitchen_cwb</a></p>
+                        <p class="text-sm text-gray-600">📍 Praça Gen. Osório, 333 - loja 18 - Centro, Curitiba - PR, 82590-300</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg card-hover">
+                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">Yü Korean Taste</h3>
+                        <p class="text-gray-700 mb-4"><a href="https://www.instagram.com/yukoreantaste/" target="_blank" class="text-azul-guia hover:underline">@yukoreantaste</a></p>
+                        <p class="text-sm text-gray-600">📍 Av. Anita Garibaldi 850</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg card-hover">
+                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">YAMI RESTAURANTE</h3>
+                        <p class="text-gray-700 mb-4"><a href="https://www.instagram.com/yami.asianfood/" target="_blank" class="text-azul-guia hover:underline">@yami.asianfood</a></p>
+                        <p class="text-sm text-gray-600">📍 Rua GENERAL OSÓRIO 477 CENTRO CURITIBA-PR, Curitiba, Brazil</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Aulas (Oculta) -->
+        <section id="aulas-list" class="guia-content hidden py-24 px-6">
+            <div class="container mx-auto">
+                <h2 id="k-schools-title" style="font-size:1.6rem; margin-bottom:12px;">🏫 Escolas de K-Pop & Língua Coreana — Curitiba</h2>
+                <p style="margin:0 0 18px 0; color:#444;">
+                    Lista com instituições locais que oferecem aulas de K-Pop e/ou cursos de idioma coreano. Verifique horários e contatos diretamente com cada escola — dados sujeitos a atualização.
+                </p>
+
+                <div style="display:grid; gap:14px; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));">
+                    <!-- Card: Studio D1 -->
+                    <article class="school-card" aria-labelledby="studio-d1" style="background:#fff; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06); padding:16px;">
+                        <header style="display:flex; gap:12px; align-items:center;">
+                            <svg width="44" height="44" viewBox="0 0 24 24" aria-hidden="true" focusable="false" style="flex:0 0 44px;">
+                                <circle cx="12" cy="12" r="11" fill="#EDE7F6"></circle>
+                                <path d="M7 15c1-3 6-3 7 0" stroke="#7C4DFF" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+                            </svg>
+                            <div>
+                                <h3 id="studio-d1" style="margin:0; font-size:1.05rem;">Studio D1</h3>
+                                <small style="color:#666;">Aulas presenciais e online de dança (K-Pop)</small>
+                            </div>
+                        </header>
+
+                        <div style="margin-top:12px; color:#333; line-height:1.4;">
+                            <p style="margin:0 0 8px 0;"><strong>Endereço:</strong> Rua Teixeira Coelho, 242-262, Batel, Curitiba-PR</p>
+                            <p style="margin:0 0 8px 0;"><strong>Contato / Site:</strong> <a href="https://www.studiod1.com.br" target="_blank" rel="noopener noreferrer">studiod1.com.br</a></p>
+                            <p style="margin:0 0 8px 0; color:#555;"><em>Observação:</em> Instituição tradicional de dança que oferece turmas de K-Pop. Verificar agenda e turmas no site.</p>
+                        </div>
+
+                        <footer style="margin-top:10px; display:flex; gap:8px; align-items:center;">
+                            <a href="https://www.studiod1.com.br" target="_blank" rel="noopener noreferrer" style="text-decoration:none; font-weight:600; color:#7C4DFF;">Visitar site →</a>
+                        </footer>
+                    </article>
+
+                    <!-- Card: Centro Ásia Tomodachi -->
+                    <article class="school-card" aria-labelledby="centro-asia" style="background:#fff; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06); padding:16px;">
+                        <header style="display:flex; gap:12px; align-items:center;">
+                            <svg width="44" height="44" viewBox="0 0 24 24" aria-hidden="true" focusable="false" style="flex:0 0 44px;">
+                                <rect x="2" y="2" width="20" height="20" rx="5" fill="#FFF3E0"></rect>
+                                <path d="M6 10h12M6 14h8" stroke="#FF9800" stroke-width="1.2" stroke-linecap="round"/>
+                            </svg>
+                            <div>
+                                <h3 id="centro-asia" style="margin:0; font-size:1.05rem;">Centro Ásia (Tomodachi)</h3>
+                                <small style="color:#666;">Cursos de idioma coreano e atividades culturais</small>
+                            </div>
+                        </header>
+
+                        <div style="margin-top:12px; color:#333; line-height:1.4;">
+                            <p style="margin:0 0 8px 0;"><strong>Endereço:</strong> Av. Iguaçu, 2513, Água Verde, Curitiba-PR</p>
+                            <p style="margin:0 0 8px 0;"><strong>Instagram / Site:</strong> <a href="https://www.centroasia.com.br" target="_blank" rel="noopener noreferrer">@centroasiabrasil</a></p>
+                            <p style="margin:0 0 8px 0; color:#555;"><em>Observação:</em> Oferece cursos presenciais de coreano (turmas reduzidas), oficinas culturais e certificação.</p>
+                        </div>
+
+                        <footer style="margin-top:10px; display:flex; gap:8px; align-items:center;">
+                            <a href="https://www.centroasia.com.br" target="_blank" rel="noopener noreferrer" style="text-decoration:none; font-weight:600; color:#FF9800;">Mais informações →</a>
+                        </footer>
+                    </article>
+
+                    <!-- Card: Hello Ásia -->
+                    <article class="school-card" aria-labelledby="hello-asia" style="background:#fff; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06); padding:16px;">
+                        <header style="display:flex; gap:12px; align-items:center;">
+                            <svg width="44" height="44" viewBox="0 0 24 24" aria-hidden="true" focusable="false" style="flex:0 0 44px;">
+                                <circle cx="12" cy="12" r="11" fill="#E8F5E9"></circle>
+                                <path d="M8 12h8M10 15h4" stroke="#43A047" stroke-width="1.2" stroke-linecap="round"/>
+                            </svg>
+                            <div>
+                                <h3 id="hello-asia" style="margin:0; font-size:1.05rem;">Hello Ásia — Idiomas Asiáticos</h3>
+                                <small style="color:#666;">Aulas online de coreano</small>
+                            </div>
+                        </header>
+
+                        <div style="margin-top:12px; color:#333; line-height:1.4;">
+                            <p style="margin:0 0 8px 0;"><strong>Formato:</strong> Aulas online (sem endereço físico confirmado)</p>
+                            <p style="margin:0 0 8px 0;"><strong>Perfil / Link:</strong> <a href="https://biolink.info/helloasiaoficial" target="_blank" rel="noopener noreferrer">helloasiaoficial (biolink)</a></p>
+                            <p style="margin:0 0 8px 0; color:#555;"><em>Observação:</em> Oferece cursos básicos com professores nativos e brasileiros. Útil para quem prefere formato remoto.</p>
+                        </div>
+
+                        <footer style="margin-top:10px; display:flex; gap:8px; align-items:center;">
+                            <a href="https://biolink.info/helloasiaoficial" target="_blank" rel="noopener noreferrer" style="text-decoration:none; font-weight:600; color:#43A047;">Acessar perfil →</a>
+                        </footer>
+                    </article>
+                </div>
+
+                
+            </div>
+        </section>
+
+        <!-- Seção de K-Stores -->
+        <section id="k-stores-list" class="guia-content hidden py-12 px-6">
+            <div class="container mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">K-Stores & Mercados Coreanos</h2>
+                    <p class="text-xl text-gray-700 max-w-2xl mx-auto">Encontre produtos coreanos, de K-beauty a alimentos.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Sarang Korean Market -->
+                    <div class="bg-white p-4 rounded-2xl shadow-lg card-hover">
+                        <p class="text-gray-700 mb-4">
+                            <a href="https://www.instagram.com/sarangkoreanmarket" target="_blank" class="text-azul-guia hover:underline flex items-center">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"'''/></svg>
+                                @sarangkoreanmarket
+                            </a>
+                        </p>
+                        <p class="text-sm text-gray-600">📍 Shopping Palladium, Piso L3, Loja Q337 — Av. Pres. Kennedy, 4121, Portão, Curitiba</p>
+                    </div>
+                    <!-- Hello Korea Store -->
+                    <div class="bg-white p-4 rounded-2xl shadow-lg card-hover">
+                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">Hello Korea Store</h3>
+                        <p class="text-gray-700 mb-4">
+                            <a href="https://www.instagram.com/hellokoreastore" target="_blank" class="text-azul-guia hover:underline flex items-center">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"'''/></svg>
+                                @hellokoreastore
+                            </a>
+                        </p>
+                        <p class="text-sm text-gray-600">📍 Atendimento via Instagram (atendimento apenas online)</p>
+                    </div>
+                    <!-- Variedades São José -->
+                    <div class="bg-white p-4 rounded-2xl shadow-lg card-hover">
+                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">Variedades São José</h3>
+                        <p class="text-gray-700 mb-4">N/A</p>
+                        <p class="text-sm text-gray-600">📍 Loja física em Curitiba (produtos orientais, incluindo coreanos)</p>
+                    </div>
+                    <!-- Miho Asian Beauty -->
+                    <div class="bg-white p-4 rounded-2xl shadow-lg card-hover">
+                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">Miho Asian Beauty</h3>
+                        <p class="text-gray-700 mb-4">
+                            <a href="https://www.shopmiho.com" target="_blank" class="text-azul-guia hover:underline">shopmiho.com</a>
+                        </p>
+                        <p class="text-sm text-gray-600">📍 Rua Guilherme Tragante, 251, Curitiba‑PR, CEP 82800‑090</p>
+                    </div>
+                    <!-- Bonsai Mercearia -->
+                    <div class="bg-white p-4 rounded-2xl shadow-lg card-hover">
+                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">Bonsai Mercearia</h3>
+                        <p class="text-gray-700 mb-4">
+                            <a href="https://www.instagram.com/bonsaimercearia" target="_blank" class="text-azul-guia hover:underline flex items-center">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"'''/></svg>
+                                @bonsaimercearia
+                            </a>
+                        </p>
+                        <p class="text-sm text-gray-600">📍 Av. Sete de Setembro, 1865, Curitiba, PR</p>
+                    </div>
+                    <!-- Love Myself Store -->
+                    <div class="bg-white p-4 rounded-2xl shadow-lg card-hover">
+                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">Love Myself Store</h3>
+                        <p class="text-gray-700 mb-4">
+                            <a href="https://www.instagram.com/storelovemyself" target="_blank" class="text-azul-guia hover:underline flex items-center">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"'''/></svg>
+                                @storelovemyself
+                            </a>
+                        </p>
+                        <p class="text-sm text-gray-600">📍 Atendimento via Instagram (atendimento apenas online)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- 6. Seção de Artigos Otimizada -->
         <section id="artigos" class="py-24 px-6 bg-white">
             <div class="container mx-auto">
@@ -527,7 +699,16 @@
                     <p class="text-xl text-gray-700 max-w-2xl mx-auto">Análises, guias e notícias do universo Hallyu.</p>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <article class="bg-bege-pinhao rounded-2xl shadow-lg overflow-hidden card-hover group">
+                        <div class="p-8">
+                            <div class="text-sm text-azul-guia font-semibold mb-2 uppercase tracking-wide">EVENTOS</div>
+                            <h3 class="text-2xl font-bold text-preto-carvao mb-4 group-hover:text-vermelho-paixao transition-colors">KOFF 2025: O Guia Definitivo para a Semana do Cinema Coreano em Curitiba! 🎬<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/800px-Flag_of_South_Korea.svg.png" alt="Bandeira da Coreia do Sul" class="inline-block w-6 h-4 mx-1"></h3>
+                            <p class="text-gray-700 mb-6">Se você é do time que devora K-dramas e fica sempre de olho nos filmes coreanos mais aclamados, prepare o coração!</p>
+                            <a href="artigo-koff-2025.html" class="font-bold text-vermelho-paixao hover:text-red-700 transition-colors">Ler mais →</a>
+                        </div>
+                    </article>
+
                     <article class="bg-bege-pinhao rounded-2xl shadow-lg overflow-hidden card-hover group">
                         <div class="p-8">
                             <div class="text-sm text-azul-guia font-semibold mb-2 uppercase tracking-wide">GASTRONOMIA</div>
@@ -648,8 +829,7 @@
                     <div class="flex space-x-4">
                         <a href="https://instagram.com/HallyuCuritiba" target="_blank" class="text-gray-400 hover:text-vermelho-paixao transition-colors">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                            </svg>
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"'''/></svg>
                         </a>
                         <a href="https://tiktok.com/@HallyuCuritiba" target="_blank" class="text-gray-400 hover:text-vermelho-paixao transition-colors">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -694,9 +874,6 @@
                             Curitiba, PR
                         </li>
                         <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-                            </svg>
                             @hallyucuritiba
                         </li>
                     </ul>
@@ -821,6 +998,26 @@
                 header.classList.remove('bg-bege-pinhao', 'shadow-md');
                 header.classList.add('bg-bege-pinhao/80', 'backdrop-blur-lg');
             }
+        });
+
+        // Script para expandir as seções do Guia CWB
+        document.querySelectorAll('[data-target]').forEach(card => {
+            card.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const targetSection = document.getElementById(targetId);
+
+                if (targetSection) {
+                    // Esconde todas as outras seções
+                    document.querySelectorAll('.guia-content').forEach(section => {
+                        if (section.id !== targetId) {
+                            section.classList.add('hidden');
+                        }
+                    });
+
+                    // Mostra ou esconde a seção clicada
+                    targetSection.classList.toggle('hidden');
+                }
+            });
         });
     </script>
 </body>
