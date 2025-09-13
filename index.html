@@ -112,6 +112,7 @@
                 <a href="#inicio" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Início</a>
                 <a href="#agenda" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Agenda</a>
                 <a href="#mapa" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Mapa</a>
+                <a href="#restaurantes" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Restaurantes</a>
                 <a href="#guia" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Guia CWB</a>
                 <a href="#artigos" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Artigos</a>
                 <a href="#sobre" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Sobre</a>
@@ -134,6 +135,7 @@
                 <a href="#inicio" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Início</a>
                 <a href="#agenda" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Agenda</a>
                 <a href="#mapa" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Mapa</a>
+                <a href="#restaurantes" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Restaurantes</a>
                 <a href="#guia" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Guia CWB</a>
                 <a href="#artigos" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Artigos</a>
                 <a href="#sobre" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Sobre</a>
@@ -416,7 +418,7 @@
                         <h3 class="text-3xl font-bold mb-8 text-preto-carvao">Legenda</h3>
                         <ul class="space-y-5 font-semibold text-lg">
                             <li>
-                                <a href="artigo-gastronomia.html" class="flex items-center group">
+                                <a href="#restaurantes" class="flex items-center group">
                                     <svg class="w-6 h-6 mr-4 text-vermelho-paixao" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="1.5">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a2.25 2.25 0 01-2.25 2.25H5.25a2.25 2.25 0 01-2.25-2.25v-8.25M12 4.875A3.375 3.375 0 0012 1.5v3.375m0 0a3.375 3.375 0 00-3.375 3.375h6.75A3.375 3.375 0 0012 4.875zm0 0a7.5 7.5 0 017.5 7.5H4.5a7.5 7.5 0 017.5-7.5z" />
                                     </svg>
@@ -456,6 +458,124 @@
             </div>
         </section>
 
+        <!-- Seção Restaurantes -->
+        <section id="restaurantes" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-preto-carvao mb-6">
+                        Melhores <span class="text-vermelho-paixao">Restaurantes</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Saboreie a autêntica culinária coreana nos melhores restaurantes de Curitiba
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Restaurante 1 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border card-hover">
+                        <div class="h-48 bg-gradient-to-br from-red-400 to-pink-600 flex items-center justify-center">
+                            <span class="text-6xl">🍖</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex text-yellow-400">
+                                    <span>⭐⭐⭐⭐⭐</span>
+                                </div>
+                                <span class="text-green-600 font-medium text-sm">Aberto</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Seoul BBQ House</h3>
+                            <p class="text-gray-600 mb-4">Churrasco coreano tradicional com carnes premium e banchan variados.</p>
+                            <div class="flex items-center text-sm text-gray-500 mb-4">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                Batel • R$ 80-120 por pessoa
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="flex-1 bg-vermelho-paixao text-white py-2 rounded-lg font-medium btn-hover">
+                                    Ver Menu
+                                </button>
+                                <button class="px-4 py-2 border border-gray-300 rounded-lg btn-hover">
+                                    📍
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Restaurante 2 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border card-hover">
+                        <div class="h-48 bg-gradient-to-br from-orange-400 to-red-600 flex items-center justify-center">
+                            <span class="text-6xl">🍜</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex text-yellow-400">
+                                    <span>⭐⭐⭐⭐⭐</span>
+                                </div>
+                                <span class="text-green-600 font-medium text-sm">Aberto</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Kimchi & Noodles</h3>
+                            <p class="text-gray-600 mb-4">Especializado em ramyeon, bibimbap e pratos caseiros coreanos.</p>
+                            <div class="flex items-center text-sm text-gray-500 mb-4">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                Centro • R$ 35-60 por pessoa
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="flex-1 bg-azul-guia text-white py-2 rounded-lg font-medium btn-hover">
+                                    Ver Menu
+                                </button>
+                                <button class="px-4 py-2 border border-gray-300 rounded-lg btn-hover">
+                                    📍
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Restaurante 3 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border card-hover">
+                        <div class="h-48 bg-gradient-to-br from-green-400 to-blue-600 flex items-center justify-center">
+                            <span class="text-6xl">🥟</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex text-yellow-400">
+                                    <span>⭐⭐⭐⭐</span>
+                                </div>
+                                <span class="text-green-600 font-medium text-sm">Aberto</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">K-Street Food</h3>
+                            <p class="text-gray-600 mb-4">Comida de rua coreana: hotteok, tteokbokki, kimbap e muito mais.</p>
+                            <div class="flex items-center text-sm text-gray-500 mb-4">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                Água Verde • R$ 20-40 por pessoa
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="flex-1 bg-laranja-poente text-white py-2 rounded-lg font-medium btn-hover">
+                                    Ver Menu
+                                </button>
+                                <button class="px-4 py-2 border border-gray-300 rounded-lg btn-hover">
+                                    📍
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <button class="bg-vermelho-paixao text-white px-8 py-4 rounded-full font-bold text-lg btn-hover">
+                        Ver Mapa Completo
+                    </button>
+                </div>
+            </div>
+        </section>
+
         <!-- 5. Guia CWB (com ícones SVG personalizados ) Embelezado -->
         <section id="guia" class="py-24 px-6">
             <div class="container mx-auto">
@@ -466,7 +586,7 @@
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Card Restaurantes -->
-                    <a href="#" class="text-center card-hover bg-white rounded-2xl p-8 block group">
+                    <a href="#restaurantes" class="text-center card-hover bg-white rounded-2xl p-8 block group">
                         <div class="w-24 h-24 mx-auto mb-6 flex items-center justify-center bg-vermelho-paixao/10 rounded-full transition-colors duration-300 group-hover:bg-vermelho-paixao">
                             <!-- Ícone SVG Personalizado: Restaurantes -->
                             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-vermelho-paixao transition-colors duration-300 group-hover:text-white" stroke="currentColor" stroke-width="1.5">
