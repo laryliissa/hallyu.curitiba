@@ -19,65 +19,65 @@
     <!-- Estilos Personalizados -->
     <link rel="stylesheet" href=".css/style.css">
 </head>
-<body class="antialiased bg-bege-pinhao">
+<body class="antialiased bg-fundo">
 
     <!-- Cabeçalho Padrão -->
-    <header class="bg-bege-pinhao/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm border-b border-white/20">
+    <header class="bg-fundo/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm border-b border-white/20">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-3 group">
                 <img src="images/logo-hallyu-transparente.png" alt="Logo HallyuCuritiba" class="w-12 h-12 transition-transform group-hover:scale-105">
-                <span class="text-2xl font-extrabold text-preto-carvao">HallyuCuritiba</span>
+                <span class="text-2xl font-extrabold text-texto">HallyuCuritiba</span>
             </a>
             <nav class="hidden md:flex items-center space-x-8 font-semibold">
-                <a href="index.html" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Início</a>
-                <a href="agenda.html" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Agenda</a>
-                <a href="restaurantes.html" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Restaurantes</a>
-                <a href="index.html#artigos" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Artigos</a>
-                <a href="index.html#sobre" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Sobre</a>
+                <a href="index.html" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Início</a>
+                <a href="agenda.html" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Agenda</a>
+                <a href="restaurantes.html" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Restaurantes</a>
+                <a href="index.html#artigos" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Artigos</a>
+                <a href="index.html#sobre" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Sobre</a>
             </nav>
             <button class="md:hidden text-gray-700 z-50 relative" onclick="toggleMobileMenu()">
                 <svg id="menu-open-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 <svg id="menu-close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
         </div>
-        <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-bege-pinhao z-40 md:hidden">
+        <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-fundo z-40 md:hidden">
             <nav class="flex flex-col h-full justify-center items-center space-y-8">
-                <a href="index.html" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Início</a>
-                <a href="agenda.html" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Agenda</a>
-                <a href="restaurantes.html" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Restaurantes</a>
-                <a href="index.html#artigos" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Artigos</a>
-                <a href="index.html#sobre" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Sobre</a>
+                <a href="index.html" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Início</a>
+                <a href="agenda.html" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Agenda</a>
+                <a href="restaurantes.html" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Restaurantes</a>
+                <a href="index.html#artigos" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Artigos</a>
+                <a href="index.html#sobre" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Sobre</a>
             </nav>
         </div>
     </header>
 
     <!-- Conteúdo da Página de Contribuição -->
-    <main class="py-16 px-6" style="background: linear-gradient(180deg, var(--cor-bege-pinhao) 0%, #FFFFFF 50%);">
+    <main class="py-16 px-6" style="background: linear-gradient(180deg, var(--cor-fundo) 0%, #FFFFFF 50%);">
         <div class="container mx-auto max-w-3xl">
             <div class="text-center mb-12">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">Faça Parte do <span class="text-vermelho-paixao">HallyuCuritiba!</span></h1>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-texto mb-4">Faça Parte do <span class="text-primaria">HallyuCuritiba!</span></h1>
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">Viu um evento novo? Conhece um restaurante que não está no nosso mapa? Sabe de uma aula incrível? Sua contribuição é fundamental para mantermos a comunidade Hallyu sempre atualizada.</p>
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto mt-2 font-semibold">Mande sua dica!</p>
             </div>
 
-            <div class="bg-bege-pinhao p-8 md:p-12 rounded-2xl shadow-xl border border-white/50">
+            <div class="bg-fundo p-8 md:p-12 rounded-2xl shadow-xl border border-white/50">
                 <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
                     <!-- Nome -->
                     <div>
                         <label for="name" class="block text-sm font-bold text-gray-700 mb-2">Seu Nome</label>
-                        <input type="text" name="name" id="name" required class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-azul-guia focus:ring-azul-guia text-lg transition">
+                        <input type="text" name="name" id="name" required class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-secundaria focus:ring-secundaria text-lg transition">
                     </div>
 
                     <!-- E-mail -->
                     <div>
                         <label for="email" class="block text-sm font-bold text-gray-700 mb-2">Seu E-mail (para entrarmos em contato, se necessário)</label>
-                        <input type="email" name="email" id="email" required class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-azul-guia focus:ring-azul-guia text-lg transition">
+                        <input type="email" name="email" id="email" required class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-secundaria focus:ring-secundaria text-lg transition">
                     </div>
 
                     <!-- Tipo de Sugestão -->
                     <div>
                         <label for="suggestion-type" class="block text-sm font-bold text-gray-700 mb-2">Tipo de Sugestão</label>
-                        <select id="suggestion-type" name="suggestion-type" required class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-azul-guia focus:ring-azul-guia text-lg transition bg-white">
+                        <select id="suggestion-type" name="suggestion-type" required class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-secundaria focus:ring-secundaria text-lg transition bg-white">
                             <option value="evento">Evento</option>
                             <option value="restaurante">Restaurante / Café</option>
                             <option value="loja">Loja / Mercado</option>
@@ -89,12 +89,12 @@
                     <!-- Mensagem -->
                     <div>
                         <label for="message" class="block text-sm font-bold text-gray-700 mb-2">Sua Mensagem</label>
-                        <textarea name="message" id="message" rows="6" required placeholder="Conte-nos tudo! Se tiver links, pode colocar aqui." class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-azul-guia focus:ring-azul-guia text-lg transition"></textarea>
+                        <textarea name="message" id="message" rows="6" required placeholder="Conte-nos tudo! Se tiver links, pode colocar aqui." class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-secundaria focus:ring-secundaria text-lg transition"></textarea>
                     </div>
 
                     <!-- Botão de Envio -->
                     <div class="text-center pt-4">
-                        <button type="submit" class="bg-vermelho-paixao text-white font-bold py-4 px-10 rounded-full hover:bg-red-700 transition-colors duration-300 btn-hover text-lg shadow-lg">
+                        <button type="submit" class="bg-primaria text-white font-bold py-4 px-10 rounded-full hover:bg-red-700 transition-colors duration-300 btn-hover text-lg shadow-lg">
                             Enviar Contribuição
                         </button>
                     </div>
@@ -104,7 +104,7 @@
     </main>
 
     <!-- Rodapé Otimizado -->
-    <footer class="bg-preto-carvao text-white py-16">
+    <footer class="bg-texto text-white py-16">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-8">
                 <!-- Logo e Descrição -->

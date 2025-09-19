@@ -23,7 +23,7 @@
         .article-content h2 {
             font-size: 1.8rem;
             font-weight: 800;
-            color: var(--cor-vermelho-paixao);
+            color: var(--cor-primaria);
             margin-top: 2.5rem;
             margin-bottom: 1rem;
         }
@@ -37,7 +37,7 @@
             margin-bottom: 1.2rem;
         }
         .article-content strong {
-            color: var(--cor-azul-guia);
+            color: var(--cor-secundaria);
         }
         .article-img {
             width: 100%;
@@ -52,29 +52,29 @@
 <body class="antialiased">
 
     <!-- Cabeçalho Padrão -->
-    <header class="bg-bege-pinhao/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm border-b border-white/20">
+    <header class="bg-fundo/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm border-b border-white/20">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-3 group">
                 <img src="images/logo-hallyu-transparente.png" alt="Logo HallyuCuritiba" class="w-12 h-12 transition-transform group-hover:scale-105">
-                <span class="text-2xl font-extrabold text-preto-carvao">HallyuCuritiba</span>
+                <span class="text-2xl font-extrabold text-texto">HallyuCuritiba</span>
             </a>
             <nav class="hidden md:flex items-center space-x-8 font-semibold">
-                <a href="index.html#inicio" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Início</a>
-                <a href="index.html#agenda" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Agenda</a>
-                <a href="index.html#artigos" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Artigos</a>
-                <a href="index.html#sobre" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Sobre</a>
+                <a href="index.html#inicio" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Início</a>
+                <a href="index.html#agenda" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Agenda</a>
+                <a href="index.html#artigos" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Artigos</a>
+                <a href="index.html#sobre" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Sobre</a>
             </nav>
             <button class="md:hidden text-gray-700 z-50 relative" onclick="toggleMobileMenu()">
                 <svg id="menu-open-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 <svg id="menu-close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
         </div>
-        <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-bege-pinhao z-40 md:hidden">
+        <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-fundo z-40 md:hidden">
             <nav class="flex flex-col h-full justify-center items-center space-y-8">
-                <a href="index.html#inicio" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Início</a>
-                <a href="index.html#agenda" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Agenda</a>
-                <a href="index.html#artigos" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Artigos</a>
-                <a href="index.html#sobre" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Sobre</a>
+                <a href="index.html#inicio" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Início</a>
+                <a href="index.html#agenda" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Agenda</a>
+                <a href="index.html#artigos" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Artigos</a>
+                <a href="index.html#sobre" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Sobre</a>
             </nav>
         </div>
     </header>
@@ -82,10 +82,10 @@
     <!-- Conteúdo do Artigo -->
     <main class="bg-white py-16 px-6">
         <div class="container mx-auto max-w-3xl article-content">
-            <a href="index.html#artigos" class="font-bold text-azul-guia hover:text-vermelho-paixao transition-colors mb-8 inline-block">&larr; Voltar para todos os artigos</a>
-            <h1 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">KOFF 2025: O Guia Completo para a Semana do Cinema Coreano em Curitiba! 🎬🇰🇷</h1>
+            <a href="index.html#artigos" class="font-bold text-secundaria hover:text-primaria transition-colors mb-8 inline-block">&larr; Voltar para todos os artigos</a>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-texto mb-4">KOFF 2025: O Guia Completo para a Semana do Cinema Coreano em Curitiba! 🎬🇰🇷</h1>
             <div class="text-center mb-6">
-                <a href="https://www.instagram.com/p/DOJpM52jrTV/" target="_blank" class="text-azul-guia hover:text-vermelho-paixao transition-colors font-semibold inline-flex items-center">
+                <a href="https://www.instagram.com/p/DOJpM52jrTV/" target="_blank" class="text-secundaria hover:text-primaria transition-colors font-semibold inline-flex items-center">
                     <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                     Ver publicação no Instagram
                 </a>
@@ -93,25 +93,25 @@
 
             <!-- Check-in Rápido do Evento -->
             <div class="bg-blue-50 border-l-4 border-blue-400 p-6 my-8 rounded-lg shadow-md">
-                <h3 class="text-xl font-bold text-preto-carvao mb-4 flex items-center">
-                    <svg class="w-6 h-6 mr-3 text-azul-guia" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <h3 class="text-xl font-bold text-texto mb-4 flex items-center">
+                    <svg class="w-6 h-6 mr-3 text-secundaria" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     Resumo do Evento
                 </h3>
                 <ul class="space-y-3 text-gray-800">
                     <li class="flex items-start">
-                        <svg class="w-5 h-5 mr-3 text-azul-guia flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <svg class="w-5 h-5 mr-3 text-secundaria flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
                         <div><strong>O quê:</strong> <span class="font-medium">Mostra de Cinema Coreano (KOFF) 2025</span></div>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-5 h-5 mr-3 text-azul-guia flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                        <svg class="w-5 h-5 mr-3 text-secundaria flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
                         <div><strong>Quando:</strong> <span class="font-medium">18 a 24 de setembro de 2025</span></div>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-5 h-5 mr-3 text-azul-guia flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                        <svg class="w-5 h-5 mr-3 text-secundaria flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
                         <div><strong>Onde:</strong> <span class="font-medium">Cine Passeio (Rua Riachuelo, 410 - Centro)</span></div>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-5 h-5 mr-3 text-azul-guia flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path d="M8.433 7.418c.158-.103.346-.195.574-.277a6.993 6.993 0 014.983 0c.228.082.416.174.574.277a.5.5 0 01.14.635l-1.452 2.904a.5.5 0 01-.635.14l-1.82-1.214a.5.5 0 00-.586 0L8.433 9.363a.5.5 0 01-.635-.14L6.346 6.319a.5.5 0 01.14-.635z"></path><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm0 2a10 10 0 100-20 10 10 0 000 20z" clip-rule="evenodd"></path></svg>
+                        <svg class="w-5 h-5 mr-3 text-secundaria flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path d="M8.433 7.418c.158-.103.346-.195.574-.277a6.993 6.993 0 014.983 0c.228.082.416.174.574.277a.5.5 0 01.14.635l-1.452 2.904a.5.5 0 01-.635.14l-1.82-1.214a.5.5 0 00-.586 0L8.433 9.363a.5.5 0 01-.635-.14L6.346 6.319a.5.5 0 01.14-.635z"></path><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm0 2a10 10 0 100-20 10 10 0 000 20z" clip-rule="evenodd"></path></svg>
                         <div><strong>Quanto:</strong> <span class="font-medium">Gratuito! Ingressos distribuídos 1h antes de cada sessão.</span></div>
                     </li>
                 </ul>
@@ -119,8 +119,8 @@
             <p class="text-xl text-gray-600 mb-8">Se você é do time que devora K-dramas e fica sempre de olho nos filmes coreanos mais aclamados, prepare o coração! Temos AQUELE evento que vai fazer sua agenda de cinéfilo ferver e te dar ótimos assuntos para a próxima roda de amigos. Sim, estamos falando da Mostra de Cinema Coreano (KOFF) 2025, que desembarca no Cine Passeio para uma semana inteira de imersão cultural na tela grande!</p>
             
             <h2>O Que Esperar do KOFF 2025?</h2>
-            <p>Organizado pelo Centro Cultural Coreano no Brasil, o <a href="https://www.instagram.com/koffko_/" target="_blank" class="text-azul-guia hover:underline">KOFF</a> já é um evento tradicional e muito aguardado em todo o país. A edição deste ano traz para Curitiba uma curadoria especial com filmes aclamados em festivais internacionais.</p>
-            <p>Entre os destaques da <a href="https://koffko.com.br/pt/program-curitiba/" target="_blank" class="text-azul-guia hover:underline">programação</a>, estão títulos como "Broker - Uma Nova Chance", do renomado diretor Hirokazu Kore-eda e com a participação da estrela IU, e o premiado "Decisão de Partir", de Park Chan-wook, que levou o prêmio de Melhor Direção em Cannes. A seleção é um prato cheio para quem aprecia narrativas complexas e a estética visual sofisticada.</p>
+            <p>Organizado pelo Centro Cultural Coreano no Brasil, o <a href="https://www.instagram.com/koffko_/" target="_blank" class="text-secundaria hover:underline">KOFF</a> já é um evento tradicional e muito aguardado em todo o país. A edição deste ano traz para Curitiba uma curadoria especial com filmes aclamados em festivais internacionais.</p>
+            <p>Entre os destaques da <a href="https://koffko.com.br/pt/program-curitiba/" target="_blank" class="text-secundaria hover:underline">programação</a>, estão títulos como "Broker - Uma Nova Chance", do renomado diretor Hirokazu Kore-eda e com a participação da estrela IU, e o premiado "Decisão de Partir", de Park Chan-wook, que levou o prêmio de Melhor Direção em Cannes. A seleção é um prato cheio para quem aprecia narrativas complexas e a estética visual sofisticada.</p>
 
             <h2>Como Participar? O Guia Definitivo!</h2>
             <p>A melhor parte? É tudo de graça! Mas como a HallyuCuritiba é o seu guia definitivo, a gente te dá o passo a passo para não perder nada:</p>
@@ -129,7 +129,7 @@
                 <li><strong>Quando?</strong> De 18 a 24 de setembro de 2025.</li>
                 <li><strong>Onde?</strong> Cine Passeio (Rua Riachuelo, 410 - Centro).</li>
                 <li><strong>Quanto?</strong> GRATUITO!</li>
-                <li><strong>Como garantir seu lugar?</strong> Os ingressos serão distribuídos na bilheteria do Cine Passeio, uma hora antes do início de cada sessão. A dica de ouro é chegar com um pouco de antecedência, principalmente para os filmes mais aguardados! Fique de olho no <a href="https://www.instagram.com/koffko_/" target="_blank" class="text-azul-guia hover:underline">Instagram do festival</a> para mais informações.</li>
+                <li><strong>Como garantir seu lugar?</strong> Os ingressos serão distribuídos na bilheteria do Cine Passeio, uma hora antes do início de cada sessão. A dica de ouro é chegar com um pouco de antecedência, principalmente para os filmes mais aguardados! Fique de olho no <a href="https://www.instagram.com/koffko_/" target="_blank" class="text-secundaria hover:underline">Instagram do festival</a> para mais informações.</li>
             </ul>
 
             <p>Esta é a oportunidade perfeita para mergulhar em histórias fascinantes e ver na tela grande o talento que consolidou a Coreia do Sul como uma potência cultural global. A HallyuCuritiba estará de olho em tudo e, quem sabe, a gente não se encontra por lá?</p>
@@ -139,29 +139,29 @@
 
         <!-- Seção de Comentários -->
         <div class="container mx-auto max-w-3xl mt-16">
-            <div class="bg-bege-pinhao p-8 rounded-2xl shadow-inner">
-                <h2 class="text-3xl font-bold text-preto-carvao mb-6">Deixe seu comentário</h2>
+            <div class="bg-fundo p-8 rounded-2xl shadow-inner">
+                <h2 class="text-3xl font-bold text-texto mb-6">Deixe seu comentário</h2>
                 <form action="#" method="POST" class="space-y-6">
                     <div>
                         <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nome</label>
-                        <input type="text" name="name" id="name" required class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-azul-guia focus:ring-azul-guia text-lg">
+                        <input type="text" name="name" id="name" required class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-secundaria focus:ring-secundaria text-lg">
                     </div>
                     <div>
                         <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail (não será publicado)</label>
-                        <input type="email" name="email" id="email" required class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-azul-guia focus:ring-azul-guia text-lg">
+                        <input type="email" name="email" id="email" required class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-secundaria focus:ring-secundaria text-lg">
                     </div>
                     <div>
                         <label for="comment" class="block text-sm font-medium text-gray-700 mb-1">Comentário</label>
-                        <textarea name="comment" id="comment" rows="5" required class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-azul-guia focus:ring-azul-guia text-lg"></textarea>
+                        <textarea name="comment" id="comment" rows="5" required class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-secundaria focus:ring-secundaria text-lg"></textarea>
                     </div>
-                    <button type="submit" class="bg-azul-guia text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors duration-300 btn-hover">Enviar Comentário</button>
+                    <button type="submit" class="bg-secundaria text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors duration-300 btn-hover">Enviar Comentário</button>
                 </form>
             </div>
         </div>
     </main>
 
     <!-- Rodapé Otimizado -->
-    <footer class="bg-preto-carvao text-white py-16">
+    <footer class="bg-texto text-white py-16">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-8">
                 <!-- Logo e Descrição -->

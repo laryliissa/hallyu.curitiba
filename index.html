@@ -18,28 +18,28 @@
     <link rel="icon" href="favicon-hallyu.png" type="image/png">
 
     <!-- Estilos Personalizados -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href=".css/style.css">
 </head>
 <body class="antialiased">
 
     <!-- 1. Cabeçalho (Header) Otimizado -->
-    <header class="bg-bege-pinhao/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm border-b border-white/20">
+    <header class="bg-fundo/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm border-b border-white/20">
         <div class="container mx-auto px-6 py-2 flex justify-between items-center">
             <!-- Logo ATUALIZADA -->
             <a href="#inicio" class="flex items-center space-x-3 group">
                 <img src="images/logo-hallyu-transparente.png" alt="Logo HallyuCuritiba" class="w-14 h-14 transition-transform group-hover:scale-105">
-                <span class="text-3xl font-extrabold text-preto-carvao">HallyuCuritiba</span>
+                <span class="text-3xl font-extrabold text-texto">HallyuCuritiba</span>
             </a>
             
             <!-- Menu de Navegação (Desktop) -->
             <nav class="hidden md:flex items-center space-x-8 font-semibold">
-                <a href="#inicio" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Início</a>
-                <a href="#agenda" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Agenda</a>
-                <a href="restaurantes.html" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Restaurantes</a>
-                <a href="guia-k-stores.html" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">K-Stores</a>
-                <a href="aulas.html" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Aulas</a>
-                <a href="#artigos" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Artigos</a>
-                <a href="#sobre" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Sobre</a>
+                <a href="#inicio" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Início</a>
+                <a href="#agenda" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Agenda</a>
+                <a href="restaurantes.html" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Restaurantes</a>
+                <a href="guia-k-stores.html" class="text-gray-700 hover:text-secundaria transition-colors duration-300">K-Stores</a>
+                <a href="aulas.html" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Aulas</a>
+                <a href="#artigos" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Artigos</a>
+                <a href="#sobre" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Sobre</a>
             </nav>
             
             <!-- Botão Menu Mobile -->
@@ -54,15 +54,15 @@
         </div>
 
         <!-- Menu Mobile Otimizado -->
-        <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-bege-pinhao z-40 md:hidden">
+        <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-fundo z-40 md:hidden">
             <nav class="flex flex-col h-full justify-center items-center space-y-8">
-                <a href="#inicio" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Início</a>
-                <a href="#agenda" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Agenda</a>
-                <a href="restaurantes.html" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Restaurantes</a>
-                <a href="guia-k-stores.html" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">K-Stores</a>
-                <a href="aulas.html" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Aulas</a>
-                <a href="#artigos" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Artigos</a>
-                <a href="#sobre" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Sobre</a>
+                <a href="#inicio" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-secundaria transition-colors">Início</a>
+                <a href="#agenda" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-secundaria transition-colors">Agenda</a>
+                <a href="restaurantes.html" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-secundaria transition-colors">Restaurantes</a>
+                <a href="guia-k-stores.html" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-secundaria transition-colors">K-Stores</a>
+                <a href="aulas.html" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-secundaria transition-colors">Aulas</a>
+                <a href="#artigos" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-secundaria transition-colors">Artigos</a>
+                <a href="#sobre" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-secundaria transition-colors">Sobre</a>
             </nav>
         </div>
     </header>
@@ -77,26 +77,26 @@
                 <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight shadow-text">
                     Bem-vindos ao  
 
-                    <span class="text-amarelo-nascente">HallyuCuritiba</span>
+                    <span class="text-destaque">HallyuCuritiba</span>
                 </h1>
                 <p class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto font-medium opacity-95">
                     Seu guia definitivo para a cultura coreana em Curitiba. Descubra eventos, restaurantes, lojas e tudo sobre a Onda Coreana na nossa cidade!
                 </p>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <a href="#agenda" class="bg-amarelo-nascente text-preto-carvao px-10 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-all duration-300 shadow-lg btn-hover flex items-center">
+                    <a href="#agenda" class="bg-destaque text-texto px-10 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-all duration-300 shadow-lg btn-hover flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0h18M-4.5 12h22.5" />
                         </svg>
                         Ver Agenda de Eventos
                     </a>
-                    <a href="#mapa" class="bg-azul-guia text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition-all duration-300 shadow-lg btn-hover flex items-center">
+                    <a href="#mapa" class="bg-secundaria text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition-all duration-300 shadow-lg btn-hover flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                           <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                         </svg>
                         Explorar o Mapa
                     </a>
-                    <a href="contribua.html" class="bg-laranja-poente text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-orange-600 transition-all duration-300 shadow-lg btn-hover flex items-center">
+                    <a href="contribua.html" class="bg-destaque text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-orange-600 transition-all duration-300 shadow-lg btn-hover flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345h5.364c.518 0 .734.654.372 1.01l-4.36 3.185a.563.563 0 00-.222.635l1.654 6.103c.166.615-.547 1.097-1.067.734L12 17.431a.563.563 0 00-.652 0l-5.096 3.725c-.52.363-1.233-.119-1.067-.734l1.654-6.103a.563.563 0 00-.222-.635L2.01 9.965c-.362-.356-.146-1.01.372-1.01h5.364a.563.563 0 00.475-.345L11.48 3.5z" />
                         </svg>
@@ -110,7 +110,7 @@
         <section id="agenda" class="py-24 px-6">
             <div class="container mx-auto">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">Agenda Hallyu</h2>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-texto mb-4">Agenda Hallyu</h2>
                     <p class="text-xl text-gray-700 max-w-2xl mx-auto">Não perca nenhum evento da cultura coreana em Curitiba.</p>
                 </div>
 
@@ -120,7 +120,7 @@
                         <div id="calendar-container" class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory" style="scrollbar-width: none; -ms-overflow-style: none;">
                             <!-- Setembro -->
                             <div class="calendar-card flex-shrink-0 w-full snap-start bg-white p-8 rounded-2xl shadow-xl">
-                                <h3 class="text-2xl font-bold text-preto-carvao text-center mb-6">Setembro 2025</h3>
+                                <h3 class="text-2xl font-bold text-texto text-center mb-6">Setembro 2025</h3>
                                 <div class="grid grid-cols-7 gap-2 text-center font-bold text-gray-500 mb-4">
                                     <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
                                 </div>
@@ -136,9 +136,9 @@
                                     <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">8</div>
                                     <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">9</div>
                                     <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">10</div>
-                                    <div class="p-2 rounded cursor-pointer font-bold text-azul-guia bg-azul-guia/10" data-event-id="11">11</div>
+                                    <div class="p-2 rounded cursor-pointer font-bold text-secundaria bg-secundaria/10" data-event-id="11">11</div>
                                     <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">12</div>
-                                    <div class="p-2 rounded cursor-pointer font-bold text-laranja-poente bg-laranja-poente/10" data-event-id="13">13</div>
+                                    <div class="p-2 rounded cursor-pointer font-bold text-destaque bg-destaque/10" data-event-id="13">13</div>
                                     <div class="p-2 rounded cursor-pointer font-bold text-gray-500 bg-gray-400/10" data-event-id="14">14</div>
                                     <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">15</div>
                                     <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">16</div>
@@ -160,7 +160,7 @@
                             </div>
                             <!-- Outubro -->
                             <div class="calendar-card flex-shrink-0 w-full snap-start bg-white p-8 rounded-2xl shadow-xl ml-4">
-                                <h3 class="text-2xl font-bold text-preto-carvao text-center mb-6">Outubro 2025</h3>
+                                <h3 class="text-2xl font-bold text-texto text-center mb-6">Outubro 2025</h3>
                                 <div class="grid grid-cols-7 gap-2 text-center font-bold text-gray-500 mb-4">
                                     <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
                                 </div>
@@ -193,7 +193,7 @@
                                     <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">23</div>
                                     <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">24</div>
                                     <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">25</div>
-                                    <div class="p-2 rounded cursor-pointer font-bold text-vermelho-paixao bg-vermelho-paixao/10" data-event-id="26">26</div>
+                                    <div class="p-2 rounded cursor-pointer font-bold text-primaria bg-primaria/10" data-event-id="26">26</div>
                                     <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">27</div>
                                     <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">28</div>
                                     <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">29</div>
@@ -203,7 +203,7 @@
                             </div>
                             <!-- Novembro -->
                             <div class="calendar-card flex-shrink-0 w-full snap-start bg-white p-8 rounded-2xl shadow-xl ml-4">
-                                <h3 class="text-2xl font-bold text-preto-carvao text-center mb-6">Novembro 2025</h3>
+                                <h3 class="text-2xl font-bold text-texto text-center mb-6">Novembro 2025</h3>
                                 <div class="grid grid-cols-7 gap-2 text-center font-bold text-gray-500 mb-4">
                                     <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
                                 </div>
@@ -248,7 +248,7 @@
                             </div>
                             <!-- Dezembro -->
                             <div class="calendar-card flex-shrink-0 w-full snap-start bg-white p-8 rounded-2xl shadow-xl ml-4">
-                                <h3 class="text-2xl font-bold text-preto-carvao text-center mb-6">Dezembro 2025</h3>
+                                <h3 class="text-2xl font-bold text-texto text-center mb-6">Dezembro 2025</h3>
                                 <div class="grid grid-cols-7 gap-2 text-center font-bold text-gray-500 mb-4">
                                     <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
                                 </div>
@@ -299,18 +299,18 @@
                     <!-- Lista de Eventos Detalhados -->
                     <div class="lg:col-span-2">
                         <div id="events-setembro" class="event-list">
-                            <h3 class="text-3xl font-bold text-preto-carvao mb-6">Eventos de Setembro</h3>
+                            <h3 class="text-3xl font-bold text-texto mb-6">Eventos de Setembro</h3>
                             <div class="space-y-6">
                                 <div class="bg-white p-5 rounded-xl shadow-lg flex items-start space-x-4 card-hover cursor-pointer relative" data-event-id="11">
-                                    <div class="text-center bg-azul-guia text-white rounded-lg px-4 py-2 flex-shrink-0">
+                                    <div class="text-center bg-secundaria text-white rounded-lg px-4 py-2 flex-shrink-0">
                                         <p class="font-black text-2xl">11</p>
                                         <p class="text-xs font-bold">SET</p>
                                     </div>
                                     <div>
-                                        <h4 class="font-bold text-lg text-preto-carvao">Festival de Cinema Coreano – III Edição ✅</h4>
+                                        <h4 class="font-bold text-lg text-texto">Festival de Cinema Coreano – III Edição ✅</h4>
                                         <p class="text-sm text-gray-700">📍 Cine Passeio</p>
                                         <p class="text-sm text-gray-700 mt-1">
-                                            <a href="https://www.instagram.com/koffko_/" target="_blank" class="text-azul-guia hover:underline">
+                                            <a href="https://www.instagram.com/koffko_/" target="_blank" class="text-secundaria hover:underline">
                                                 <svg class="w-4 h-4 inline-block mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                                                 @koffko_
                                             </a>
@@ -324,15 +324,15 @@
                                 </div>
                                 
                                 <div class="bg-white p-5 rounded-xl shadow-lg flex items-start space-x-4 card-hover cursor-pointer relative" data-event-id="13">
-                                    <div class="text-center bg-laranja-poente text-white rounded-lg px-4 py-2 flex-shrink-0">
+                                    <div class="text-center bg-destaque text-white rounded-lg px-4 py-2 flex-shrink-0">
                                         <p class="font-black text-2xl">13</p>
                                         <p class="text-xs font-bold">SET</p>
                                     </div>
                                     <div>
-                                        <h4 class="font-bold text-lg text-preto-carvao">Namjooning day ✅</h4>
+                                        <h4 class="font-bold text-lg text-texto">Namjooning day ✅</h4>
                                         <p class="text-sm text-gray-700">📍 Lynk gastrô</p>
                                         <p class="text-sm text-gray-700 mt-1">
-                                            <a href="https://www.instagram.com/korean_dreams_/" target="_blank" class="text-azul-guia hover:underline">
+                                            <a href="https://www.instagram.com/korean_dreams_/" target="_blank" class="text-secundaria hover:underline">
                                                 <svg class="w-4 h-4 inline-block mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                                                 @korean_dreams_
                                             </a>
@@ -346,15 +346,15 @@
                                 </div>
                                 <!-- Evento Virgo Boys -->
                                 <div class="bg-white p-5 rounded-xl shadow-lg flex items-start space-x-4 card-hover cursor-pointer relative" data-event-id="13">
-                                    <div class="text-center bg-laranja-poente text-white rounded-lg px-4 py-2 flex-shrink-0">
+                                    <div class="text-center bg-destaque text-white rounded-lg px-4 py-2 flex-shrink-0">
                                         <p class="font-black text-2xl">13</p>
                                         <p class="text-xs font-bold">SET</p>
                                     </div>
                                     <div>
-                                        <h4 class="font-bold text-lg text-preto-carvao">Virgo Boys ✅</h4>
+                                        <h4 class="font-bold text-lg text-texto">Virgo Boys ✅</h4>
                                         <p class="text-sm text-gray-700">📍 Pingado Cafe</p>
                                         <p class="text-sm text-gray-700 mt-1">
-                                            <a href="https://www.instagram.com/magicshop.cwb/" target="_blank" class="text-azul-guia hover:underline">
+                                            <a href="https://www.instagram.com/magicshop.cwb/" target="_blank" class="text-secundaria hover:underline">
                                                 <svg class="w-4 h-4 inline-block mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                                                 @magicshop.cwb
                                             </a>
@@ -374,15 +374,15 @@
                                         <p class="text-xs font-bold">SET</p>
                                     </div>
                                     <div>
-                                        <h4 class="font-bold text-lg text-preto-carvao">1º Encontro de ATINY'S em Curitiba 🏴‍☠️ ✅</h4>
+                                        <h4 class="font-bold text-lg text-texto">1º Encontro de ATINY'S em Curitiba 🏴‍☠️ ✅</h4>
                                         <p class="text-sm text-gray-700">📍 Yami Asian Food</p>
                                         <p class="text-sm text-gray-700 mt-1">
-                                            <a href="https://www.instagram.com/halateezbr/" target="_blank" class="text-azul-guia hover:underline">
+                                            <a href="https://www.instagram.com/halateezbr/" target="_blank" class="text-secundaria hover:underline">
                                                 <svg class="w-4 h-4 inline-block mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                                                 @halateezbr
                                             </a>
                                         </p>
-                                        <p class="text-xs text-gray-500 mt-1">12:00 - 16:30 - <span class="bg-red-500 text-white font-bold py-1 px-2 rounded-full text-xs">ESGOTADO</span> R$ 30,00</p>
+                                        <p class="text-xs text-gray-500 mt-1">12:00 - 16:30 - <span class="bg-primaria text-white font-bold py-1 px-2 rounded-full text-xs">ESGOTADO</span> R$ 30,00</p>
                                     </div>
                                     <div class="absolute top-0 left-full ml-4 w-48 bg-gray-800 text-white text-sm rounded-lg p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                                         <h5 class="font-bold">1º Encontro de ATINY'S</h5>
@@ -392,18 +392,18 @@
                             </div>
                         </div>
                         <div id="events-outubro" class="event-list hidden">
-                            <h3 class="text-3xl font-bold text-preto-carvao mb-6">Eventos de Outubro</h3>
+                            <h3 class="text-3xl font-bold text-texto mb-6">Eventos de Outubro</h3>
                             <div class="space-y-6">
                                 <div class="bg-white p-5 rounded-xl shadow-lg flex items-start space-x-4 card-hover cursor-pointer relative" data-event-id="26">
-                                    <div class="text-center bg-vermelho-paixao text-white rounded-lg px-4 py-2 flex-shrink-0">
+                                    <div class="text-center bg-primaria text-white rounded-lg px-4 py-2 flex-shrink-0">
                                         <p class="font-black text-2xl">26</p>
                                         <p class="text-xs font-bold">OUT</p>
                                     </div>
                                     <div>
-                                        <h4 class="font-bold text-lg text-preto-carvao">Momento Secreto com Sung Hoon — Segunda Temporada</h4>
+                                        <h4 class="font-bold text-lg text-texto">Momento Secreto com Sung Hoon — Segunda Temporada</h4>
                                         <p class="text-sm text-gray-700">📍 Live Curitiba - Curitiba-PR</p>
                                         <p class="text-sm text-gray-700 mt-1">
-                                            <a href="https://www.instagram.com/sam_entretenimento/" target="_blank" class="text-azul-guia hover:underline">
+                                            <a href="https://www.instagram.com/sam_entretenimento/" target="_blank" class="text-secundaria hover:underline">
                                                 <svg class="w-4 h-4 inline-block mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                                                 @sam_entretenimento
                                             </a>
@@ -418,11 +418,11 @@
                             </div>
                         </div>
                         <div id="events-novembro" class="event-list hidden">
-                            <h3 class="text-3xl font-bold text-preto-carvao mb-6">Eventos de Novembro</h3>
+                            <h3 class="text-3xl font-bold text-texto mb-6">Eventos de Novembro</h3>
                             <p class="text-gray-600">Nenhum evento agendado para este mês. Fique de olho para futuras atualizações!</p>
                         </div>
                         <div id="events-dezembro" class="event-list hidden">
-                            <h3 class="text-3xl font-bold text-preto-carvao mb-6">Eventos de Dezembro</h3>
+                            <h3 class="text-3xl font-bold text-texto mb-6">Eventos de Dezembro</h3>
                             <p class="text-gray-600">Nenhum evento agendado para este mês. Fique de olho para futuras atualizações!</p>
                         </div>
                     </div>
@@ -436,7 +436,7 @@
         <section id="mapa" class="py-24 px-6 bg-white">
             <div class="container mx-auto">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">Mapa da Hallyu</h2>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-texto mb-4">Mapa da Hallyu</h2>
                     <p class="text-xl text-gray-700 max-w-2xl mx-auto">Explore os principais pontos da cultura coreana em Curitiba.</p>
                 </div>
 
@@ -447,15 +447,15 @@
                     </div>
                     
                     <!-- Legenda do Mapa -->
-                    <div class="bg-bege-pinhao p-8 rounded-2xl shadow-inner">
-                        <h3 class="text-3xl font-bold mb-8 text-preto-carvao">Legenda</h3>
+                    <div class="bg-fundo p-8 rounded-2xl shadow-inner">
+                        <h3 class="text-3xl font-bold mb-8 text-texto">Legenda</h3>
                         <ul class="space-y-5 font-semibold text-lg">
                             <li class="group">
                                 <a href="#restaurantes" class="flex items-center">
-                                    <svg class="w-6 h-6 mr-4 text-vermelho-paixao" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="1.5">
+                                    <svg class="w-6 h-6 mr-4 text-primaria" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="1.5">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a2.25 2.25 0 01-2.25 2.25H5.25a2.25 2.25 0 01-2.25-2.25v-8.25M12 4.875A3.375 3.375 0 0012 1.5v3.375m0 0a3.375 3.375 0 00-3.375 3.375h6.75A3.375 3.375 0 0012 4.875zm0 0a7.5 7.5 0 017.5 7.5H4.5a7.5 7.5 0 017.5-7.5z" />
                                     </svg>
-                                    <span class="group-hover:text-vermelho-paixao transition-colors">Restaurantes & Cafés</span>
+                                    <span class="group-hover:text-primaria transition-colors">Restaurantes & Cafés</span>
                                 </a>
                             </li>
                             <li class="flex items-center group">
@@ -466,26 +466,26 @@
                             </li>
                             <li class="group">
                                 <a href="#guia" class="flex items-center">
-                                    <svg class="w-6 h-6 mr-4 text-azul-guia" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5">
+                                    <svg class="w-6 h-6 mr-4 text-secundaria" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5">
                                         <path d="M7.5 7.67001V6.70001C7.5 4.45001 9.31 2.24001 11.56 2.03001C14.24 1.77001 16.5 3.88001 16.5 6.51001V7.89001" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                         <path d="M15.44 16.94C15.04 18.28 13.63 19.34 12 19.34C10.37 19.34 8.96 18.28 8.56 16.94" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                         <path d="M9 22H15C19.02 22 19.74 20.39 19.95 18.43L20.7 12.43C20.97 9.99 20.27 8 16 8H8C3.73 8 3.03 9.99 3.3 12.43L4.05 18.43C4.26 20.39 4.98 22 9 22Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                    <span class="group-hover:text-azul-guia transition-colors">Lojas</span>
+                                    <span class="group-hover:text-secundaria transition-colors">Lojas</span>
                                 </a>
                             </li>
                             <li class="group">
                                 <a href="#agenda" class="flex items-center">
-                                    <svg class="w-6 h-6 mr-4 text-laranja-poente" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5">
+                                    <svg class="w-6 h-6 mr-4 text-destaque" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5">
                                         <path d="M12 13.43C13.7278 13.43 15.13 12.0278 15.13 10.3C15.13 8.57222 13.7278 7.17 12 7.17C10.2722 7.17 8.87 8.57222 8.87 10.3C8.87 12.0278 10.2722 13.43 12 13.43Z" stroke="currentColor" stroke-width="1.5"/>
                                         <path d="M12 21.37C15.89 17.82 19.43 14.44 19.43 10.3C19.43 6.16 16.11 2.84 12 2.84C7.89 2.84 4.57 6.16 4.57 10.3C4.57 14.44 8.11 17.82 12 21.37Z" stroke="currentColor" stroke-width="1.5"/>
                                     </svg>
-                                    <span class="group-hover:text-laranja-poente transition-colors">Locais de Eventos</span>
+                                    <span class="group-hover:text-destaque transition-colors">Locais de Eventos</span>
                                 </a>
                             </li>
                             <li class="group">
                                 <a href="#guia" class="flex items-center">
-                                    <svg class="w-6 h-6 mr-4 text-amarelo-nascente" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="1.5">
+                                    <svg class="w-6 h-6 mr-4 text-destaque" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="1.5">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
                                     </svg>
                                     <span class="group-hover:text-yellow-600 transition-colors">Aulas & Cultura</span>
@@ -501,59 +501,59 @@
         <section id="guia" class="py-24 px-6">
             <div class="container mx-auto">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">Guia CWB</h2>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-texto mb-4">Guia CWB</h2>
                     <p class="text-xl text-gray-700 max-w-2xl mx-auto">Descubra os melhores lugares para vivenciar a cultura coreana.</p>
                 </div>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Card Restaurantes -->
                     <a href="#restaurantes" class="text-center card-hover bg-white rounded-2xl p-8 block group">
-                        <div class="w-24 h-24 mx-auto mb-6 flex items-center justify-center bg-vermelho-paixao/10 rounded-full transition-colors duration-300 group-hover:bg-vermelho-paixao">
+                        <div class="w-24 h-24 mx-auto mb-6 flex items-center justify-center bg-primaria/10 rounded-full transition-colors duration-300 group-hover:bg-primaria">
                             <!-- Ícone SVG Personalizado: Restaurantes -->
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-vermelho-paixao transition-colors duration-300 group-hover:text-white" stroke="currentColor" stroke-width="1.5">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primaria transition-colors duration-300 group-hover:text-white" stroke="currentColor" stroke-width="1.5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a2.25 2.25 0 01-2.25 2.25H5.25a2.25 2.25 0 01-2.25-2.25v-8.25M12 4.875A3.375 3.375 0 0012 1.5v3.375m0 0a3.375 3.375 0 00-3.375 3.375h6.75A3.375 3.375 0 0012 4.875zm0 0a7.5 7.5 0 017.5 7.5H4.5a7.5 7.5 0 017.5-7.5z" />
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">Restaurantes</h3>
+                        <h3 class="text-2xl font-bold text-texto mb-2">Restaurantes</h3>
                         <p class="text-gray-700">Saboreie a autêntica culinária coreana.</p>
                     </a>
 
                     <!-- Card K-Stores -->
                     <a href="guia-k-stores.html" class="text-center card-hover bg-white rounded-2xl p-8 block group">
-                        <div class="w-24 h-24 mx-auto mb-6 flex items-center justify-center bg-azul-guia/10 rounded-full transition-colors duration-300 group-hover:bg-azul-guia">
+                        <div class="w-24 h-24 mx-auto mb-6 flex items-center justify-center bg-secundaria/10 rounded-full transition-colors duration-300 group-hover:bg-secundaria">
                             <!-- Ícone SVG Personalizado: K-Stores -->
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-azul-guia transition-colors duration-300 group-hover:text-white">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-secundaria transition-colors duration-300 group-hover:text-white">
                                 <path d="M7.5 7.67001V6.70001C7.5 4.45001 9.31 2.24001 11.56 2.03001C14.24 1.77001 16.5 3.88001 16.5 6.51001V7.89001" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M15.44 16.94C15.04 18.28 13.63 19.34 12 19.34C10.37 19.34 8.96 18.28 8.56 16.94" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M9 22H15C19.02 22 19.74 20.39 19.95 18.43L20.7 12.43C20.97 9.99 20.27 8 16 8H8C3.73 8 3.03 9.99 3.3 12.43L4.05 18.43C4.26 20.39 4.98 22 9 22Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">K-Stores</h3>
+                        <h3 class="text-2xl font-bold text-texto mb-2">K-Stores</h3>
                         <p class="text-gray-700">Encontre K-beauty e produtos coreanos.</p>
                     </a>
 
                     <!-- Card Escolas/Aulas -->
                     <a href="aulas.html" class="text-center card-hover bg-white rounded-2xl p-8 block group">
-                        <div class="w-24 h-24 mx-auto mb-6 flex items-center justify-center bg-amarelo-nascente/20 rounded-full transition-colors duration-300 group-hover:bg-amarelo-nascente">
+                        <div class="w-24 h-24 mx-auto mb-6 flex items-center justify-center bg-destaque/20 rounded-full transition-colors duration-300 group-hover:bg-destaque">
                             <!-- Ícone SVG Personalizado: Escolas -->
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-amarelo-nascente transition-colors duration-300 group-hover:text-white" stroke="currentColor" stroke-width="1.5">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-destaque transition-colors duration-300 group-hover:text-white" stroke="currentColor" stroke-width="1.5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">Aulas</h3>
+                        <h3 class="text-2xl font-bold text-texto mb-2">Aulas</h3>
                         <p class="text-gray-700">Aprenda a dançar K-pop ou o idioma coreano.</p>
                     </a>
 
                     <!-- Card Pontos de Encontro -->
                     <a href="#" class="text-center card-hover bg-white rounded-2xl p-8 block group">
-                        <div class="w-24 h-24 mx-auto mb-6 flex items-center justify-center bg-laranja-poente/10 rounded-full transition-colors duration-300 group-hover:bg-laranja-poente">
+                        <div class="w-24 h-24 mx-auto mb-6 flex items-center justify-center bg-destaque/10 rounded-full transition-colors duration-300 group-hover:bg-destaque">
                             <!-- Ícone SVG Personalizado: Pontos de Encontro -->
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-laranja-poente transition-colors duration-300 group-hover:text-white">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-destaque transition-colors duration-300 group-hover:text-white">
                                 <path d="M12 13.43C13.7278 13.43 15.13 12.0278 15.13 10.3C15.13 8.57222 13.7278 7.17 12 7.17C10.2722 7.17 8.87 8.57222 8.87 10.3C8.87 12.0278 10.2722 13.43 12 13.43Z" stroke="currentColor" stroke-width="1.5"/>
                                 <path d="M12 21.37C15.89 17.82 19.43 14.44 19.43 10.3C19.43 6.16 16.11 2.84 12 2.84C7.89 2.84 4.57 6.16 4.57 10.3C4.57 14.44 8.11 17.82 12 21.37Z" stroke="currentColor" stroke-width="1.5"/>
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">Encontros</h3>
+                        <h3 class="text-2xl font-bold text-texto mb-2">Encontros</h3>
                         <p class="text-gray-700">Conecte-se com outros fãs da Hallyu.</p>
                     </a>
                 </div>
@@ -564,8 +564,8 @@
         <section id="restaurantes" class="py-24 px-6">
             <div class="container mx-auto">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">
-                        Melhores <span class="text-vermelho-paixao">Restaurantes</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-texto mb-4">
+                        Melhores <span class="text-primaria">Restaurantes</span>
                     </h2>
                     <p class="text-xl text-gray-700 max-w-2xl mx-auto">
                         Saboreie a autêntica culinária coreana nos melhores restaurantes de Curitiba.
@@ -583,7 +583,7 @@
                                 </a>
                                 <div class="p-6 flex flex-col flex-grow">
                                     <div class="flex items-center justify-between mb-3">
-                                        <a href="https://www.instagram.com/kdog.coreano/" target="_blank" class="flex items-center text-yellow-400">
+                                        <a href="https://www.instagram.com/kdog.coreano/" target="_blank" class="flex items-center text-destaque">
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                                             <span class="ml-1 text-gray-600">Ver no Instagram</span>
                                         </a>                                        
@@ -599,7 +599,7 @@
                                         🕒 Verificar horários online
                                     </div>
                                     <div class="flex gap-2">
-                                        <a href="https://www.instagram.com/kdog.coreano/" target="_blank" class="flex-1 bg-vermelho-paixao text-white py-2 rounded-lg font-medium btn-hover text-center">Ver Menu</a>
+                                        <a href="https://www.instagram.com/kdog.coreano/" target="_blank" class="flex-1 bg-primaria text-white py-2 rounded-lg font-medium btn-hover text-center">Ver Menu</a>
                                         <button class="px-4 py-2 border border-gray-300 rounded-lg btn-hover">📍</button>
                                     </div>
                                 </div>
@@ -612,7 +612,7 @@
                                 </div>
                                 <div class="p-6 flex flex-col flex-grow">                                    
                                     <div class="flex items-center justify-between mb-3">
-                                        <a href="https://share.google/8Sc098I1PJVsUaCTN" target="_blank" class="flex text-yellow-400">
+                                        <a href="https://share.google/8Sc098I1PJVsUaCTN" target="_blank" class="flex text-destaque">
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
@@ -635,7 +635,7 @@
                                         🕒 Sex-Sáb: 11:30-15:00, 18:00-22:00
                                     </div>
                                     <div class="flex gap-2">
-                                        <a href="https://saisokorea.nox.com.br/" target="_blank" class="flex-1 bg-vermelho-paixao text-white py-2 rounded-lg font-medium btn-hover text-center">Ver Menu</a>
+                                        <a href="https://saisokorea.nox.com.br/" target="_blank" class="flex-1 bg-primaria text-white py-2 rounded-lg font-medium btn-hover text-center">Ver Menu</a>
                                         <a href="https://www.google.com/maps/place/R.+Nunes+Machado,+30+-+Centro,+Curitiba+-+PR,+80250-000" target="_blank" class="px-4 py-2 border border-gray-300 rounded-lg btn-hover">📍</a>
                                     </div>
                                 </div>
@@ -648,7 +648,7 @@
                                 </div>
                                 <div class="p-6 flex flex-col flex-grow">
                                     <div class="flex items-center justify-between mb-3">
-                                        <a href="https://share.google/fqGkpFrwwpQ8QhOtL" target="_blank" class="flex text-yellow-400">
+                                        <a href="https://share.google/fqGkpFrwwpQ8QhOtL" target="_blank" class="flex text-destaque">
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
@@ -668,7 +668,7 @@
                                         🕒 Terça a Sábado, das 11h às 15h
                                     </div>
                                     <div class="flex gap-2">
-                                        <a href="https://menu.restaurantguru.com/m8/Shinys-Kitchen-Korean-Street-Food-Curitiba-menu-bo4.jpg" target="_blank" class="flex-1 bg-vermelho-paixao text-white py-2 rounded-lg font-medium btn-hover text-center">Ver Menu</a>
+                                        <a href="https://menu.restaurantguru.com/m8/Shinys-Kitchen-Korean-Street-Food-Curitiba-menu-bo4.jpg" target="_blank" class="flex-1 bg-primaria text-white py-2 rounded-lg font-medium btn-hover text-center">Ver Menu</a>
                                         <a href="https://www.google.com/maps/place/Pra%C3%A7a+Gen.+Os%C3%B3rio,+333+-+Loja+18+-+Centro,+Curitiba+-+PR,+80020-010" target="_blank" class="px-4 py-2 border border-gray-300 rounded-lg btn-hover">📍</a>
                                     </div>
                                 </div>
@@ -681,7 +681,7 @@
                                 </div>
                                 <div class="p-6 flex flex-col flex-grow">
                                     <div class="flex items-center justify-between mb-3">
-                                        <a href="https://share.google/sXGdBkGCvylzhHBxL" target="_blank" class="flex text-yellow-400">
+                                        <a href="https://share.google/sXGdBkGCvylzhHBxL" target="_blank" class="flex text-destaque">
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
@@ -701,7 +701,7 @@
                                         🕒 Seg-Sex: 11:30-15:00, Sáb-Dom: 12:00-15:00
                                     </div>
                                     <div class="flex gap-2">
-                                        <a href="https://www.instagram.com/yucozinhaoriental/" target="_blank" class="flex-1 bg-vermelho-paixao text-white py-2 rounded-lg font-medium btn-hover text-center">Ver Menu</a>
+                                        <a href="https://www.instagram.com/yucozinhaoriental/" target="_blank" class="flex-1 bg-primaria text-white py-2 rounded-lg font-medium btn-hover text-center">Ver Menu</a>
                                         <a href="https://www.google.com/maps/place/Pra%C3%A7a+Gen.+Os%C3%B3rio,+485+-+Centro,+Curitiba+-+PR,+80020-010" target="_blank" class="px-4 py-2 border border-gray-300 rounded-lg btn-hover">📍</a>
                                     </div>
                                 </div>
@@ -714,7 +714,7 @@
                                 </div>
                                 <div class="p-6 flex flex-col flex-grow">
                                     <div class="flex items-center justify-between mb-3">
-                                        <a href="https://share.google/8e2vfipQQqowqjl9J" target="_blank" class="flex items-center text-yellow-400">
+                                        <a href="https://share.google/8e2vfipQQqowqjl9J" target="_blank" class="flex items-center text-destaque">
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
@@ -734,7 +734,7 @@
                                         🕒 Seg-Sáb: 11:30-16:00
                                     </div>
                                     <div class="flex gap-2">
-                                        <a href="https://www.instagram.com/yami.asianfood/" target="_blank" class="flex-1 bg-vermelho-paixao text-white py-2 rounded-lg font-medium btn-hover text-center">Ver Menu</a>
+                                        <a href="https://www.instagram.com/yami.asianfood/" target="_blank" class="flex-1 bg-primaria text-white py-2 rounded-lg font-medium btn-hover text-center">Ver Menu</a>
                                         <a href="https://www.google.com/maps/place/Pra%C3%A7a+Gen.+Os%C3%B3rio,+477+-+Centro,+Curitiba+-+PR,+80020-010" target="_blank" class="px-4 py-2 border border-gray-300 rounded-lg btn-hover">📍</a>
                                     </div>
                                 </div>
@@ -747,7 +747,7 @@
                                 </div>
                                 <div class="p-6 flex flex-col flex-grow">
                                     <div class="flex items-center justify-between mb-3">
-                                        <a href="https://share.google/wOnVuTGy2bgzAr38D" target="_blank" class="flex text-yellow-400">
+                                        <a href="https://share.google/wOnVuTGy2bgzAr38D" target="_blank" class="flex text-destaque">
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
@@ -767,7 +767,7 @@
                                         🕒 Seg-Sex: 11:30-14:30, Sáb: 11:30-14:15, Jantar: 18:00-21:00
                                     </div>
                                     <div class="flex gap-2">
-                                        <a href="https://www.instagram.com/yoribogo_cwb/" target="_blank" class="flex-1 bg-vermelho-paixao text-white py-2 rounded-lg font-medium btn-hover text-center">Ver Menu</a>
+                                        <a href="https://www.instagram.com/yoribogo_cwb/" target="_blank" class="flex-1 bg-primaria text-white py-2 rounded-lg font-medium btn-hover text-center">Ver Menu</a>
                                         <a href="https://www.google.com/maps/place/R.+Vicente+Machado,+520+-+8+-+Centro,+Curitiba+-+PR,+80420-010" target="_blank" class="px-4 py-2 border border-gray-300 rounded-lg btn-hover">📍</a>
                                     </div>
                                 </div>
@@ -780,7 +780,7 @@
                                 </div>
                                 <div class="p-6 flex flex-col flex-grow">
                                     <div class="flex items-center justify-between mb-3">
-                                        <a href="https://maps.app.goo.gl/y37QTz7dRFzuthaQ9" target="_blank" class="flex text-yellow-400">
+                                        <a href="https://maps.app.goo.gl/y37QTz7dRFzuthaQ9" target="_blank" class="flex text-destaque">
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
@@ -800,7 +800,7 @@
                                         🕒 Seg-Sex: 08:00-17:30, Sáb: 08:00-14:30
                                     </div>
                                     <div class="flex gap-2">
-                                        <a href="https://www.instagram.com/yutogo.oficial/" target="_blank" class="flex-1 bg-vermelho-paixao text-white py-2 rounded-lg font-medium btn-hover text-center">Ver Menu</a>
+                                        <a href="https://www.instagram.com/yutogo.oficial/" target="_blank" class="flex-1 bg-primaria text-white py-2 rounded-lg font-medium btn-hover text-center">Ver Menu</a>
                                         <a href="https://maps.app.goo.gl/y37QTz7dRFzuthaQ9" target="_blank" class="px-4 py-2 border border-gray-300 rounded-lg btn-hover">📍</a>
                                     </div>
                                 </div>
@@ -815,7 +815,7 @@
                                 </a>
                                 <div class="p-6 flex flex-col flex-grow">
                                     <div class="flex items-center justify-between mb-3">
-                                        <a href="https://share.google/1LBOUdRezCqB8ViwO" target="_blank" class="flex text-yellow-400">
+                                        <a href="https://share.google/1LBOUdRezCqB8ViwO" target="_blank" class="flex text-destaque">
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
@@ -835,22 +835,22 @@
                                         🍱 Retirada de Seg a Sáb 11h às 13:45h
                                     </div>
                                     <div class="flex gap-2">
-                                        <a href="https://www.instagram.com/felicidadesdamo/" target="_blank" class="flex-1 bg-vermelho-paixao text-white py-2 rounded-lg font-medium btn-hover text-center">Ver Menu</a>
+                                        <a href="https://www.instagram.com/felicidadesdamo/" target="_blank" class="flex-1 bg-primaria text-white py-2 rounded-lg font-medium btn-hover text-center">Ver Menu</a>
                                         <a href="https://share.google/1LBOUdRezCqB8ViwO" target="_blank" class="px-4 py-2 border border-gray-300 rounded-lg btn-hover">📍</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <button id="prev-restaurant" class="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-4 bg-white/50 hover:bg-white rounded-full p-2 transition-colors z-10 shadow-md">
-                            <svg class="w-6 h-6 text-preto-carvao" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                            <svg class="w-6 h-6 text-texto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                         </button>
                         <button id="next-restaurant" class="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-4 bg-white/50 hover:bg-white rounded-full p-2 transition-colors z-10 shadow-md">
-                            <svg class="w-6 h-6 text-preto-carvao" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            <svg class="w-6 h-6 text-texto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                         </button>
                     </div>
 
                 <div class="text-center mt-12">
-                    <a href="restaurantes.html" class="bg-vermelho-paixao text-white px-8 py-4 rounded-full font-bold text-lg btn-hover">
+                    <a href="restaurantes.html" class="bg-primaria text-white px-8 py-4 rounded-full font-bold text-lg btn-hover">
                         Ver todos os restaurantes
                     </a>
                 </div>
@@ -859,14 +859,14 @@
                 <div class="bg-white rounded-2xl shadow-2xl mt-20 max-w-4xl mx-auto overflow-hidden">
                     <div class="grid md:grid-cols-2 items-center">
                         <div class="p-8 md:p-10">
-                            <h3 class="text-3xl font-extrabold text-preto-carvao mb-3">Ajude a construir o guia!</h3>
+                            <h3 class="text-3xl font-extrabold text-texto mb-3">Ajude a construir o guia!</h3>
                             <p class="text-gray-700 mb-6">Seu restaurante favorito não está na lista? Conhece um cantinho novo que abriu na cidade? Mande uma DM para nós no Instagram! Juntos, vamos deixar nosso guia cada vez mais completo.</p>
-                            <a href="https://instagram.com/HallyuCuritiba" target="_blank" class="inline-flex items-center bg-azul-guia text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 btn-hover">
+                            <a href="https://instagram.com/HallyuCuritiba" target="_blank" class="inline-flex items-center bg-secundaria text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 btn-hover">
                                 <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884zM18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
                                 Enviar Sugestão
                             </a>
                         </div>
-                        <div class="hidden md:flex bg-bege-pinhao h-full items-center justify-center p-10">
+                        <div class="hidden md:flex bg-fundo h-full items-center justify-center p-10">
                             <img src="images/logo-hallyu-transparente.png" alt="Logo HallyuCuritiba" class="w-48 h-48">
                         </div>
                     </div>
@@ -878,44 +878,44 @@
         <section id="artigos" class="py-24 px-6 bg-white">
             <div class="container mx-auto">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">Últimos Artigos</h2>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-texto mb-4">Últimos Artigos</h2>
                     <p class="text-xl text-gray-700 max-w-2xl mx-auto">Análises, guias e notícias do universo Hallyu.</p>
                 </div>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <article class="bg-bege-pinhao rounded-2xl shadow-lg overflow-hidden card-hover group">
+                    <article class="bg-fundo rounded-2xl shadow-lg overflow-hidden card-hover group">
                         <div class="p-8">
-                            <div class="text-sm text-azul-guia font-semibold mb-2 uppercase tracking-wide">BELEZA</div>
-                            <h3 class="text-2xl font-bold text-preto-carvao mb-4 group-hover:text-vermelho-paixao transition-colors">Onde Comprar K-Beauty em Curitiba: Guia Definitivo</h3>
+                            <div class="text-sm text-secundaria font-semibold mb-2 uppercase tracking-wide">BELEZA</div>
+                            <h3 class="text-2xl font-bold text-texto mb-4 group-hover:text-primaria transition-colors">Onde Comprar K-Beauty em Curitiba: Guia Definitivo</h3>
                             <p class="text-gray-700 mb-6">Descubra os melhores lugares em Curitiba para encontrar produtos de K-Beauty e manter sua rotina de skincare coreana impecável.</p>
-                            <a href="artigo-k-beauty.html" class="font-bold text-vermelho-paixao hover:text-red-700 transition-colors">Ler mais →</a>
+                            <a href="artigo-k-beauty.html" class="font-bold text-primaria hover:text-red-700 transition-colors">Ler mais →</a>
                         </div>
                     </article>
 
-                    <article class="bg-bege-pinhao rounded-2xl shadow-lg overflow-hidden card-hover group">
+                    <article class="bg-fundo rounded-2xl shadow-lg overflow-hidden card-hover group">
                         <div class="p-8">
-                            <div class="text-sm text-azul-guia font-semibold mb-2 uppercase tracking-wide">GASTRONOMIA</div>
-                            <h3 class="text-2xl font-bold text-preto-carvao mb-4 group-hover:text-vermelho-paixao transition-colors">Guia Definitivo da Culinária Coreana em Curitiba</h3>
+                            <div class="text-sm text-secundaria font-semibold mb-2 uppercase tracking-wide">GASTRONOMIA</div>
+                            <h3 class="text-2xl font-bold text-texto mb-4 group-hover:text-primaria transition-colors">Guia Definitivo da Culinária Coreana em Curitiba</h3>
                             <p class="text-gray-700 mb-6">Annyeong, Hallyu Fam! 🌊✨ Descubra os sabores, pratos e os melhores restaurantes coreanos na nossa cidade.</p>
-                            <a href="artigo-gastronomia.html" class="font-bold text-vermelho-paixao hover:text-red-700 transition-colors">Ler mais →</a>
+                            <a href="artigo-gastronomia.html" class="font-bold text-primaria hover:text-red-700 transition-colors">Ler mais →</a>
                         </div>
                     </article>
 
-                    <article class="bg-bege-pinhao rounded-2xl shadow-lg overflow-hidden card-hover group">
+                    <article class="bg-fundo rounded-2xl shadow-lg overflow-hidden card-hover group">
                         <div class="p-8">
-                            <div class="text-sm text-azul-guia font-semibold mb-2 uppercase tracking-wide">EVENTOS</div>
-                            <h3 class="text-2xl font-bold text-preto-carvao mb-4 group-hover:text-vermelho-paixao transition-colors">A Lição do Hallyu Korean Fest: Curitiba e a Força da Sua Onda</h3>
+                            <div class="text-sm text-secundaria font-semibold mb-2 uppercase tracking-wide">EVENTOS</div>
+                            <h3 class="text-2xl font-bold text-texto mb-4 group-hover:text-primaria transition-colors">A Lição do Hallyu Korean Fest: Curitiba e a Força da Sua Onda</h3>
                             <p class="text-gray-700 mb-6">Uma reflexão sobre o impacto, os desafios e o futuro dos grandes eventos de cultura coreana na cidade.</p>
-                            <a href="artigo-hallyu-fest.html" class="font-bold text-vermelho-paixao hover:text-red-700 transition-colors">Ler mais →</a>
+                            <a href="artigo-hallyu-fest.html" class="font-bold text-primaria hover:text-red-700 transition-colors">Ler mais →</a>
                         </div>
                     </article>
 
-                    <article class="bg-bege-pinhao rounded-2xl shadow-lg overflow-hidden card-hover group">
+                    <article class="bg-fundo rounded-2xl shadow-lg overflow-hidden card-hover group">
                         <div class="p-8">
-                            <div class="text-sm text-azul-guia font-semibold mb-2 uppercase tracking-wide">EVENTOS</div>
-                            <h3 class="text-2xl font-bold text-preto-carvao mb-4 group-hover:text-vermelho-paixao transition-colors">KOFF 2025: O Guia Completo para a Semana do Cinema Coreano</h3>
+                            <div class="text-sm text-secundaria font-semibold mb-2 uppercase tracking-wide">EVENTOS</div>
+                            <h3 class="text-2xl font-bold text-texto mb-4 group-hover:text-primaria transition-colors">KOFF 2025: O Guia Completo para a Semana do Cinema Coreano</h3>
                             <p class="text-gray-700 mb-6">O KOFF - Korean Film Festival está de volta! Saiba tudo sobre a edição de 2025, que acontece no Cine Passeio, e prepare-se para uma semana de imersão na cinematografia coreana.</p>
-                            <a href="artigo-koff-2025.html" class="font-bold text-vermelho-paixao hover:text-red-700 transition-colors">Ler mais →</a>
+                            <a href="artigo-koff-2025.html" class="font-bold text-primaria hover:text-red-700 transition-colors">Ler mais →</a>
                         </div>
                     </article>
                 </div>
@@ -923,7 +923,7 @@
         </section>
 
         <!-- 7. Newsletter Otimizada -->
-        <section class="py-24 px-6 bg-azul-guia text-white">
+        <section class="py-24 px-6 bg-secundaria text-white">
             <div class="container mx-auto text-center">
                 <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Fique por Dentro do Hallyu</h2>
                 <p class="text-xl mb-12 opacity-90 max-w-2xl mx-auto">Receba as últimas novidades da cultura coreana em Curitiba diretamente no seu e-mail.</p>
@@ -933,10 +933,10 @@
                         id="newsletterEmail"
                         type="email" 
                         placeholder="Seu melhor e-mail" 
-                        class="flex-1 px-6 py-4 rounded-full text-gray-900 focus:outline-none focus:ring-4 focus:ring-amarelo-nascente/50 text-lg"
+                        class="flex-1 px-6 py-4 rounded-full text-gray-900 focus:outline-none focus:ring-4 focus:ring-destaque/50 text-lg"
                         required
                     >
-                    <button type="submit" class="bg-amarelo-nascente text-preto-carvao px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-all duration-300 btn-hover">
+                    <button type="submit" class="bg-destaque text-texto px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-all duration-300 btn-hover">
                         Inscrever
                     </button>
                 </form>
@@ -949,13 +949,13 @@
         <section id="sobre" class="py-24 px-6 bg-white">
             <div class="container mx-auto">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">Sobre Nós</h2>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-texto mb-4">Sobre Nós</h2>
                     <p class="text-xl text-gray-700 max-w-2xl mx-auto">Conheça a história por trás do HallyuCuritiba.</p>
                 </div>
 
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div>
-                        <h3 class="text-3xl font-bold text-preto-carvao mb-6">Nossa Missão</h3>
+                        <h3 class="text-3xl font-bold text-texto mb-6">Nossa Missão</h3>
                         <p class="text-lg text-gray-700 mb-6 leading-relaxed">
                             Somos fãs apaixonados pela cultura coreana que decidiram criar um espaço centralizado para toda a comunidade Hallyu de Curitiba. Nosso objetivo é conectar pessoas, divulgar eventos e fortalecer os laços entre os amantes da cultura coreana na nossa cidade.
                         </p>
@@ -963,37 +963,37 @@
                             Há mais de 6 anos acompanhamos de perto o crescimento da Onda Coreana em Curitiba, e agora queremos compartilhar todo esse conhecimento com vocês.
                         </p>
                         <div class="flex space-x-4">
-                            <a href="https://instagram.com/HallyuCuritiba" target="_blank" class="bg-vermelho-paixao text-white px-6 py-3 rounded-full font-bold hover:bg-red-700 transition-colors btn-hover">
+                            <a href="https://instagram.com/HallyuCuritiba" target="_blank" class="bg-primaria text-white px-6 py-3 rounded-full font-bold hover:bg-red-700 transition-colors btn-hover">
                                 Siga no Instagram
                             </a>
-                            <a href="contribua.html" class="border-2 border-azul-guia text-azul-guia px-6 py-3 rounded-full font-bold hover:bg-azul-guia hover:text-white transition-colors btn-hover">
+                            <a href="contribua.html" class="border-2 border-secundaria text-secundaria px-6 py-3 rounded-full font-bold hover:bg-secundaria hover:text-white transition-colors btn-hover">
                                 Entre em Contato
                             </a>
                         </div>
                     </div>
-                    <div class="bg-bege-pinhao p-8 rounded-2xl">
-                        <h4 class="text-2xl font-bold text-preto-carvao mb-6">Por que criamos o HallyuCuritiba?</h4>
+                    <div class="bg-fundo p-8 rounded-2xl">
+                        <h4 class="text-2xl font-bold text-texto mb-6">Por que criamos o HallyuCuritiba?</h4>
                         <ul class="space-y-4 text-gray-700">
                             <li class="flex items-start">
-                                <svg class="w-6 h-6 text-vermelho-paixao mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-6 h-6 text-primaria mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
                                     <circle cx="12" cy="12" r="8" />
                                 </svg>
                                 <span>Para centralizar informações sobre eventos e locais</span>
                             </li>
                             <li class="flex items-start">
-                                <svg class="w-6 h-6 text-azul-guia mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-6 h-6 text-secundaria mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
                                     <rect x="4" y="4" width="16" height="16" rx="2"/>
                                 </svg>
                                 <span>Para fortalecer a comunidade local de fãs</span>
                             </li>
                             <li class="flex items-start">
-                                <svg class="w-6 h-6 text-laranja-poente mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-6 h-6 text-destaque mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M12 2 L2 12 L12 22 L22 12 Z" />
                                 </svg>
                                 <span>Para divulgar estabelecimentos que apoiam a cultura coreana</span>
                             </li>
                             <li class="flex items-start">
-                                <svg class="w-6 h-6 text-amarelo-nascente mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-6 h-6 text-destaque mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M12 0 L14.5 9.5 L24 12 L14.5 14.5 L12 24 L9.5 14.5 L0 12 L9.5 9.5 Z" />
                                 </svg>
                                 <span>Para criar conteúdo de qualidade sobre o universo Hallyu</span>
@@ -1006,7 +1006,7 @@
     </main>
 
     <!-- 9. Rodapé Otimizado -->
-    <footer class="bg-preto-carvao text-white py-16">
+    <footer class="bg-texto text-white py-16">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-8">
                 <!-- Logo e Descrição -->
@@ -1019,15 +1019,15 @@
                         Seu guia definitivo para a cultura coreana em Curitiba. Conectando fãs, promovendo eventos e celebrando o Hallyu no Paraná.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="https://instagram.com/HallyuCuritiba" target="_blank" class="text-gray-400 hover:text-vermelho-paixao transition-colors">
+                        <a href="https://instagram.com/HallyuCuritiba" target="_blank" class="text-gray-400 hover:text-primaria transition-colors">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                         </a>
-                        <a href="https://tiktok.com/@HallyuCuritiba" target="_blank" class="text-gray-400 hover:text-vermelho-paixao transition-colors">
+                        <a href="https://tiktok.com/@HallyuCuritiba" target="_blank" class="text-gray-400 hover:text-primaria transition-colors">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
                             </svg>
                         </a>
-                        <a href="https://youtube.com/@HallyuCuritiba" target="_blank" class="text-gray-400 hover:text-vermelho-paixao transition-colors">
+                        <a href="https://youtube.com/@HallyuCuritiba" target="_blank" class="text-gray-400 hover:text-primaria transition-colors">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                             </svg>
