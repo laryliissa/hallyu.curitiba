@@ -17,25 +17,25 @@
     <link rel="icon" href="images/favicon-hallyu.png" type="image/png">
 
     <!-- Estilos Personalizados -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="antialiased">
 
     <!-- Cabeçalho Padrão -->
-    <header class="bg-fundo/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm border-b border-white/20">
+    <header class="bg-bege-pinhao/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm border-b border-white/20">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-3 group">
                 <img src="images/logo-hallyu-transparente.png" alt="Logo HallyuCuritiba" class="w-14 h-14 transition-transform group-hover:scale-105">
-                <span class="text-2xl font-extrabold text-texto">HallyuCuritiba</span>
+                <span class="text-2xl font-extrabold text-preto-carvao">HallyuCuritiba</span>
             </a>
             <nav class="hidden md:flex items-center space-x-8 font-semibold">
-                <a href="index.html#inicio" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Início</a>
-                <a href="index.html#agenda" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Agenda</a>
-                <a href="restaurantes.html" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Restaurantes</a>
-                <a href="guia-k-stores.html" class="text-secundaria font-bold">K-Stores</a>
-                <a href="aulas.html" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Aulas</a>
-                <a href="index.html#artigos" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Artigos</a>
-                <a href="index.html#sobre" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Sobre</a>
+                <a href="index.html#inicio" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Início</a>
+                <a href="index.html#agenda" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Agenda</a>
+                <a href="restaurantes.html" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Restaurantes</a>
+                <a href="guia-k-stores.html" class="text-azul-guia font-bold">K-Stores</a>
+                <a href="aulas.html" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Aulas</a>
+                <a href="index.html#artigos" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Artigos</a>
+                <a href="index.html#sobre" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Sobre</a>
             </nav>
             <button class="md:hidden text-gray-700 z-50 relative" onclick="toggleMobileMenu()">
                 <svg id="menu-open-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
@@ -43,15 +43,15 @@
             </button>
         </div>
         <!-- Menu Mobile Otimizado -->
-        <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-fundo z-40 md:hidden">
+        <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-bege-pinhao z-40 md:hidden">
             <nav class="flex flex-col h-full justify-center items-center space-y-8">
-                <a href="index.html#inicio" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-secundaria transition-colors">Início</a>
-                <a href="index.html#agenda" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-secundaria transition-colors">Agenda</a>
-                <a href="restaurantes.html" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-secundaria transition-colors">Restaurantes</a>
-                <a href="guia-k-stores.html" onclick="toggleMobileMenu()" class="text-3xl font-bold text-secundaria transition-colors">K-Stores</a>
-                <a href="aulas.html" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-secundaria transition-colors">Aulas</a>
-                <a href="index.html#artigos" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-secundaria transition-colors">Artigos</a>
-                <a href="index.html#sobre" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-secundaria transition-colors">Sobre</a>
+                <a href="index.html#inicio" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Início</a>
+                <a href="index.html#agenda" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Agenda</a>
+                <a href="restaurantes.html" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Restaurantes</a>
+                <a href="guia-k-stores.html" onclick="toggleMobileMenu()" class="text-3xl font-bold text-azul-guia transition-colors">K-Stores</a>
+                <a href="aulas.html" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Aulas</a>
+                <a href="index.html#artigos" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Artigos</a>
+                <a href="index.html#sobre" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Sobre</a>
             </nav>
         </div>
     </header>
@@ -59,39 +59,39 @@
     <main class="py-16 px-6 bg-white">
         <div class="container mx-auto max-w-4xl">
             <header class="text-center mb-16">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-texto mb-4">Guia de K-Stores em Curitiba</h1>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">Guia de K-Stores em Curitiba</h1>
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">Do Álbum do seu Bias aos Ingredientes para o Kimchi Perfeito!</p>
                 <p class="mt-4 text-gray-700">Annyeong, chingu! ✨ Se você já viveu a saga de tentar encontrar um álbum lacrado, um lightstick oficial ou aquele ingrediente secreto para o seu tteokbokki, seus problemas acabaram! O HallyuCuritiba mapeou a cidade e criou o guia definitivo de lojas com produtos coreanos. De K-pop a K-food, aqui você encontra tudo. Fighting!</p>
             </header>
 
             <section id="kpop" class="mb-16">
-                <h2 class="text-3xl font-bold text-secundaria mb-8 border-l-4 border-primaria pl-4">🎶 K-Pop & Merch</h2>
+                <h2 class="text-3xl font-bold text-azul-guia mb-8 border-l-4 border-vermelho-paixao pl-4">🎶 K-Pop & Merch</h2>
                 <div class="grid md:grid-cols-2 gap-8 items-stretch">
                     <!-- Card Livrarias Curitiba -->
-                    <div class="store-card bg-fundo p-6 rounded-xl shadow-lg card-hover flex flex-col">
-                        <h3 class="text-2xl font-bold text-texto mb-2">Livrarias Curitiba</h3>
+                    <div class="store-card bg-bege-pinhao p-6 rounded-xl shadow-lg card-hover flex flex-col">
+                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">Livrarias Curitiba</h3>
                         <p class="text-gray-700 mb-4 flex-grow">Uma das maiores redes de livrarias do país, que possui uma seção dedicada ao K-pop com álbuns, livros e biografias. É o lugar mais acessível para encontrar lançamentos oficiais.</p>
-                        <div class="bg-blue-50 border-l-4 border-secundaria p-4 rounded-lg my-4">
+                        <div class="bg-blue-50 border-l-4 border-azul-guia p-4 rounded-lg my-4">
                             <p class="text-sm italic text-gray-800"><strong>Dica do HallyuBot:</strong> Verifique o estoque no site antes de ir à loja física, especialmente para os comebacks mais aguardados!</p>
                         </div>
                         <div class="mt-auto text-sm text-gray-600">
                             <p class="font-semibold"><strong>Endereços:</strong> Várias unidades (Palladium, Estação, etc.)</p>
-                            <a href="https://www.instagram.com/livrarias.curitiba/" target="_blank" class="inline-flex items-center text-secundaria hover:text-primaria transition-colors mt-2">
+                            <a href="https://www.instagram.com/livrarias.curitiba/" target="_blank" class="inline-flex items-center text-azul-guia hover:text-vermelho-paixao transition-colors mt-2">
                                 <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                                 @livrarias.curitiba
                             </a>
                         </div>
                     </div>
                     <!-- Card Itiban -->
-                    <div class="store-card bg-fundo p-6 rounded-xl shadow-lg card-hover flex flex-col">
-                        <h3 class="text-2xl font-bold text-texto mb-2">Itiban Comic Shop</h3>
+                    <div class="store-card bg-bege-pinhao p-6 rounded-xl shadow-lg card-hover flex flex-col">
+                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">Itiban Comic Shop</h3>
                         <p class="text-gray-700 mb-4 flex-grow">Embora focada em HQs e mangás, a Itiban frequentemente traz álbuns de K-pop e trilhas sonoras de animes e doramas. Um verdadeiro achado!</p>
-                        <div class="bg-blue-50 border-l-4 border-secundaria p-4 rounded-lg my-4">
+                        <div class="bg-blue-50 border-l-4 border-azul-guia p-4 rounded-lg my-4">
                             <p class="text-sm italic text-gray-800"><strong>Dica do HallyuBot:</strong> Siga o Instagram deles. Por serem uma loja especializada, eles costumam anunciar as novidades de K-pop que chegam por lá.</p>
                         </div>
                         <div class="mt-auto text-sm text-gray-600">
                             <p class="font-semibold"><strong>Endereço:</strong> Av. Silva Jardim, 845 - Rebouças</p>
-                            <a href="https://www.instagram.com/itibancomicshop/" target="_blank" class="inline-flex items-center text-secundaria hover:text-primaria transition-colors mt-2">
+                            <a href="https://www.instagram.com/itibancomicshop/" target="_blank" class="inline-flex items-center text-azul-guia hover:text-vermelho-paixao transition-colors mt-2">
                                 <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                                 @itibancomicshop
                             </a>
@@ -101,48 +101,48 @@
             </section>
 
             <section id="kfood" class="mb-16">
-                <h2 class="text-3xl font-bold text-secundaria mb-8 border-l-4 border-primaria pl-4">🍜 K-Food & Mercados</h2>
+                <h2 class="text-3xl font-bold text-azul-guia mb-8 border-l-4 border-vermelho-paixao pl-4">🍜 K-Food & Mercados</h2>
                 <div class="grid md:grid-cols-2 gap-8 items-stretch">
                     <!-- Card Bonsai -->
-                    <div class="store-card bg-fundo p-6 rounded-xl shadow-lg card-hover flex flex-col">
-                        <h3 class="text-2xl font-bold text-texto mb-2">Bonsai Mercearia</h3>
+                    <div class="store-card bg-bege-pinhao p-6 rounded-xl shadow-lg card-hover flex flex-col">
+                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">Bonsai Mercearia</h3>
                         <p class="text-gray-700 mb-4 flex-grow">Um clássico no Mercado Municipal. Possui uma enorme variedade de produtos asiáticos, incluindo uma ótima seleção coreana com lámens, soju, snacks e ingredientes como gochujang.</p>
-                        <div class="bg-blue-50 border-l-4 border-secundaria p-4 rounded-lg my-4">
+                        <div class="bg-blue-50 border-l-4 border-azul-guia p-4 rounded-lg my-4">
                             <p class="text-sm italic text-gray-800"><strong>Dica do HallyuBot:</strong> É o lugar perfeito para montar seu "kit de sobrevivência para dorameiros" com todas as guloseimas que você vê nas séries!</p>
                         </div>
                         <div class="mt-auto text-sm text-gray-600">
                             <p class="font-semibold"><strong>Endereços:</strong> Mercado Municipal - Av. Sete de Setembro, 1865 - Box 266</p>
-                            <a href="https://www.instagram.com/bonsaimercearia/" target="_blank" class="inline-flex items-center text-secundaria hover:text-primaria transition-colors mt-2">
+                            <a href="https://www.instagram.com/bonsaimercearia/" target="_blank" class="inline-flex items-center text-azul-guia hover:text-vermelho-paixao transition-colors mt-2">
                                 <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                                 @bonsaimercearia
                             </a>
                         </div>
                     </div>
                     <!-- Card Sarang -->
-                    <div class="store-card bg-fundo p-6 rounded-xl shadow-lg card-hover flex flex-col">
-                        <h3 class="text-2xl font-bold text-texto mb-2">Sarang</h3>
+                    <div class="store-card bg-bege-pinhao p-6 rounded-xl shadow-lg card-hover flex flex-col">
+                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">Sarang</h3>
                         <p class="text-gray-700 mb-4 flex-grow">Loja charmosa no Shopping Palladium com foco em produtos coreanos. Lá você encontra desde salgadinhos e doces famosos até presentes e itens de papelaria fofos.</p>
-                        <div class="bg-blue-50 border-l-4 border-secundaria p-4 rounded-lg my-4">
+                        <div class="bg-blue-50 border-l-4 border-azul-guia p-4 rounded-lg my-4">
                             <p class="text-sm italic text-gray-800"><strong>Dica do HallyuBot:</strong> Ideal para encontrar um presente rápido e temático ou para provar aquele snack que viralizou no TikTok.</p>
                         </div>
                         <div class="mt-auto text-sm text-gray-600">
                             <p class="font-semibold"><strong>Endereços:</strong> Shopping Palladium - Av. Pres. Kennedy, 4121 - Portão</p>
-                            <a href="https://www.instagram.com/sarang.cwb/" target="_blank" class="inline-flex items-center text-secundaria hover:text-primaria transition-colors mt-2">
+                            <a href="https://www.instagram.com/sarang.cwb/" target="_blank" class="inline-flex items-center text-azul-guia hover:text-vermelho-paixao transition-colors mt-2">
                                 <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                                 @sarang.cwb
                             </a>
                         </div>
                     </div>
                     <!-- Card Yuky -->
-                     <div class="store-card bg-fundo p-6 rounded-xl shadow-lg card-hover flex flex-col">
-                        <h3 class="text-2xl font-bold text-texto mb-2">Yuky Produtos Orientais</h3>
+                     <div class="store-card bg-bege-pinhao p-6 rounded-xl shadow-lg card-hover flex flex-col">
+                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">Yuky Produtos Orientais</h3>
                         <p class="text-gray-700 mb-4 flex-grow">Mercearia completa com grande foco em produtos importados, incluindo muitos itens coreanos. Ótimo para encontrar sorvetes Melona, bebidas e uma variedade de massas e temperos.</p>
-                        <div class="bg-blue-50 border-l-4 border-secundaria p-4 rounded-lg my-4">
+                        <div class="bg-blue-50 border-l-4 border-azul-guia p-4 rounded-lg my-4">
                             <p class="text-sm italic text-gray-800"><strong>Dica do HallyuBot:</strong> Se você quer se aventurar na cozinha coreana, a Yuky é uma parada obrigatória para encontrar todos os ingredientes.</p>
                         </div>
                         <div class="mt-auto text-sm text-gray-600">
                             <p class="font-semibold"><strong>Endereço:</strong> Av. Pres. Arthur da Silva Bernardes, 1370 - Portão</p>
-                            <a href="https://www.instagram.com/yukyprodutosorientais/" target="_blank" class="inline-flex items-center text-secundaria hover:text-primaria transition-colors mt-2">
+                            <a href="https://www.instagram.com/yukyprodutosorientais/" target="_blank" class="inline-flex items-center text-azul-guia hover:text-vermelho-paixao transition-colors mt-2">
                                 <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                                 @yukyprodutosorientais
                             </a>
@@ -152,33 +152,33 @@
             </section>
 
             <section id="kbeauty" class="mb-16">
-                <h2 class="text-3xl font-bold text-secundaria mb-8 border-l-4 border-primaria pl-4">🧴 K-Beauty & Skincare</h2>
+                <h2 class="text-3xl font-bold text-azul-guia mb-8 border-l-4 border-vermelho-paixao pl-4">🧴 K-Beauty & Skincare</h2>
                 <div class="grid md:grid-cols-2 gap-8 items-stretch">
                     <!-- Card SKEENLAB -->
-                    <div class="store-card bg-fundo p-6 rounded-xl shadow-lg card-hover flex flex-col">
-                        <h3 class="text-2xl font-bold text-texto mb-2">SKEENLAB</h3>
+                    <div class="store-card bg-bege-pinhao p-6 rounded-xl shadow-lg card-hover flex flex-col">
+                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">SKEENLAB</h3>
                         <p class="text-gray-700 mb-4 flex-grow">A boutique do skincare asiático no Batel. Loja super especializada em K-beauty e J-beauty, com curadoria de marcas e produtos de alta qualidade. Oferecem consultoria para montar sua rotina.</p>
-                        <div class="bg-blue-50 border-l-4 border-secundaria p-4 rounded-lg my-4">
+                        <div class="bg-blue-50 border-l-4 border-azul-guia p-4 rounded-lg my-4">
                             <p class="text-sm italic text-gray-800"><strong>Dica do HallyuBot:</strong> Se você quer investir seriamente na sua pele, comece por aqui. A experiência de compra é um diferencial!</p>
                         </div>
                         <div class="mt-auto text-sm text-gray-600">
                             <p class="font-semibold"><strong>Endereço:</strong> Rua Gabriel de Lara, 121 - Batel</p>
-                            <a href="https://www.instagram.com/skeenlab/" target="_blank" class="inline-flex items-center text-secundaria hover:text-primaria transition-colors mt-2">
+                            <a href="https://www.instagram.com/skeenlab/" target="_blank" class="inline-flex items-center text-azul-guia hover:text-vermelho-paixao transition-colors mt-2">
                                 <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                                 @skeenlab
                             </a>
                         </div>
                     </div>
                     <!-- Card Miho -->
-                    <div class="store-card bg-fundo p-6 rounded-xl shadow-lg card-hover flex flex-col">
-                        <h3 class="text-2xl font-bold text-texto mb-2">Miho Asian Beauty</h3>
+                    <div class="store-card bg-bege-pinhao p-6 rounded-xl shadow-lg card-hover flex flex-col">
+                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">Miho Asian Beauty</h3>
                         <p class="text-gray-700 mb-4 flex-grow">Outra loja 100% focada em cosméticos asiáticos, sendo uma referência para encontrar produtos autênticos, desde os mais famosos até marcas de nicho. Ótimas avaliações da comunidade.</p>
-                        <div class="bg-blue-50 border-l-4 border-secundaria p-4 rounded-lg my-4">
+                        <div class="bg-blue-50 border-l-4 border-azul-guia p-4 rounded-lg my-4">
                             <p class="text-sm italic text-gray-800"><strong>Dica do HallyuBot:</strong> Fique de olho nas redes sociais deles para novidades, pois costumam trazer lançamentos direto da Coreia.</p>
                         </div>
                         <div class="mt-auto text-sm text-gray-600">
                             <p class="font-semibold"><strong>Endereço:</strong> R. Zeila Moura dos Santos, 101 - Cristo Rei</p>
-                            <a href="https://www.instagram.com/mihobeauty.br/" target="_blank" class="inline-flex items-center text-secundaria hover:text-primaria transition-colors mt-2">
+                            <a href="https://www.instagram.com/mihobeauty.br/" target="_blank" class="inline-flex items-center text-azul-guia hover:text-vermelho-paixao transition-colors mt-2">
                                 <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                                 @mihobeauty.br
                             </a>
@@ -188,33 +188,33 @@
             </section>
             
             <section id="fanmade" class="mb-16">
-                <h2 class="text-3xl font-bold text-secundaria mb-8 border-l-4 border-primaria pl-4">💖 Lojas Fanmade & Grupos de Compra</h2>
+                <h2 class="text-3xl font-bold text-azul-guia mb-8 border-l-4 border-vermelho-paixao pl-4">💖 Lojas Fanmade & Grupos de Compra</h2>
                 <div class="grid md:grid-cols-2 gap-8 items-stretch">
                     <!-- Card Loja Fanmade 1 (Exemplo) -->
-                    <div class="store-card bg-fundo p-6 rounded-xl shadow-lg card-hover flex flex-col">
-                        <h3 class="text-2xl font-bold text-texto mb-2">Magic Shop CWB</h3>
+                    <div class="store-card bg-bege-pinhao p-6 rounded-xl shadow-lg card-hover flex flex-col">
+                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">Magic Shop CWB</h3>
                         <p class="text-gray-700 mb-4 flex-grow">Loja de Curitiba especializada em produtos fanmade, como photocards, adesivos e itens temáticos de diversos grupos de K-Pop. Frequentemente organizam eventos e encontros.</p>
-                        <div class="bg-blue-50 border-l-4 border-secundaria p-4 rounded-lg my-4">
+                        <div class="bg-blue-50 border-l-4 border-azul-guia p-4 rounded-lg my-4">
                             <p class="text-sm italic text-gray-800"><strong>Dica do HallyuBot:</strong> Fique de olho nos stories para não perder os lançamentos de coleções limitadas e os famosos "GOs" (Group Orders).</p>
                         </div>
                         <div class="mt-auto text-sm text-gray-600">
                             <p class="font-semibold"><strong>Como comprar:</strong> Vendas diretas pelo Instagram.</p>
-                            <a href="https://www.instagram.com/magicshop.cwb/" target="_blank" class="inline-flex items-center text-secundaria hover:text-primaria transition-colors mt-2">
+                            <a href="https://www.instagram.com/magicshop.cwb/" target="_blank" class="inline-flex items-center text-azul-guia hover:text-vermelho-paixao transition-colors mt-2">
                                 <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                                 @magicshop.cwb
                             </a>
                         </div>
                     </div>
                     <!-- Card Loja Fanmade 2 (Exemplo) -->
-                    <div class="store-card bg-fundo p-6 rounded-xl shadow-lg card-hover flex flex-col">
-                        <h3 class="text-2xl font-bold text-texto mb-2">Korean Dreams</h3>
+                    <div class="store-card bg-bege-pinhao p-6 rounded-xl shadow-lg card-hover flex flex-col">
+                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">Korean Dreams</h3>
                         <p class="text-gray-700 mb-4 flex-grow">Focada em papelaria e itens de decoração com temática de K-Pop e K-dramas. Perfeita para quem quer deixar o cantinho de estudos ou o quarto com a cara da Coreia.</p>
-                        <div class="bg-blue-50 border-l-4 border-secundaria p-4 rounded-lg my-4">
+                        <div class="bg-blue-50 border-l-4 border-azul-guia p-4 rounded-lg my-4">
                             <p class="text-sm italic text-gray-800"><strong>Dica do HallyuBot:</strong> Além dos produtos, eles também organizam encontros temáticos em cafés pela cidade. Uma ótima chance de conhecer outros fãs!</p>
                         </div>
                         <div class="mt-auto text-sm text-gray-600">
                             <p class="font-semibold"><strong>Como comprar:</strong> Vendas diretas pelo Instagram.</p>
-                            <a href="https://www.instagram.com/korean_dreams_/" target="_blank" class="inline-flex items-center text-secundaria hover:text-primaria transition-colors mt-2">
+                            <a href="https://www.instagram.com/korean_dreams_/" target="_blank" class="inline-flex items-center text-azul-guia hover:text-vermelho-paixao transition-colors mt-2">
                                 <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                                 @korean_dreams_
                             </a>
@@ -223,10 +223,10 @@
                 </div>
             </section>
 
-            <section class="text-center mt-16 bg-secundaria text-white p-8 rounded-xl shadow-lg">
+            <section class="text-center mt-16 bg-azul-guia text-white p-8 rounded-xl shadow-lg">
                 <h3 class="text-2xl font-bold mb-3">Ajude a construir o maior guia de Curitiba!</h3>
                 <p class="mb-6">Sua loja favorita não está na lista? Conhece um cantinho novo que abriu na cidade? Mande uma mensagem para nós no Instagram! Juntos, vamos deixar nosso guia cada vez mais completo!</p>
-                <a href="https://instagram.com/HallyuCuritiba" target="_blank" class="inline-block bg-primaria text-white font-bold py-3 px-8 rounded-full hover:bg-primaria-dark transition-colors duration-300 shadow-lg">
+                <a href="https://instagram.com/HallyuCuritiba" target="_blank" class="inline-block bg-vermelho-paixao text-white font-bold py-3 px-8 rounded-full hover:bg-red-700 transition-colors duration-300 shadow-lg">
                     Enviar Sugestão
                 </a>
             </section>
@@ -234,7 +234,7 @@
     </main>
 
     <!-- Rodapé Otimizado -->
-    <footer class="bg-texto text-white py-16">
+    <footer class="bg-preto-carvao text-white py-16">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-8">
                 <!-- Logo e Descrição -->

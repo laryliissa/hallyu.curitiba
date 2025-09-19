@@ -1,13 +1,10 @@
 :root {
-    --cor-fundo: #FDF8F5;
-    --cor-texto: #333333;
-    --cor-primaria: #5D7A9A;
-    --cor-secundaria: #E8A09A;
-    --cor-destaque: #F7D59C;
-    --cor-preto: #000000;
-    --cor-primaria-dark: #4B627D;
-    --cor-secundaria-dark: #D48A84;
-    --cor-destaque-dark: #F2C57D;
+    --cor-vermelho-paixao: #D81E2C;
+    --cor-azul-guia: #0054A6;
+    --cor-amarelo-nascente: #FDB913;
+    --cor-laranja-poente: #F58220;
+    --cor-bege-pinhao: #F2EBE3;
+    --cor-preto-carvao: #231F20;
 }
 
 /* Habilita a rolagem suave para todo o site */
@@ -16,9 +13,9 @@ html {
 }
 
 body {
-    background-color: var(--cor-fundo);
+    background-color: var(--cor-bege-pinhao);
     font-family: 'Inter', sans-serif;
-    color: var(--cor-texto);
+    color: var(--cor-preto-carvao);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -27,29 +24,25 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Classes de cor personalizadas */
-.bg-primaria { background-color: var(--cor-primaria); }
-.text-primaria { color: var(--cor-primaria); }
-.bg-secundaria { background-color: var(--cor-secundaria); }
-.text-secundaria { color: var(--cor-secundaria); }
-.bg-destaque { background-color: var(--cor-destaque); }
-.text-destaque { color: var(--cor-destaque); }
-.bg-fundo { background-color: var(--cor-fundo); }
-.text-texto { color: var(--cor-texto); }
-.text-preto { color: var(--cor-preto); }
+/* Previne a rolagem horizontal quando o menu mobile está ativo */
+.mobile-menu-active {
+    overflow-x: hidden;
+}
 
-.hover\:bg-primaria-dark:hover {
-    background-color: var(--cor-primaria-dark);
-}
-.hover\:bg-secundaria-dark:hover {
-    background-color: var(--cor-secundaria-dark);
-}
-.hover\:bg-destaque-dark:hover {
-    background-color: var(--cor-destaque-dark);
-}
+/* Classes de cor personalizadas para Tailwind */
+.bg-vermelho-paixao { background-color: var(--cor-vermelho-paixao); }
+.text-vermelho-paixao { color: var(--cor-vermelho-paixao); }
+.bg-azul-guia { background-color: var(--cor-azul-guia); }
+.text-azul-guia { color: var(--cor-azul-guia); }
+.bg-bege-pinhao { background-color: var(--cor-bege-pinhao); }
+.text-amarelo-nascente { color: var(--cor-amarelo-nascente); }
+.bg-amarelo-nascente { background-color: var(--cor-amarelo-nascente); }
+.text-laranja-poente { color: var(--cor-laranja-poente); }
+.bg-laranja-poente { background-color: var(--cor-laranja-poente); }
+.text-preto-carvao { color: var(--cor-preto-carvao); }
 
 .gradient-hero {
-    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+    background: linear-gradient(135deg, var(--cor-vermelho-paixao), var(--cor-azul-guia));
 }
 
 .card-hover {

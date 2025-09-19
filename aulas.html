@@ -17,40 +17,40 @@
     <link rel="icon" href="images/favicon-hallyu.png" type="image/png">
 
     <!-- Estilos Personalizados -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="antialiased">
 
     <!-- Cabeçalho Padrão -->
-    <header class="bg-fundo/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm border-b border-white/20">
+    <header class="bg-bege-pinhao/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm border-b border-white/20">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-3 group">
                 <img src="images/logo-hallyu-transparente.png" alt="Logo HallyuCuritiba" class="w-12 h-12 transition-transform group-hover:scale-105">
-                <span class="text-2xl font-extrabold text-texto">HallyuCuritiba</span>
+                <span class="text-2xl font-extrabold text-preto-carvao">HallyuCuritiba</span>
             </a>
             <nav class="hidden md:flex items-center space-x-8 font-semibold">
-                <a href="index.html#inicio" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Início</a>
-                <a href="index.html#agenda" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Agenda</a>
-                <a href="restaurantes.html" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Restaurantes</a>
-                <a href="guia-k-stores.html" class="text-gray-700 hover:text-secundaria transition-colors duration-300">K-Stores</a>
-                <a href="aulas.html" class="text-secundaria font-bold">Aulas</a>
-                <a href="index.html#artigos" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Artigos</a>
-                <a href="index.html#sobre" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Sobre</a>
+                <a href="index.html#inicio" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Início</a>
+                <a href="index.html#agenda" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Agenda</a>
+                <a href="restaurantes.html" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Restaurantes</a>
+                <a href="guia-k-stores.html" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">K-Stores</a>
+                <a href="aulas.html" class="text-azul-guia font-bold">Aulas</a>
+                <a href="index.html#artigos" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Artigos</a>
+                <a href="index.html#sobre" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Sobre</a>
             </nav>
             <button class="md:hidden text-gray-700 z-50 relative" onclick="toggleMobileMenu()">
                 <svg id="menu-open-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 <svg id="menu-close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
         </div>
-        <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-fundo z-40 md:hidden">
+        <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-bege-pinhao z-40 md:hidden">
             <nav class="flex flex-col h-full justify-center items-center space-y-8">
-                <a href="index.html#inicio" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Início</a>
-                <a href="index.html#agenda" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Agenda</a>
-                <a href="restaurantes.html" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Restaurantes</a>
-                <a href="guia-k-stores.html" class="text-3xl font-bold text-gray-700 hover:text-secundaria">K-Stores</a>
-                <a href="aulas.html" class="text-3xl font-bold text-secundaria">Aulas</a>
-                <a href="index.html#artigos" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Artigos</a>
-                <a href="index.html#sobre" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Sobre</a>
+                <a href="index.html#inicio" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Início</a>
+                <a href="index.html#agenda" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Agenda</a>
+                <a href="restaurantes.html" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Restaurantes</a>
+                <a href="guia-k-stores.html" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">K-Stores</a>
+                <a href="aulas.html" class="text-3xl font-bold text-azul-guia">Aulas</a>
+                <a href="index.html#artigos" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Artigos</a>
+                <a href="index.html#sobre" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Sobre</a>
             </nav>
         </div>
     </header>
@@ -59,37 +59,37 @@
     <main class="bg-white py-16 px-6">
         <div class="container mx-auto max-w-4xl">
             <div class="text-center mb-16">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-texto mb-4">Aulas da Hallyu em Curitiba</h1>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">Aulas da Hallyu em Curitiba</h1>
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">Seja para aprender o idioma ou para arrasar na dança, encontre aqui sua próxima aula.</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Card Aulas de Coreano -->
-                <a href="aulas-coreano.html" class="block bg-fundo p-8 rounded-2xl shadow-lg card-hover">
-                    <h2 class="text-3xl font-bold text-texto mb-4">Aulas de Coreano</h2>
+                <a href="aulas-coreano.html" class="block bg-bege-pinhao p-8 rounded-2xl shadow-lg card-hover">
+                    <h2 class="text-3xl font-bold text-preto-carvao mb-4">Aulas de Coreano</h2>
                     <p class="text-gray-700">Encontre cursos de idioma, do presencial ao online, para todos os níveis.</p>
-                    <span class="inline-block mt-6 font-bold text-secundaria">Ver opções →</span>
+                    <span class="inline-block mt-6 font-bold text-azul-guia">Ver opções →</span>
                 </a>
 
                 <!-- Card Aulas de K-Pop -->
-                <a href="aulas-kpop.html" class="block bg-fundo p-8 rounded-2xl shadow-lg card-hover">
-                    <h2 class="text-3xl font-bold text-texto mb-4">Aulas de K-Pop</h2>
+                <a href="aulas-kpop.html" class="block bg-bege-pinhao p-8 rounded-2xl shadow-lg card-hover">
+                    <h2 class="text-3xl font-bold text-preto-carvao mb-4">Aulas de K-Pop</h2>
                     <p class="text-gray-700">Descubra escolas e estúdios para aprender a dançar como seus idols.</p>
-                    <span class="inline-block mt-6 font-bold text-secundaria">Ver opções →</span>
+                    <span class="inline-block mt-6 font-bold text-azul-guia">Ver opções →</span>
                 </a>
 
                 <!-- Card Aulas de Culinária -->
-                <a href="aulas-culinaria.html" class="block bg-fundo p-8 rounded-2xl shadow-lg card-hover">
-                    <h2 class="text-3xl font-bold text-texto mb-4">Aulas de Culinária</h2>
+                <a href="aulas-culinaria.html" class="block bg-bege-pinhao p-8 rounded-2xl shadow-lg card-hover">
+                    <h2 class="text-3xl font-bold text-preto-carvao mb-4">Aulas de Culinária</h2>
                     <p class="text-gray-700">Aprenda a fazer kimchi, bulgogi e outros pratos deliciosos.</p>
-                    <span class="inline-block mt-6 font-bold text-secundaria">Ver opções →</span>
+                    <span class="inline-block mt-6 font-bold text-azul-guia">Ver opções →</span>
                 </a>
             </div>
         </div>
     </main>
 
     <!-- Rodapé Otimizado -->
-    <footer class="bg-texto text-white py-16">
+    <footer class="bg-preto-carvao text-white py-16">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-8">
                 <!-- Logo e Descrição -->

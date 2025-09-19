@@ -17,40 +17,40 @@
     <link rel="icon" href="images/favicon-hallyu.png" type="image/png">
 
     <!-- Estilos Personalizados -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="antialiased">
 
     <!-- Cabeçalho Padrão -->
-    <header class="bg-fundo/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm border-b border-white/20">
+    <header class="bg-bege-pinhao/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm border-b border-white/20">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-3 group">
                 <img src="images/logo-hallyu-transparente.png" alt="Logo HallyuCuritiba" class="w-12 h-12 transition-transform group-hover:scale-105">
-                <span class="text-2xl font-extrabold text-texto">HallyuCuritiba</span>
+                <span class="text-2xl font-extrabold text-preto-carvao">HallyuCuritiba</span>
             </a>
             <nav class="hidden md:flex items-center space-x-8 font-semibold">
-                <a href="index.html#inicio" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Início</a>
-                <a href="index.html#agenda" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Agenda</a>
-                <a href="restaurantes.html" class="text-secundaria font-bold">Restaurantes</a>
-                <a href="guia-k-stores.html" class="text-gray-700 hover:text-secundaria transition-colors duration-300">K-Stores</a>
-                <a href="aulas.html" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Aulas</a>
-                <a href="index.html#artigos" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Artigos</a>
-                <a href="index.html#sobre" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Sobre</a>
+                <a href="index.html#inicio" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Início</a>
+                <a href="index.html#agenda" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Agenda</a>
+                <a href="restaurantes.html" class="text-azul-guia font-bold">Restaurantes</a>
+                <a href="guia-k-stores.html" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">K-Stores</a>
+                <a href="aulas.html" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Aulas</a>
+                <a href="index.html#artigos" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Artigos</a>
+                <a href="index.html#sobre" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Sobre</a>
             </nav>
             <button class="md:hidden text-gray-700 z-50 relative" onclick="toggleMobileMenu()">
                 <svg id="menu-open-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 <svg id="menu-close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
         </div>
-        <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-fundo z-40 md:hidden">
+        <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-bege-pinhao z-40 md:hidden">
             <nav class="flex flex-col h-full justify-center items-center space-y-8">
-                <a href="index.html#inicio" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Início</a>
-                <a href="index.html#agenda" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Agenda</a>
-                <a href="restaurantes.html" class="text-3xl font-bold text-secundaria">Restaurantes</a>
-                <a href="guia-k-stores.html" class="text-3xl font-bold text-gray-700 hover:text-secundaria">K-Stores</a>
-                <a href="aulas.html" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Aulas</a>
-                <a href="index.html#artigos" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Artigos</a>
-                <a href="index.html#sobre" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Sobre</a>
+                <a href="index.html#inicio" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Início</a>
+                <a href="index.html#agenda" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Agenda</a>
+                <a href="restaurantes.html" class="text-3xl font-bold text-azul-guia">Restaurantes</a>
+                <a href="guia-k-stores.html" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">K-Stores</a>
+                <a href="aulas.html" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Aulas</a>
+                <a href="index.html#artigos" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Artigos</a>
+                <a href="index.html#sobre" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Sobre</a>
             </nav>
         </div>
     </header>
@@ -59,15 +59,15 @@
     <main class="bg-white py-16 px-6">
         <div class="container mx-auto max-w-4xl">
             <div class="text-center mb-16">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-texto mb-4">Restaurantes Coreanos</h1>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">Restaurantes Coreanos</h1>
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">Explore os sabores da Coreia em Curitiba. Aqui está uma lista de restaurantes para você visitar!</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Restaurante 1: K-dog Curitiba -->
-                <div id="k-dog" class="bg-fundo p-6 rounded-xl shadow-lg card-hover flex flex-col h-full">
-                    <h2 class="text-2xl font-bold text-texto">K-dog Curitiba</h2>
-                    <a href="https://www.instagram.com/kdog.coreano/" target="_blank" class="flex text-destaque mt-2">
+                <div id="k-dog" class="bg-bege-pinhao p-6 rounded-xl shadow-lg card-hover flex flex-col h-full">
+                    <h2 class="text-2xl font-bold text-preto-carvao">K-dog Curitiba</h2>
+                    <a href="https://www.instagram.com/kdog.coreano/" target="_blank" class="flex text-amarelo-nascente mt-2">
                         <span class="ml-1 text-gray-600">⭐ Ver no Instagram</span>
                     </a>
                     <a href="https://www.instagram.com/kdog.coreano/" target="_blank" class="block">
@@ -80,15 +80,15 @@
                         <p><strong>ℹ️ Informações:</strong> Pedidos online via ifood/WhatsApp</p>
                         <p class="flex items-center">
                             <strong class="mr-2"><svg class="w-4 h-4 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></strong>
-                            <a href="https://www.instagram.com/kdog.coreano/" target="_blank" class="text-secundaria hover:underline ml-1">@kdog.coreano</a>
+                            <a href="https://www.instagram.com/kdog.coreano/" target="_blank" class="text-azul-guia hover:underline ml-1">@kdog.coreano</a>
                         </p>
                     </div>
                 </div>
 
                 <!-- Restaurante 2: Saiso -->
-                <div id="saiso" class="bg-fundo p-6 rounded-xl shadow-lg card-hover flex flex-col h-full">
-                    <h2 class="text-2xl font-bold text-texto">Saiso K-Food Market</h2>
-                    <a href="https://share.google/8Sc098I1PJVsUaCTN" target="_blank" class="flex text-destaque mt-2">
+                <div id="saiso" class="bg-bege-pinhao p-6 rounded-xl shadow-lg card-hover flex flex-col h-full">
+                    <h2 class="text-2xl font-bold text-preto-carvao">Saiso K-Food Market</h2>
+                    <a href="https://share.google/8Sc098I1PJVsUaCTN" target="_blank" class="flex text-amarelo-nascente mt-2">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
@@ -106,15 +106,15 @@
                         <p><strong>📍 Endereço:</strong> R. Nunes Machado, 30 - Centro, Curitiba - PR, 80250-000</p>
                         <p class="flex items-center">
                             <strong class="mr-2"><svg class="w-4 h-4 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></strong>
-                            <a href="https://www.instagram.com/saisokfood/" target="_blank" class="text-secundaria hover:underline ml-1">@saisokfood</a>
+                            <a href="https://www.instagram.com/saisokfood/" target="_blank" class="text-azul-guia hover:underline ml-1">@saisokfood</a>
                         </p>
                     </div>
                 </div>
 
                 <!-- Restaurante 3: Shiny’s Kitchen Curitiba -->
-                <div id="shinys-kitchen" class="bg-fundo p-6 rounded-xl shadow-lg card-hover flex flex-col h-full">
-                    <h2 class="text-2xl font-bold text-texto">Shiny’s Kitchen Curitiba</h2>
-                    <a href="https://share.google/fqGkpFrwwpQ8QhOtL" target="_blank" class="flex text-destaque mt-2">
+                <div id="shinys-kitchen" class="bg-bege-pinhao p-6 rounded-xl shadow-lg card-hover flex flex-col h-full">
+                    <h2 class="text-2xl font-bold text-preto-carvao">Shiny’s Kitchen Curitiba</h2>
+                    <a href="https://share.google/fqGkpFrwwpQ8QhOtL" target="_blank" class="flex text-amarelo-nascente mt-2">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
@@ -132,15 +132,15 @@
                         <p><strong>📍 Endereço:</strong> Praça Gen. Osório, 333 - Loja 18 - Centro, Curitiba - PR, 80020-010</p>
                         <p class="flex items-center">
                             <strong class="mr-2"><svg class="w-4 h-4 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></strong>
-                            <a href="https://www.instagram.com/shinyskitchen_cwb/" target="_blank" class="text-secundaria hover:underline ml-1">@shinyskitchen_cwb</a>
+                            <a href="https://www.instagram.com/shinyskitchen_cwb/" target="_blank" class="text-azul-guia hover:underline ml-1">@shinyskitchen_cwb</a>
                         </p>
                     </div>
                 </div>
 
                 <!-- Restaurante 4: YAMI RESTAURANTE -->
-                <div id="yami-restaurante" class="bg-fundo p-6 rounded-xl shadow-lg card-hover flex flex-col h-full">
-                    <h2 class="text-2xl font-bold text-texto">YAMI RESTAURANTE</h2>
-                    <a href="https://g.co/kgs/qf9Y2sC" target="_blank" class="flex text-destaque mt-2">
+                <div id="yami-restaurante" class="bg-bege-pinhao p-6 rounded-xl shadow-lg card-hover flex flex-col h-full">
+                    <h2 class="text-2xl font-bold text-preto-carvao">YAMI RESTAURANTE</h2>
+                    <a href="https://g.co/kgs/qf9Y2sC" target="_blank" class="flex text-amarelo-nascente mt-2">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
@@ -156,15 +156,15 @@
                         <p><strong>📍 Endereço:</strong> R. Gen. Osório, 477 - Centro, Curitiba - PR, 80020-010</p>
                         <p class="flex items-center">
                             <strong class="mr-2"><svg class="w-4 h-4 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></strong>
-                            <a href="https://www.instagram.com/yami.asianfood/" target="_blank" class="text-secundaria hover:underline ml-1">@yami.asianfood</a>
+                            <a href="https://www.instagram.com/yami.asianfood/" target="_blank" class="text-azul-guia hover:underline ml-1">@yami.asianfood</a>
                         </p>
                     </div>
                 </div>
 
                 <!-- Restaurante 6: YÜ COZINHA ORIENTAL -->
-                <div id="yu-cozinha-oriental" class="bg-fundo p-6 rounded-xl shadow-lg card-hover flex flex-col h-full">
-                    <h2 class="text-2xl font-bold text-texto">YÜ COZINHA ORIENTAL</h2>
-                    <a href="https://share.google/sXGdBkGCvylzhHBxL" target="_blank" class="flex text-destaque mt-2">
+                <div id="yu-cozinha-oriental" class="bg-bege-pinhao p-6 rounded-xl shadow-lg card-hover flex flex-col h-full">
+                    <h2 class="text-2xl font-bold text-preto-carvao">YÜ COZINHA ORIENTAL</h2>
+                    <a href="https://share.google/sXGdBkGCvylzhHBxL" target="_blank" class="flex text-amarelo-nascente mt-2">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
@@ -182,15 +182,15 @@
                         <p><strong>📍 Endereço:</strong> Praça Gen. Osório, 485 - Centro, Curitiba - PR, 80020-010</p>
                         <p class="flex items-center">
                             <strong class="mr-2"><svg class="w-4 h-4 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></strong>
-                            <a href="https://www.instagram.com/yucozinhaoriental/" target="_blank" class="text-secundaria hover:underline ml-1">@yucozinhaoriental</a>
+                            <a href="https://www.instagram.com/yucozinhaoriental/" target="_blank" class="text-azul-guia hover:underline ml-1">@yucozinhaoriental</a>
                         </p>
                     </div>
                 </div>
 
                 <!-- Restaurante 5: Yoribogo -->
-                <div id="yoribogo" class="bg-fundo p-6 rounded-xl shadow-lg card-hover flex flex-col h-full">
-                    <h2 class="text-2xl font-bold text-texto">Yoribogo</h2>
-                    <a href="https://share.google/wOnVuTGy2bgzAr38D" target="_blank" class="flex text-destaque mt-2">
+                <div id="yoribogo" class="bg-bege-pinhao p-6 rounded-xl shadow-lg card-hover flex flex-col h-full">
+                    <h2 class="text-2xl font-bold text-preto-carvao">Yoribogo</h2>
+                    <a href="https://share.google/wOnVuTGy2bgzAr38D" target="_blank" class="flex text-amarelo-nascente mt-2">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
@@ -208,15 +208,15 @@
                         <p><strong>📍 Endereço:</strong> R. Vicente Machado, 520 - loja 8 - Centro, Curitiba - PR, 80420-010</p>
                         <p class="flex items-center">
                             <strong class="mr-2"><svg class="w-4 h-4 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></strong>
-                            <a href="https://www.instagram.com/yoribogo_cwb/" target="_blank" class="text-secundaria hover:underline ml-1">@yoribogo_cwb</a>
+                            <a href="https://www.instagram.com/yoribogo_cwb/" target="_blank" class="text-azul-guia hover:underline ml-1">@yoribogo_cwb</a>
                         </p>
                     </div>
                 </div>
 
                 <!-- Restaurante 7: Yü Korean Taste -->
-                <div id="yu-korean-taste" class="bg-fundo p-6 rounded-xl shadow-lg card-hover flex flex-col h-full">
-                    <h2 class="text-2xl font-bold text-texto">Yü Korean Taste</h2>
-                    <a href="https://maps.app.goo.gl/y37QTz7dRFzuthaQ9" target="_blank" class="flex text-destaque mt-2">
+                <div id="yu-korean-taste" class="bg-bege-pinhao p-6 rounded-xl shadow-lg card-hover flex flex-col h-full">
+                    <h2 class="text-2xl font-bold text-preto-carvao">Yü Korean Taste</h2>
+                    <a href="https://maps.app.goo.gl/y37QTz7dRFzuthaQ9" target="_blank" class="flex text-amarelo-nascente mt-2">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
@@ -235,15 +235,15 @@
                         <p><strong>🕒 Horário:</strong> Seg-Sex: 08:00-17:30, Sáb: 08:00-14:30</p>
                         <p class="flex items-center">
                             <strong class="mr-2"><svg class="w-4 h-4 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></strong>
-                            <a href="https://www.instagram.com/yutogo.oficial/" target="_blank" class="text-secundaria hover:underline ml-1">@yutogo.oficial</a>
+                            <a href="https://www.instagram.com/yutogo.oficial/" target="_blank" class="text-azul-guia hover:underline ml-1">@yutogo.oficial</a>
                         </p>
                     </div>
                 </div>
 
                 <!-- Restaurante 8: Felicidades da MÔ -->
-                <div id="felicidadesdamo" class="bg-fundo p-6 rounded-xl shadow-lg card-hover flex flex-col h-full">
-                    <h2 class="text-2xl font-bold text-texto">Felicidades da MÔ</h2>
-                    <a href="https://share.google/1LBOUdRezCqB8ViwO" target="_blank" class="flex text-destaque mt-2">
+                <div id="felicidadesdamo" class="bg-bege-pinhao p-6 rounded-xl shadow-lg card-hover flex flex-col h-full">
+                    <h2 class="text-2xl font-bold text-preto-carvao">Felicidades da MÔ</h2>
+                    <a href="https://share.google/1LBOUdRezCqB8ViwO" target="_blank" class="flex text-amarelo-nascente mt-2">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
@@ -262,7 +262,7 @@
                         <p><strong>🍱 Horário:</strong> Retirada de Seg a Sáb 11h às 13:45h</p>
                         <p class="flex items-center">
                             <strong class="mr-2"><svg class="w-4 h-4 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></strong>
-                            <a href="https://www.instagram.com/felicidadesdamo/" target="_blank" class="text-secundaria hover:underline ml-1">@felicidadesdamo</a>
+                            <a href="https://www.instagram.com/felicidadesdamo/" target="_blank" class="text-azul-guia hover:underline ml-1">@felicidadesdamo</a>
                         </p>
                     </div>
                 </div>
@@ -271,7 +271,7 @@
     </main>
 
     <!-- Rodapé Otimizado -->
-    <footer class="bg-texto text-white py-16">
+    <footer class="bg-preto-carvao text-white py-16">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-8">
                 <!-- Logo e Descrição -->
