@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HallyuCuritiba - Seu Guia Definitivo da Onda Coreana</title>
-    <meta name="description" content="Descubra a Onda Coreana em Curitiba! Encontre a agenda de eventos, mapa de restaurantes, lojas de k-pop e artigos sobre a cultura Hallyu na cidade.">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -20,7 +19,7 @@
     <!-- Estilos Personalizados -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="antialiased">
+<body>
 
     <!-- 1. Cabeçalho (Header) Otimizado -->
     <header class="bg-bege-pinhao/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm border-b border-white/20">
@@ -33,13 +32,13 @@
             
             <!-- Menu de Navegação (Desktop) -->
             <nav class="hidden md:flex items-center space-x-8 font-semibold">
-                <a href="#inicio" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Início</a>
-                <a href="#agenda" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Agenda</a>
-                <a href="restaurantes.html" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Restaurantes</a>
-                <a href="guia-k-stores.html" class="text-gray-700 hover:text-secundaria transition-colors duration-300">K-Stores</a>
-                <a href="aulas.html" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Aulas</a>
-                <a href="#artigos" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Artigos</a>
-                <a href="#sobre" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Sobre</a>
+                <a href="#inicio" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Início</a>
+                <a href="#agenda" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Agenda</a>
+                <a href="restaurantes.html" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Restaurantes</a>
+                <a href="guia-k-stores.html" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">K-Stores</a>
+                <a href="aulas.html" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Aulas</a>
+                <a href="#artigos" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Artigos</a>
+                <a href="#sobre" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Sobre</a>
             </nav>
             
             <!-- Botão Menu Mobile -->
@@ -54,15 +53,15 @@
         </div>
 
         <!-- Menu Mobile Otimizado -->
-        <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-fundo z-40 md:hidden">
+        <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-bege-pinhao z-40 md:hidden">
             <nav class="flex flex-col h-full justify-center items-center space-y-8">
-                <a href="#inicio" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-secundaria transition-colors">Início</a>
-                <a href="#agenda" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-secundaria transition-colors">Agenda</a>
-                <a href="restaurantes.html" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-secundaria transition-colors">Restaurantes</a>
-                <a href="guia-k-stores.html" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-secundaria transition-colors">K-Stores</a>
-                <a href="aulas.html" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-secundaria transition-colors">Aulas</a>
-                <a href="#artigos" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-secundaria transition-colors">Artigos</a>
-                <a href="#sobre" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-secundaria transition-colors">Sobre</a>
+                <a href="#inicio" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Início</a>
+                <a href="#agenda" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Agenda</a>
+                <a href="restaurantes.html" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Restaurantes</a>
+                <a href="guia-k-stores.html" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">K-Stores</a>
+                <a href="aulas.html" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Aulas</a>
+                <a href="#artigos" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Artigos</a>
+                <a href="#sobre" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Sobre</a>
             </nav>
         </div>
     </header>
@@ -83,23 +82,13 @@
                     Seu guia definitivo para a cultura coreana em Curitiba. Descubra eventos, restaurantes, lojas e tudo sobre a Onda Coreana na nossa cidade!
                 </p>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <a href="#agenda" class="bg-destaque text-texto px-10 py-4 rounded-full font-bold text-lg hover:bg-destaque-dark transition-all duration-300 shadow-lg btn-hover flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0h18M-4.5 12h22.5" />
-                        </svg>
+                    <a href="agenda.html" class="bg-amarelo-nascente text-preto-carvao px-10 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-all duration-300 shadow-lg btn-hover">
                         Ver Agenda de Eventos
                     </a>
-                    <a href="#mapa" class="bg-secundaria text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-secundaria-dark transition-all duration-300 shadow-lg btn-hover flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                        </svg>
+                    <a href="restaurantes.html" class="bg-azul-guia text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition-all duration-300 shadow-lg btn-hover">
                         Explorar o Mapa
                     </a>
-                    <a href="contribua.html" class="bg-destaque text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-destaque-dark transition-all duration-300 shadow-lg btn-hover flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345h5.364c.518 0 .734.654.372 1.01l-4.36 3.185a.563.563 0 00-.222.635l1.654 6.103c.166.615-.547 1.097-1.067.734L12 17.431a.563.563 0 00-.652 0l-5.096 3.725c-.52.363-1.233-.119-1.067-.734l1.654-6.103a.563.563 0 00-.222-.635L2.01 9.965c-.362-.356-.146-1.01.372-1.01h5.364a.563.563 0 00.475-.345L11.48 3.5z" />
-                        </svg>
+                    <a href="contribua.html" class="bg-laranja-poente text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-orange-600 transition-all duration-300 shadow-lg btn-hover">
                         Contribua
                     </a>
                 </div>
@@ -452,10 +441,10 @@
                         <ul class="space-y-5 font-semibold text-lg">
                             <li class="group">
                                 <a href="#restaurantes" class="flex items-center">
-                                    <svg class="w-6 h-6 mr-4 text-primaria" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="1.5">
+                                    <svg class="w-6 h-6 mr-4 text-secundaria" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="1.5">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a2.25 2.25 0 01-2.25 2.25H5.25a2.25 2.25 0 01-2.25-2.25v-8.25M12 4.875A3.375 3.375 0 0012 1.5v3.375m0 0a3.375 3.375 0 00-3.375 3.375h6.75A3.375 3.375 0 0012 4.875zm0 0a7.5 7.5 0 017.5 7.5H4.5a7.5 7.5 0 017.5-7.5z" />
                                     </svg>
-                                    <span class="group-hover:text-primaria transition-colors">Restaurantes & Cafés</span>
+                                    <span class="group-hover:text-secundaria transition-colors">Restaurantes & Cafés</span>
                                 </a>
                             </li>
                             <li class="flex items-center group">
@@ -466,12 +455,12 @@
                             </li>
                             <li class="group">
                                 <a href="#guia" class="flex items-center">
-                                    <svg class="w-6 h-6 mr-4 text-secundaria" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5">
+                                    <svg class="w-6 h-6 mr-4 text-primaria" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5">
                                         <path d="M7.5 7.67001V6.70001C7.5 4.45001 9.31 2.24001 11.56 2.03001C14.24 1.77001 16.5 3.88001 16.5 6.51001V7.89001" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                         <path d="M15.44 16.94C15.04 18.28 13.63 19.34 12 19.34C10.37 19.34 8.96 18.28 8.56 16.94" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                         <path d="M9 22H15C19.02 22 19.74 20.39 19.95 18.43L20.7 12.43C20.97 9.99 20.27 8 16 8H8C3.73 8 3.03 9.99 3.3 12.43L4.05 18.43C4.26 20.39 4.98 22 9 22Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                    <span class="group-hover:text-secundaria transition-colors">Lojas</span>
+                                    <span class="group-hover:text-primaria transition-colors">Lojas</span>
                                 </a>
                             </li>
                             <li class="group">
@@ -508,9 +497,9 @@
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Card Restaurantes -->
                     <a href="#restaurantes" class="text-center card-hover bg-white rounded-2xl p-8 block group">
-                        <div class="w-24 h-24 mx-auto mb-6 flex items-center justify-center bg-primaria/10 rounded-full transition-colors duration-300 group-hover:bg-primaria">
+                                                <div class="w-24 h-24 mx-auto mb-6 flex items-center justify-center bg-secundaria/10 rounded-full transition-colors duration-300 group-hover:bg-secundaria">
                             <!-- Ícone SVG Personalizado: Restaurantes -->
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primaria transition-colors duration-300 group-hover:text-white" stroke="currentColor" stroke-width="1.5">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-secundaria transition-colors duration-300 group-hover:text-white" stroke="currentColor" stroke-width="1.5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a2.25 2.25 0 01-2.25 2.25H5.25a2.25 2.25 0 01-2.25-2.25v-8.25M12 4.875A3.375 3.375 0 0012 1.5v3.375m0 0a3.375 3.375 0 00-3.375 3.375h6.75A3.375 3.375 0 0012 4.875zm0 0a7.5 7.5 0 017.5 7.5H4.5a7.5 7.5 0 017.5-7.5z" />
                             </svg>
                         </div>
@@ -522,7 +511,7 @@
                     <a href="guia-k-stores.html" class="text-center card-hover bg-white rounded-2xl p-8 block group">
                         <div class="w-24 h-24 mx-auto mb-6 flex items-center justify-center bg-secundaria/10 rounded-full transition-colors duration-300 group-hover:bg-secundaria">
                             <!-- Ícone SVG Personalizado: K-Stores -->
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-secundaria transition-colors duration-300 group-hover:text-white">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primaria transition-colors duration-300 group-hover:text-white">
                                 <path d="M7.5 7.67001V6.70001C7.5 4.45001 9.31 2.24001 11.56 2.03001C14.24 1.77001 16.5 3.88001 16.5 6.51001V7.89001" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M15.44 16.94C15.04 18.28 13.63 19.34 12 19.34C10.37 19.34 8.96 18.28 8.56 16.94" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M9 22H15C19.02 22 19.74 20.39 19.95 18.43L20.7 12.43C20.97 9.99 20.27 8 16 8H8C3.73 8 3.03 9.99 3.3 12.43L4.05 18.43C4.26 20.39 4.98 22 9 22Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -850,7 +839,7 @@
                     </div>
 
                 <div class="text-center mt-12">
-                    <a href="restaurantes.html" class="bg-primaria text-white px-8 py-4 rounded-full font-bold text-lg btn-hover">
+                    <a href="restaurantes.html" class="bg-azul-guia text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition-all duration-300 shadow-lg btn-hover">
                         Ver todos os restaurantes
                     </a>
                 </div>
@@ -972,10 +961,10 @@
                             Há mais de 6 anos acompanhamos de perto o crescimento da Onda Coreana em Curitiba, e agora queremos compartilhar todo esse conhecimento com vocês.
                         </p>
                         <div class="flex space-x-4">
-                            <a href="https://instagram.com/HallyuCuritiba" target="_blank" class="bg-primaria text-white px-6 py-3 rounded-full font-bold hover:bg-primaria-dark transition-colors btn-hover">
+                            <a href="https://instagram.com/HallyuCuritiba" target="_blank" class="bg-azul-guia text-white px-6 py-3 rounded-full font-bold hover:bg-blue-700 transition-colors btn-hover">
                                 Siga no Instagram
                             </a>
-                            <a href="contribua.html" class="border-2 border-secundaria text-secundaria px-6 py-3 rounded-full font-bold hover:bg-secundaria hover:text-white transition-colors btn-hover">
+                            <a href="contribua.html" class="border-2 border-azul-guia text-azul-guia px-6 py-3 rounded-full font-bold hover:bg-azul-guia hover:text-white transition-colors btn-hover">
                                 Entre em Contato
                             </a>
                         </div>
@@ -1008,6 +997,46 @@
                                 <span>Para criar conteúdo de qualidade sobre o universo Hallyu</span>
                             </li>
                         </ul>
+                    </div>
+                </div>
+
+                <!-- Paleta de Cores da Marca -->
+                <div class="mt-24">
+                    <div class="text-center mb-12">
+                        <h3 class="text-3xl font-bold text-texto mb-4">Nossa Paleta de Cores</h3>
+                        <p class="text-lg text-gray-700 max-w-2xl mx-auto">Estas são as cores que dão vida à identidade HallyuCuritiba, inspiradas na energia e na paixão da nossa cidade e da cultura coreana.</p>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
+                        <div class="color-swatch">
+                            <div class="w-full h-24 rounded-lg bg-vermelho-paixao shadow-md"></div>
+                            <h4 class="font-bold mt-3 text-texto">Vermelho Paixão</h4>
+                            <p class="text-sm text-gray-600">#D81E2C</p>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="w-full h-24 rounded-lg bg-azul-guia shadow-md"></div>
+                            <h4 class="font-bold mt-3 text-texto">Azul Guia</h4>
+                            <p class="text-sm text-gray-600">#0054A6</p>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="w-full h-24 rounded-lg bg-amarelo-nascente shadow-md"></div>
+                            <h4 class="font-bold mt-3 text-texto">Amarelo Nascente</h4>
+                            <p class="text-sm text-gray-600">#FDB913</p>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="w-full h-24 rounded-lg bg-laranja-poente shadow-md"></div>
+                            <h4 class="font-bold mt-3 text-texto">Laranja Poente</h4>
+                            <p class="text-sm text-gray-600">#F58220</p>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="w-full h-24 rounded-lg bg-bege-pinhao shadow-md border"></div>
+                            <h4 class="font-bold mt-3 text-texto">Bege Pinhão</h4>
+                            <p class="text-sm text-gray-600">#F2EBE3</p>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="w-full h-24 rounded-lg bg-preto-carvao shadow-md"></div>
+                            <h4 class="font-bold mt-3 text-texto">Preto Carvão</h4>
+                            <p class="text-sm text-gray-600">#231F20</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1048,10 +1077,10 @@
                 <div>
                     <h3 class="text-lg font-bold mb-6">Links Rápidos</h3>
                     <ul class="space-y-3">
-                        <li><a href="#agenda" class="text-gray-400 hover:text-white transition-colors">Agenda de Eventos</a></li>
-                        <li><a href="#guia" class="text-gray-400 hover:text-white transition-colors">Restaurantes</a></li>
-                        <li><a href="#guia" class="text-gray-400 hover:text-white transition-colors">Lojas K-pop</a></li>
-                        <li><a href="#guia" class="text-gray-400 hover:text-white transition-colors">Comunidade</a></li>
+                        <li><a href="agenda.html" class="text-gray-400 hover:text-white transition-colors">Agenda de Eventos</a></li>
+                        <li><a href="restaurantes.html" class="text-gray-400 hover:text-white transition-colors">Restaurantes</a></li>
+                        <li><a href="guia-k-stores.html" class="text-gray-400 hover:text-white transition-colors">Lojas K-pop</a></li>
+                        <li><a href="contribua.html" class="text-gray-400 hover:text-white transition-colors">Comunidade</a></li>
                         <li><a href="#artigos" class="text-gray-400 hover:text-white transition-colors">Artigos</a></li>
                     </ul>
                 </div>

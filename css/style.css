@@ -1,3 +1,4 @@
+0,0 @@
 :root {
     --cor-vermelho-paixao: #D81E2C;
     --cor-azul-guia: #0054A6;
@@ -5,6 +6,13 @@
     --cor-laranja-poente: #F58220;
     --cor-bege-pinhao: #F2EBE3;
     --cor-preto-carvao: #231F20;
+
+    /* Cores semânticas para facilitar o uso */
+    --primaria: var(--cor-vermelho-paixao);
+    --secundaria: var(--cor-azul-guia);
+    --destaque: var(--cor-amarelo-nascente);
+    --fundo: var(--cor-bege-pinhao);
+    --texto: var(--cor-preto-carvao);
 }
 
 /* Habilita a rolagem suave para todo o site */
@@ -13,20 +21,15 @@ html {
 }
 
 body {
-    background-color: var(--cor-bege-pinhao);
+    background-color: var(--fundo);
     font-family: 'Inter', sans-serif;
-    color: var(--cor-preto-carvao);
+    color: var(--texto);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
-}
-
-/* Previne a rolagem horizontal quando o menu mobile está ativo */
-.mobile-menu-active {
-    overflow-x: hidden;
 }
 
 /* Classes de cor personalizadas para Tailwind */
@@ -40,6 +43,17 @@ h1, h2, h3, h4, h5, h6 {
 .text-laranja-poente { color: var(--cor-laranja-poente); }
 .bg-laranja-poente { background-color: var(--cor-laranja-poente); }
 .text-preto-carvao { color: var(--cor-preto-carvao); }
+
+/* Cores semânticas */
+.bg-primaria { background-color: var(--primaria); }
+.text-primaria { color: var(--primaria); }
+.bg-secundaria { background-color: var(--secundaria); }
+.text-secundaria { color: var(--secundaria); }
+.bg-destaque { background-color: var(--destaque); }
+.text-destaque { color: var(--destaque); }
+.bg-fundo { background-color: var(--fundo); }
+.text-texto { color: var(--texto); }
+
 
 .gradient-hero {
     background: linear-gradient(135deg, var(--cor-vermelho-paixao), var(--cor-azul-guia));
@@ -77,4 +91,23 @@ h1, h2, h3, h4, h5, h6 {
 .btn-hover:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Estilos para a barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Cor de fundo da trilha */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Cor do "pegador" da barra de rolagem */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cor do "pegador" ao passar o mouse */
 }
