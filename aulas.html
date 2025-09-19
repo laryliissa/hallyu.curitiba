@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulas de Coreano em Curitiba - HallyuCuritiba</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Montserrat and Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon-hallyu.png" type="image/png">
+
+    <!-- Estilos Personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="antialiased">
+
+    <!-- Cabeçalho Padrão -->
+    <header class="bg-bege-pinhao/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm border-b border-white/20">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <img src="images/logo-hallyu-transparente.png" alt="Logo HallyuCuritiba" class="w-12 h-12 transition-transform group-hover:scale-105">
+                <span class="text-2xl font-extrabold text-preto-carvao">HallyuCuritiba</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 font-semibold">
+                <a href="index.html#inicio" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Início</a>
+                <a href="index.html#agenda" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Agenda</a>
+                <a href="restaurantes.html" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Restaurantes</a>
+                <a href="guia-k-stores.html" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">K-Stores</a>
+                <a href="aulas.html" class="text-azul-guia font-bold">Aulas</a>
+                <a href="index.html#artigos" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Artigos</a>
+                <a href="index.html#sobre" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Sobre</a>
+            </nav>
+            <button class="md:hidden text-gray-700 z-50 relative" onclick="toggleMobileMenu()">
+                <svg id="menu-open-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <svg id="menu-close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-bege-pinhao z-40 md:hidden">
+            <nav class="flex flex-col h-full justify-center items-center space-y-8">
+                <a href="index.html#inicio" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Início</a>
+                <a href="index.html#agenda" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Agenda</a>
+                <a href="restaurantes.html" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Restaurantes</a>
+                <a href="guia-k-stores.html" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">K-Stores</a>
+                <a href="aulas.html" class="text-3xl font-bold text-azul-guia">Aulas</a>
+                <a href="index.html#artigos" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Artigos</a>
+                <a href="index.html#sobre" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Sobre</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo da Página de Aulas -->
+    <main class="bg-white py-16 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">Aulas da Hallyu em Curitiba</h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Seja para aprender o idioma ou para arrasar na dança, encontre aqui sua próxima aula.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card Aulas de Coreano -->
+                <a href="aulas-coreano.html" class="block bg-bege-pinhao p-8 rounded-2xl shadow-lg card-hover">
+                    <h2 class="text-3xl font-bold text-preto-carvao mb-4">Aulas de Coreano</h2>
+                    <p class="text-gray-700">Encontre cursos de idioma, do presencial ao online, para todos os níveis.</p>
+                    <span class="inline-block mt-6 font-bold text-azul-guia">Ver opções →</span>
+                </a>
+
+                <!-- Card Aulas de K-Pop -->
+                <a href="aulas-kpop.html" class="block bg-bege-pinhao p-8 rounded-2xl shadow-lg card-hover">
+                    <h2 class="text-3xl font-bold text-preto-carvao mb-4">Aulas de K-Pop</h2>
+                    <p class="text-gray-700">Descubra escolas e estúdios para aprender a dançar como seus idols.</p>
+                    <span class="inline-block mt-6 font-bold text-azul-guia">Ver opções →</span>
+                </a>
+
+                <!-- Card Aulas de Culinária -->
+                <a href="aulas-culinaria.html" class="block bg-bege-pinhao p-8 rounded-2xl shadow-lg card-hover">
+                    <h2 class="text-3xl font-bold text-preto-carvao mb-4">Aulas de Culinária</h2>
+                    <p class="text-gray-700">Aprenda a fazer kimchi, bulgogi e outros pratos deliciosos.</p>
+                    <span class="inline-block mt-6 font-bold text-azul-guia">Ver opções →</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé Otimizado -->
+    <footer class="bg-preto-carvao text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Logo e Descrição -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="images/logo-hallyu-transparente.png" alt="Logo HallyuCuritiba" class="w-12 h-12">
+                        <span class="text-2xl font-bold">HallyuCuritiba</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md leading-relaxed">
+                        Seu guia definitivo para a cultura coreana em Curitiba. Conectando fãs, promovendo eventos e celebrando o Hallyu no Paraná.
+                    </p>
+                </div>
+                
+                <!-- Links Rápidos -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Links Rápidos</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#agenda" class="text-gray-400 hover:text-white transition-colors">Agenda de Eventos</a></li>
+                        <li><a href="restaurantes.html" class="text-gray-400 hover:text-white transition-colors">Restaurantes</a></li>
+                        <li><a href="guia-k-stores.html" class="text-gray-400 hover:text-white transition-colors">K-Stores</a></li>
+                        <li><a href="aulas.html" class="text-gray-400 hover:text-white transition-colors">Aulas</a></li>
+                        <li><a href="index.html#artigos" class="text-gray-400 hover:text-white transition-colors">Artigos</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contato -->
+                <div id="contato">
+                    <h3 class="text-lg font-bold mb-6">Contato</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                            hallyucuritiba@gmail.com
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            @hallyucuritiba
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 HallyuCuritiba. Todos os direitos reservados.</p>
+                <p class="mt-2 text-sm">한류 쿠리치바 - Feito com ❤️ para a comunidade Hallyu</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
