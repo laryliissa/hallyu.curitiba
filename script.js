@@ -1,6 +1,6 @@
 // script.js
 
-// Mobile Menu Toggle
+// Função para alternar o menu móvel
 function toggleMobileMenu() {
     const mobileMenu = document.getElementById('mobileMenu');
     const menuOpenIcon = document.getElementById('menu-open-icon');
@@ -10,295 +10,168 @@ function toggleMobileMenu() {
     mobileMenu.classList.toggle('hidden');
     menuOpenIcon.classList.toggle('hidden');
     menuCloseIcon.classList.toggle('hidden');
-    document.body.classList.toggle('overflow-hidden'); // Prevent scrolling when menu is open
+    document.body.classList.toggle('overflow-hidden');
     document.body.classList.toggle('mobile-menu-active');
 }
 
-// Calendar Functionality
 document.addEventListener('DOMContentLoaded', () => {
-    const calendarContainer = document.getElementById('calendar-container');
-    const prevMonthBtnMobile = document.getElementById('prev-month');
-    const nextMonthBtnMobile = document.getElementById('next-month');
-    const prevMonthBtnDesktop = document.getElementById('prev-month-desktop');
-    const nextMonthBtnDesktop = document.getElementById('next-month-desktop');
-    const currentMonthDisplay = document.getElementById('current-month-display');
-    const eventLists = {
-        'events-setembro': document.getElementById('events-setembro'),
-        'events-outubro': document.getElementById('events-outubro'),
-        'events-novembro': document.getElementById('events-novembro'),
-        'events-dezembro': document.getElementById('events-dezembro')
-    };
+    // Configuração de Carrossel Genérica
+    function setupCarousel(containerId, prevBtnId, nextBtnId, cardSelector, isMonthCarousel = false) {
+        const container = document.getElementById(containerId);
+        const prevBtn = document.getElementById(prevBtnId);
+        const nextBtn = document.getElementById(nextBtnId);
+        
+        if (!container || !prevBtn || !nextBtn) return;
 
-    let currentMonthIndex = 0; // 0: Setembro, 1: Outubro, etc.
-    const monthCards = Array.from(calendarContainer.children);
+        const cards = Array.from(container.children).filter(child => child.matches(cardSelector));
+        let currentIndex = 0;
 
-    function showMonth(index) {
-        const scrollAmount = calendarContainer.offsetWidth * index;
-        calendarContainer.scrollTo({
-            left: scrollAmount,
-            behavior: 'smooth'
-        });
+        function updateView() {
+            const cardWidth = cards[0].offsetWidth;
+            const scrollAmount = cardWidth * currentIndex;
+            container.scrollTo({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+            updateNavButtons();
 
-        // Update month display for mobile
-        if (monthCards[index]) {
-            const monthName = monthCards[index].querySelector('h3').textContent;
-            currentMonthDisplay.textContent = monthName;
-        }
-
-        // Hide all event lists and show only the relevant one
-        Object.values(eventLists).forEach(list => list.classList.add('hidden'));
-        if (monthCards[index]) {
-            const monthId = monthCards[index].querySelector('h3').textContent.split(' ')[0].toLowerCase();
-            const targetEventList = eventLists[`events-${monthId}`];
-            if (targetEventList) {
-                targetEventList.classList.remove('hidden');
+            if (isMonthCarousel) {
+                updateMonthInfo(currentIndex);
             }
         }
-        updateCalendarNavigation();
-    }
 
-    function updateCalendarNavigation() {
-        // Mobile buttons
-        prevMonthBtnMobile.disabled = currentMonthIndex === 0;
-        nextMonthBtnMobile.disabled = currentMonthIndex === monthCards.length - 1;
-
-        // Desktop buttons (if they exist)
-        if (prevMonthBtnDesktop && nextMonthBtnDesktop) {
-            prevMonthBtnDesktop.disabled = currentMonthIndex === 0;
-            nextMonthBtnDesktop.disabled = currentMonthIndex === monthCards.length - 1;
+        function updateNavButtons() {
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex >= cards.length - 1;
         }
-    }
 
-    // Mobile button event listeners
-    prevMonthBtnMobile.addEventListener('click', () => {
-        if (currentMonthIndex > 0) {
-            currentMonthIndex--;
-            showMonth(currentMonthIndex);
+        function updateMonthInfo(index) {
+            const currentMonthDisplay = document.getElementById('current-month-display');
+            const monthCards = Array.from(document.querySelectorAll('.calendar-card'));
+            const eventLists = {
+                'setembro': document.getElementById('events-setembro'),
+                'outubro': document.getElementById('events-outubro'),
+                'novembro': document.getElementById('events-novembro'),
+                'dezembro': document.getElementById('events-dezembro')
+            };
+
+            if (monthCards[index]) {
+                const monthName = monthCards[index].querySelector('h3').textContent.split(' ')[0];
+                if (currentMonthDisplay) {
+                    currentMonthDisplay.textContent = monthName;
+                }
+
+                Object.values(eventLists).forEach(list => list.classList.add('hidden'));
+                const targetEventList = eventLists[monthName.toLowerCase()];
+                if (targetEventList) {
+                    targetEventList.classList.remove('hidden');
+                }
+            }
         }
-    });
 
-    nextMonthBtnMobile.addEventListener('click', () => {
-        if (currentMonthIndex < monthCards.length - 1) {
-            currentMonthIndex++;
-            showMonth(currentMonthIndex);
-        }
-    });
-
-    // Desktop button event listeners (if they exist)
-    if (prevMonthBtnDesktop && nextMonthBtnDesktop) {
-        prevMonthBtnDesktop.addEventListener('click', () => {
-            if (currentMonthIndex > 0) {
-                currentMonthIndex--;
-                showMonth(currentMonthIndex);
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateView();
             }
         });
 
-        nextMonthBtnDesktop.addEventListener('click', () => {
-            if (currentMonthIndex < monthCards.length - 1) {
-                currentMonthIndex++;
-                showMonth(currentMonthIndex);
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < cards.length - 1) {
+                currentIndex++;
+                updateView();
             }
         });
-    }
 
-    // Initial display
-    showMonth(currentMonthIndex);
-
-    // Event details hover (if needed, based on data-event-id)
-    document.querySelectorAll('.calendar-card div[data-event-id]').forEach(day => {
-        day.addEventListener('click', () => {
-            const eventId = day.dataset.eventId;
-            // In a real scenario, you'd fetch/display event details based on eventId
-            // For now, we'll just log it or highlight
-            console.log('Clicked event ID:', eventId);
-            // Example: highlight the corresponding event in the list
-            document.querySelectorAll('.event-list .card-hover').forEach(eventCard => {
-                if (eventCard.dataset.eventId === eventId) {
-                    eventCard.classList.add('border-blue-500', 'border-2'); // Example highlight
-                } else {
-                    eventCard.classList.remove('border-blue-500', 'border-2');
+        // Suporte para botões de desktop adicionais
+        const prevBtnDesktop = document.getElementById(prevBtnId + '-desktop');
+        const nextBtnDesktop = document.getElementById(nextBtnId + '-desktop');
+        if (prevBtnDesktop && nextBtnDesktop) {
+            prevBtnDesktop.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateView();
                 }
             });
+            nextBtnDesktop.addEventListener('click', () => {
+                if (currentIndex < cards.length - 1) {
+                    currentIndex++;
+                    updateView();
+                }
+            });
+        }
+
+        // Destaque de evento
+        document.querySelectorAll('.calendar-card div[data-event-id]').forEach(day => {
+            day.addEventListener('click', () => {
+                const eventId = day.dataset.eventId;
+                document.querySelectorAll('.event-list .card-hover').forEach(eventCard => {
+                    eventCard.classList.remove('border-blue-500', 'border-2');
+                    if (eventCard.dataset.eventId === eventId) {
+                        eventCard.classList.add('border-blue-500', 'border-2');
+                    }
+                });
+            });
         });
-    });
-});
 
-
-// Restaurant Carousel Functionality
-document.addEventListener('DOMContentLoaded', () => {
-    const restaurantesContainer = document.getElementById('restaurantes-container');
-    const prevRestaurantBtn = document.getElementById('prev-restaurant');
-    const nextRestaurantBtn = document.getElementById('next-restaurant');
-    const restaurantCards = Array.from(restaurantesContainer.children);
-
-    let currentRestaurantIndex = 0;
-
-    function showRestaurant(index) {
-        const cardWidth = restaurantCards[0].offsetWidth + (parseInt(getComputedStyle(restaurantCards[0]).marginLeft) * 2); // Assuming consistent margin
-        restaurantesContainer.scrollLeft = cardWidth * index;
-        updateRestaurantNavigation();
+        // Inicialização
+        updateView();
     }
 
-    function updateRestaurantNavigation() {
-        prevRestaurantBtn.disabled = currentRestaurantIndex === 0;
-        nextRestaurantBtn.disabled = currentRestaurantIndex === restaurantCards.length - 1;
-    }
+    // Inicializa o carrossel do calendário
+    setupCarousel('calendar-container', 'prev-month', 'next-month', '.calendar-card', true);
 
-    prevRestaurantBtn.addEventListener('click', () => {
-        if (currentRestaurantIndex > 0) {
-            currentRestaurantIndex--;
-            showRestaurant(currentRestaurantIndex);
-        }
-    });
+    // Inicializa o carrossel de restaurantes
+    setupCarousel('restaurantes-container', 'prev-restaurant', 'next-restaurant', '.restaurant-card');
 
-    nextRestaurantBtn.addEventListener('click', () => {
-        if (currentRestaurantIndex < restaurantCards.length - 1) {
-            currentRestaurantIndex++;
-            showRestaurant(currentRestaurantIndex);
-        }
-    });
-
-    // Initial display
-    showRestaurant(currentRestaurantIndex);
-
-    // Optional: Update status (Open/Closed) for restaurants based on time
+    // Atualização do status do restaurante
     function updateRestaurantStatus() {
         const now = new Date();
-        const dayOfWeek = now.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
-        const currentHour = now.getHours();
-        const currentMinute = now.getMinutes();
-        const currentTime = currentHour * 60 + currentMinute;
+        const dayOfWeek = now.getDay();
+        const currentTime = now.getHours() * 60 + now.getMinutes();
 
-        // K-dog (Pedidos online via ifood/WhatsApp - always open for simplicity or needs specific logic)
-        const kdogStatus = document.getElementById('status-kdog');
-        if (kdogStatus) {
-            kdogStatus.textContent = 'Online'; // Simplified
-            kdogStatus.classList.add('text-green-600');
-        }
+        const restaurantSchedules = {
+            'status-kdog': { alwaysOpen: true },
+            'status-saiso': {
+                week: { start: 11.5, end: 14.5, eveningStart: 18, eveningEnd: 21.5 },
+                weekend: { start: 11.5, end: 15, eveningStart: 18, eveningEnd: 22 }
+            },
+            'status-shinys': { week: { start: 11, end: 15 } },
+            'status-yu': { week: { start: 11.5, end: 15 }, weekend: { start: 12, end: 15 } },
+            'status-yami': { week: { start: 11.5, end: 16 } },
+            'status-yoribogo': {
+                week: { start: 11.5, end: 14.5, eveningStart: 18, eveningEnd: 21 },
+                saturday: { start: 11.5, end: 14.25, eveningStart: 18, eveningEnd: 21 }
+            },
+            'status-yutogo': { week: { start: 8, end: 17.5 }, saturday: { start: 8, end: 14.5 } },
+            'status-felicidadesdamo': { week: { start: 11, end: 13.75 } }
+        };
 
-        // Saiso K-Food Market
-        const saisoStatus = document.getElementById('status-saiso');
-        if (saisoStatus) {
-            let isOpen = false;
-            // Seg-Qui: 11:30-14:30, 18:00-21:30
-            if (dayOfWeek >= 1 && dayOfWeek <= 4) { // Mon-Thu
-                if ((currentTime >= (11 * 60 + 30) && currentTime <= (14 * 60 + 30)) ||
-                    (currentTime >= (18 * 60) && currentTime <= (21 * 60 + 30))) {
-                    isOpen = true;
-                }
-            }
-            // Sex-Sáb: 11:30-15:00, 18:00-22:00
-            else if (dayOfWeek === 5 || dayOfWeek === 6) { // Fri-Sat
-                if ((currentTime >= (11 * 60 + 30) && currentTime <= (15 * 60)) ||
-                    (currentTime >= (18 * 60) && currentTime <= (22 * 60))) {
-                    isOpen = true;
-                }
-            }
-            saisoStatus.textContent = isOpen ? 'Aberto' : 'Fechado';
-            saisoStatus.classList.add(isOpen ? 'text-green-600' : 'text-red-600');
-        }
+        for (const id in restaurantSchedules) {
+            const statusEl = document.getElementById(id);
+            if (statusEl) {
+                const schedule = restaurantSchedules[id];
+                let isOpen = false;
 
-        // Shiny's Kitchen
-        const shinysStatus = document.getElementById('status-shinys');
-        if (shinysStatus) {
-            let isOpen = false;
-            // Terça a Sábado, das 11h às 15h
-            if (dayOfWeek >= 2 && dayOfWeek <= 6) { // Tue-Sat
-                if (currentTime >= (11 * 60) && currentTime <= (15 * 60)) {
+                if (schedule.alwaysOpen) {
                     isOpen = true;
+                } else {
+                    const todaySchedule = (dayOfWeek >= 1 && dayOfWeek <= 5) ? schedule.week : (dayOfWeek === 6 ? (schedule.saturday || schedule.weekend) : (schedule.weekend));
+                    if (todaySchedule) {
+                        const { start, end, eveningStart, eveningEnd } = todaySchedule;
+                        if ((currentTime >= start * 60 && currentTime <= end * 60) || (eveningStart && eveningEnd && currentTime >= eveningStart * 60 && currentTime <= eveningEnd * 60)) {
+                            isOpen = true;
+                        }
+                    }
                 }
-            }
-            shinysStatus.textContent = isOpen ? 'Aberto' : 'Fechado';
-            shinysStatus.classList.add(isOpen ? 'text-green-600' : 'text-red-600');
-        }
 
-        // Yü Cozinha Oriental
-        const yuStatus = document.getElementById('status-yu');
-        if (yuStatus) {
-            let isOpen = false;
-            // Seg-Sex: 11:30-15:00, Sáb-Dom: 12:00-15:00
-            if (dayOfWeek >= 1 && dayOfWeek <= 5) { // Mon-Fri
-                if (currentTime >= (11 * 60 + 30) && currentTime <= (15 * 60)) {
-                    isOpen = true;
-                }
-            } else if (dayOfWeek === 0 || dayOfWeek === 6) { // Sun-Sat
-                if (currentTime >= (12 * 60) && currentTime <= (15 * 60)) {
-                    isOpen = true;
-                }
+                statusEl.textContent = isOpen ? 'Aberto' : 'Fechado';
+                statusEl.classList.toggle('text-green-600', isOpen);
+                statusEl.classList.toggle('text-red-600', !isOpen);
             }
-            yuStatus.textContent = isOpen ? 'Aberto' : 'Fechado';
-            yuStatus.classList.add(isOpen ? 'text-green-600' : 'text-red-600');
-        }
-
-        // Yami Asian Food
-        const yamiStatus = document.getElementById('status-yami');
-        if (yamiStatus) {
-            let isOpen = false;
-            // Seg-Sáb: 11:30-16:00
-            if (dayOfWeek >= 1 && dayOfWeek <= 6) { // Mon-Sat
-                if (currentTime >= (11 * 60 + 30) && currentTime <= (16 * 60)) {
-                    isOpen = true;
-                }
-            }
-            yamiStatus.textContent = isOpen ? 'Aberto' : 'Fechado';
-            yamiStatus.classList.add(isOpen ? 'text-green-600' : 'text-red-600');
-        }
-
-        // Yoribogo
-        const yoribogoStatus = document.getElementById('status-yoribogo');
-        if (yoribogoStatus) {
-            let isOpen = false;
-            // Seg-Sex: 11:30-14:30, Sáb: 11:30-14:15, Jantar: 18:00-21:00
-            if (dayOfWeek >= 1 && dayOfWeek <= 5) { // Mon-Fri
-                if ((currentTime >= (11 * 60 + 30) && currentTime <= (14 * 60 + 30)) ||
-                    (currentTime >= (18 * 60) && currentTime <= (21 * 60))) {
-                    isOpen = true;
-                }
-            }
-            else if (dayOfWeek === 6) { // Sat
-                if ((currentTime >= (11 * 60 + 30) && currentTime <= (14 * 60 + 15)) ||
-                    (currentTime >= (18 * 60) && currentTime <= (21 * 60))) {
-                    isOpen = true;
-                }
-            }
-            yoribogoStatus.textContent = isOpen ? 'Aberto' : 'Fechado';
-            yoribogoStatus.classList.add(isOpen ? 'text-green-600' : 'text-red-600');
-        }
-
-        // Yü Korean Taste
-        const yutogoStatus = document.getElementById('status-yutogo');
-        if (yutogoStatus) {
-            let isOpen = false;
-            // Seg-Sex: 08:00-17:30, Sáb: 08:00-14:30
-            if (dayOfWeek >= 1 && dayOfWeek <= 5) { // Mon-Fri
-                if (currentTime >= (8 * 60) && currentTime <= (17 * 60 + 30)) {
-                    isOpen = true;
-                }
-            }
-            else if (dayOfWeek === 6) { // Sat
-                if (currentTime >= (8 * 60) && currentTime <= (14 * 60 + 30)) {
-                    isOpen = true;
-                }
-            }
-            yutogoStatus.textContent = isOpen ? 'Aberto' : 'Fechado';
-            yutogoStatus.classList.add(isOpen ? 'text-green-600' : 'text-red-600');
-        }
-
-        // Felicidades da MÔ
-        const felicidadesdamoStatus = document.getElementById('status-felicidadesdamo');
-        if (felicidadesdamoStatus) {
-            let isOpen = false;
-            // Retirada de Seg a Sáb 11h às 13:45h
-            if (dayOfWeek >= 1 && dayOfWeek <= 6) { // Mon-Sat
-                if (currentTime >= (11 * 60) && currentTime <= (13 * 60 + 45)) {
-                    isOpen = true;
-                }
-            }
-            felicidadesdamoStatus.textContent = isOpen ? 'Aberto' : 'Fechado';
-            felicidadesdamoStatus.classList.add(isOpen ? 'text-green-600' : 'text-red-600');
         }
     }
 
     updateRestaurantStatus();
-    setInterval(updateRestaurantStatus, 60 * 1000); // Update every minute
+    setInterval(updateRestaurantStatus, 60000);
 });
