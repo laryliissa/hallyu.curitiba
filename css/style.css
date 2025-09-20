@@ -1,10 +1,12 @@
 :root {
     --cor-vermelho-paixao: #D81E2C;
     --cor-azul-guia: #0054A6;
-    --cor-amarelo-nascente: #FDB913;
-    --cor-laranja-poente: #F58220;
     --cor-bege-pinhao: #F2EBE3;
     --cor-preto-carvao: #231F20;
+    --cor-amarelo-nascente: #FDB913;
+    --cor-laranja-poente: #F58220;
+
+
 }
 
 /* Habilita a rolagem suave para todo o site */
@@ -32,13 +34,14 @@ h1, h2, h3, h4, h5, h6 {
 /* Classes de cor personalizadas para Tailwind */
 .bg-vermelho-paixao { background-color: var(--cor-vermelho-paixao); }
 .text-vermelho-paixao { color: var(--cor-vermelho-paixao); }
+.hover\:text-vermelho-paixao:hover { color: var(--cor-vermelho-paixao); }
 .bg-azul-guia { background-color: var(--cor-azul-guia); }
 .text-azul-guia { color: var(--cor-azul-guia); }
 .bg-bege-pinhao { background-color: var(--cor-bege-pinhao); }
 .text-amarelo-nascente { color: var(--cor-amarelo-nascente); }
 .bg-amarelo-nascente { background-color: var(--cor-amarelo-nascente); }
-.text-laranja-poente { color: var(--cor-laranja-poente); }
 .bg-laranja-poente { background-color: var(--cor-laranja-poente); }
+.text-laranja-poente { color: var(--cor-laranja-poente); }
 .text-preto-carvao { color: var(--cor-preto-carvao); }
 
 .gradient-hero {
