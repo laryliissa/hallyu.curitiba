@@ -17,8 +17,11 @@ function toggleMobileMenu() {
 // Calendar Functionality
 document.addEventListener('DOMContentLoaded', () => {
     const calendarContainer = document.getElementById('calendar-container');
-    const prevMonthBtn = document.getElementById('prev-month');
-    const nextMonthBtn = document.getElementById('next-month');
+    const prevMonthBtnMobile = document.getElementById('prev-month');
+    const nextMonthBtnMobile = document.getElementById('next-month');
+    const prevMonthBtnDesktop = document.getElementById('prev-month-desktop');
+    const nextMonthBtnDesktop = document.getElementById('next-month-desktop');
+    const currentMonthDisplay = document.getElementById('current-month-display');
     const eventLists = {
         'events-setembro': document.getElementById('events-setembro'),
         'events-outubro': document.getElementById('events-outubro'),
@@ -36,6 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth'
         });
 
+        // Update month display for mobile
+        if (monthCards[index]) {
+            const monthName = monthCards[index].querySelector('h3').textContent;
+            currentMonthDisplay.textContent = monthName;
+        }
+
         // Hide all event lists and show only the relevant one
         Object.values(eventLists).forEach(list => list.classList.add('hidden'));
         if (monthCards[index]) {
@@ -49,23 +58,48 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateCalendarNavigation() {
-        prevMonthBtn.disabled = currentMonthIndex === 0;
-        nextMonthBtn.disabled = currentMonthIndex === monthCards.length - 1;
+        // Mobile buttons
+        prevMonthBtnMobile.disabled = currentMonthIndex === 0;
+        nextMonthBtnMobile.disabled = currentMonthIndex === monthCards.length - 1;
+
+        // Desktop buttons (if they exist)
+        if (prevMonthBtnDesktop && nextMonthBtnDesktop) {
+            prevMonthBtnDesktop.disabled = currentMonthIndex === 0;
+            nextMonthBtnDesktop.disabled = currentMonthIndex === monthCards.length - 1;
+        }
     }
 
-    prevMonthBtn.addEventListener('click', () => {
+    // Mobile button event listeners
+    prevMonthBtnMobile.addEventListener('click', () => {
         if (currentMonthIndex > 0) {
             currentMonthIndex--;
             showMonth(currentMonthIndex);
         }
     });
 
-    nextMonthBtn.addEventListener('click', () => {
+    nextMonthBtnMobile.addEventListener('click', () => {
         if (currentMonthIndex < monthCards.length - 1) {
             currentMonthIndex++;
             showMonth(currentMonthIndex);
         }
     });
+
+    // Desktop button event listeners (if they exist)
+    if (prevMonthBtnDesktop && nextMonthBtnDesktop) {
+        prevMonthBtnDesktop.addEventListener('click', () => {
+            if (currentMonthIndex > 0) {
+                currentMonthIndex--;
+                showMonth(currentMonthIndex);
+            }
+        });
+
+        nextMonthBtnDesktop.addEventListener('click', () => {
+            if (currentMonthIndex < monthCards.length - 1) {
+                currentMonthIndex++;
+                showMonth(currentMonthIndex);
+            }
+        });
+    }
 
     // Initial display
     showMonth(currentMonthIndex);
