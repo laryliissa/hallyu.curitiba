@@ -31,9 +31,38 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="antialiased">
-
-    
-
+    <header class="bg-fundo sticky top-0 z-50 shadow-sm border-b border-white/20">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <img src="images/logo-hallyu-transparente.png" alt="Logo HallyuCuritiba" class="w-12 h-12 transition-transform group-hover:scale-105">
+                <span class="text-2xl font-extrabold text-texto">HallyuCuritiba</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 font-semibold">
+                <a href="index.html#inicio" class="text-secundaria font-bold">Início</a>
+                <a href="agenda.html" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Agenda de Eventos</a>
+                <a href="restaurantes.html" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Comida Coreana</a>
+                <a href="guia-k-stores.html" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Guias de Lojas</a>
+                <a href="aulas.html" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Aulas</a>
+                <a href="index.html#artigos" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Artigos</a>
+                <a href="index.html#sobre" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Sobre</a>
+            </nav>
+            <button class="md:hidden text-gray-700 z-50 relative" onclick="toggleMobileMenu()">
+                <svg id="menu-open-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <svg id="menu-close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-fundo z-40 md:hidden">
+            <nav class="flex flex-col h-full justify-center items-center space-y-8">
+                <a href="index.html#inicio" class="text-3xl font-bold text-secundaria">Início</a>
+                <a href="agenda.html" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Agenda de Eventos</a>
+                <a href="restaurantes.html" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Comida Coreana</a>
+                <a href="guia-k-stores.html" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Guias de Lojas</a>
+                <a href="aulas.html" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Aulas</a>
+                <a href="index.html#artigos" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Artigos</a>
+                <a href="index.html#sobre" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Sobre</a>
+            </nav>
+        </div>
+    </header>
     <main>
         <!-- 2. Seção Inicial (Hero) Embelezada -->
         <section id="inicio" class="gradient-hero text-white py-28 px-6 relative overflow-hidden bg-vermelho-paixao">
@@ -485,7 +514,11 @@
                     <!-- Card Restaurantes -->
                     <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden group flex flex-col">
                         <a href="restaurantes.html" class="block">
-                            <img src="https://imgur.com/BtRQ3aX.jpeg" alt="Comida coreana" class="w-full h-48 object-cover">
+                            <div class="h-48 flex items-center justify-center bg-gradient-to-b from-red-100 to-bege-pinhao">
+                                <svg class="w-24 h-24 text-vermelho-paixao mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a2.25 2.25 0 01-2.25 2.25H5.25a2.25 2.25 0 01-2.25-2.25v-8.25M12 4.875A3.375 3.375 0 0012 1.5v3.375m0 0a3.375 3.375 0 00-3.375 3.375h6.75A3.375 3.375 0 0012 4.875zm0 0a7.5 7.5 0 017.5 7.5H4.5a7.5 7.5 0 017.5-7.5z" />
+                                </svg>
+                            </div>
                             <div class="p-6 flex flex-col flex-grow">
                                 <h3 class="text-2xl font-bold text-preto-carvao mb-2">Restaurantes</h3>
                                 <p class="text-gray-700 mb-4 flex-grow">Saboreie a autêntica culinária coreana.</p>
@@ -497,7 +530,13 @@
                     <!-- Card K-Stores -->
                     <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden group flex flex-col">
                         <a href="guia-k-stores.html" class="block">
-                            <img src="https://i.imgur.com/1I6NIeJ.jpeg" alt="Prateleira de produtos de K-beauty" class="w-full h-48 object-cover">
+                            <div class="h-48 flex items-center justify-center bg-gradient-to-b from-blue-100 to-bege-pinhao">
+                                <svg class="w-24 h-24 text-azul-guia mx-auto" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M7.5 7.67001V6.70001C7.5 4.45001 9.31 2.24001 11.56 2.03001C14.24 1.77001 16.5 3.88001 16.5 6.51001V7.89001" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15.44 16.94C15.04 18.28 13.63 19.34 12 19.34C10.37 19.34 8.96 18.28 8.56 16.94" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9 22H15C19.02 22 19.74 20.39 19.95 18.43L20.7 12.43C20.97 9.99 20.27 8 16 8H8C3.73 8 3.03 9.99 3.3 12.43L4.05 18.43C4.26 20.39 4.98 22 9 22Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
                             <div class="p-6 flex flex-col flex-grow">
                                 <h3 class="text-2xl font-bold text-preto-carvao mb-2">K-Stores</h3>
                                 <p class="text-gray-700 mb-4 flex-grow">Encontre K-beauty e produtos coreanos.</p>
@@ -509,7 +548,11 @@
                     <!-- Card Aulas -->
                     <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden group flex flex-col">
                         <a href="aulas.html" class="block">
-                            <img src="https://i.imgur.com/sM1RZKa.jpeg" alt="Aula de dança K-pop" class="w-full h-48 object-cover">
+                            <div class="h-48 flex items-center justify-center bg-gradient-to-b from-yellow-100 to-bege-pinhao">
+                                <svg class="w-24 h-24 text-amarelo-nascente mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                                </svg>
+                            </div>
                             <div class="p-6 flex flex-col flex-grow">
                                 <h3 class="text-2xl font-bold text-preto-carvao mb-2">Aulas</h3>
                                 <p class="text-gray-700 mb-4 flex-grow">Aprenda a dançar K-pop ou o idioma coreano.</p>
@@ -521,7 +564,12 @@
                     <!-- Card Pontos de Encontro -->
                     <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden group flex flex-col">
                         <a href="#" class="block">
-                            <img src="https://imgur.com/6JdEjVo.jpeg" alt="Grupo de pessoas em um evento" class="w-full h-48 object-cover">
+                            <div class="h-48 flex items-center justify-center bg-gradient-to-b from-orange-100 to-bege-pinhao">
+                                <svg class="w-24 h-24 text-laranja-poente mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 13.43C13.7278 13.43 15.13 12.0278 15.13 10.3C15.13 8.57222 13.7278 7.17 12 7.17C10.2722 7.17 8.87 8.57222 8.87 10.3C8.87 12.0278 10.2722 13.43 12 13.43Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21.37C15.89 17.82 19.43 14.44 19.43 10.3C19.43 6.16 16.11 2.84 12 2.84C7.89 2.84 4.57 6.16 4.57 10.3C4.57 14.44 8.11 17.82 12 21.37Z" />
+                                </svg>
+                            </div>
                             <div class="p-6 flex flex-col flex-grow">
                                 <h3 class="text-2xl font-bold text-preto-carvao mb-2">Encontros</h3>
                                 <p class="text-gray-700 mb-4 flex-grow">Conecte-se com outros fãs da Hallyu.</p>
