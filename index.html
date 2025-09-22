@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HallyuCuritiba - Seu Guia Definitivo da Onda Coreana</title>
-    <meta name="description" content="Descubra a Onda Coreana em Curitiba! Encontre a agenda de eventos, mapa de restaurantes, lojas de k-pop e artigos sobre a cultura Hallyu na cidade.">
+    <title>HallyuCuritiba: Seu Guia Definitivo da Onda Coreana em CWB</title>
+    <meta name="description" content="Seu guia definitivo para a cultura coreana em Curitiba (CWB). Descubra a agenda de eventos, restaurantes, lojas de k-pop, k-beauty e tudo sobre a Onda Hallyu na nossa cidade.">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google tag (gtag.js) - SUBSTITUA PELO SEU CÓDIGO -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E165Q6LF5Y"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -32,50 +32,7 @@
 </head>
 <body class="antialiased">
 
-    <!-- 1. Cabeçalho (Header) Otimizado -->
-    <header class="bg-bege-pinhao sticky top-0 z-50 shadow-sm">
-        <div class="container mx-auto px-6 py-2 flex justify-between items-center">
-            <!-- Logo ATUALIZADA -->
-            <a href="#inicio" class="flex items-center space-x-3 group">
-                <img src="images/logo-hallyu-transparente.png" alt="Logo HallyuCuritiba" class="w-14 h-14 transition-transform group-hover:scale-105">
-                <span class="text-3xl font-extrabold text-preto-carvao">HallyuCuritiba</span>
-            </a>
-            
-            <!-- Menu de Navegação (Desktop) -->
-            <nav class="hidden md:flex items-center space-x-8 font-semibold">
-                <a href="#inicio" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Início</a>
-                <a href="#agenda" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Agenda</a>
-                <a href="restaurantes.html" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Restaurantes</a>
-                <a href="guia-k-stores.html" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">K-Stores</a>
-                <a href="aulas.html" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Aulas</a>
-                <a href="#artigos" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Artigos</a>
-                <a href="#sobre" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Sobre</a>
-            </nav>
-            
-            <!-- Botão Menu Mobile -->
-            <button class="md:hidden text-gray-700 z-50 relative" onclick="toggleMobileMenu()">
-                <svg id="menu-open-icon" class="w-7 h-7 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-                <svg id="menu-close-icon" class="w-7 h-7 hidden transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
-        </div>
-
-        <!-- Menu Mobile Otimizado -->
-        <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-fundo z-40 md:hidden">
-            <nav class="flex flex-col h-full justify-center items-center space-y-8">
-                <a href="#inicio" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Início</a>
-                <a href="#agenda" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Agenda</a>
-                <a href="restaurantes.html" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Restaurantes</a>
-                <a href="guia-k-stores.html" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">K-Stores</a>
-                <a href="aulas.html" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Aulas</a>
-                <a href="#artigos" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Artigos</a>
-                <a href="#sobre" onclick="toggleMobileMenu()" class="text-3xl font-bold text-gray-700 hover:text-azul-guia transition-colors">Sobre</a>
-            </nav>
-        </div>
-    </header>
+    
 
     <main>
         <!-- 2. Seção Inicial (Hero) Embelezada -->
@@ -526,55 +483,52 @@
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Card Restaurantes -->
-                    <a href="#restaurantes" class="text-center card-hover bg-white rounded-2xl p-6 block group">
-                        <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-vermelho-paixao/10 rounded-full transition-colors duration-300 group-hover:bg-vermelho-paixao">
-                            <!-- Ícone SVG Personalizado: Restaurantes -->
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-vermelho-paixao transition-colors duration-300 group-hover:text-white" stroke="currentColor" stroke-width="1.5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a2.25 2.25 0 01-2.25 2.25H5.25a2.25 2.25 0 01-2.25-2.25v-8.25M12 4.875A3.375 3.375 0 0012 1.5v3.375m0 0a3.375 3.375 0 00-3.375 3.375h6.75A3.375 3.375 0 0012 4.875zm0 0a7.5 7.5 0 017.5 7.5H4.5a7.5 7.5 0 017.5-7.5z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">Restaurantes</h3>
-                        <p class="text-gray-700">Saboreie a autêntica culinária coreana.</p>
-                    </a>
+                    <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden group flex flex-col">
+                        <a href="restaurantes.html" class="block">
+                            <img src="https://imgur.com/BtRQ3aX.jpeg" alt="Comida coreana" class="w-full h-48 object-cover">
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-2xl font-bold text-preto-carvao mb-2">Restaurantes</h3>
+                                <p class="text-gray-700 mb-4 flex-grow">Saboreie a autêntica culinária coreana.</p>
+                                <span class="bg-vermelho-paixao text-white px-6 py-2 rounded-full font-bold self-start group-hover:bg-red-700 transition-colors">Acessar Guia</span>
+                            </div>
+                        </a>
+                    </div>
 
                     <!-- Card K-Stores -->
-                    <a href="guia-k-stores.html" class="text-center card-hover bg-white rounded-2xl p-6 block group">
-                        <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-azul-guia/10 rounded-full transition-colors duration-300 group-hover:bg-azul-guia">
-                            <!-- Ícone SVG Personalizado: K-Stores -->
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-azul-guia transition-colors duration-300 group-hover:text-white">
-                                <path d="M7.5 7.67001V6.70001C7.5 4.45001 9.31 2.24001 11.56 2.03001C14.24 1.77001 16.5 3.88001 16.5 6.51001V7.89001" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M15.44 16.94C15.04 18.28 13.63 19.34 12 19.34C10.37 19.34 8.96 18.28 8.56 16.94" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M9 22H15C19.02 22 19.74 20.39 19.95 18.43L20.7 12.43C20.97 9.99 20.27 8 16 8H8C3.73 8 3.03 9.99 3.3 12.43L4.05 18.43C4.26 20.39 4.98 22 9 22Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">K-Stores</h3>
-                        <p class="text-gray-700">Encontre K-beauty e produtos coreanos.</p>
-                    </a>
+                    <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden group flex flex-col">
+                        <a href="guia-k-stores.html" class="block">
+                            <img src="https://i.imgur.com/1I6NIeJ.jpeg" alt="Prateleira de produtos de K-beauty" class="w-full h-48 object-cover">
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-2xl font-bold text-preto-carvao mb-2">K-Stores</h3>
+                                <p class="text-gray-700 mb-4 flex-grow">Encontre K-beauty e produtos coreanos.</p>
+                                <span class="bg-azul-guia text-white px-6 py-2 rounded-full font-bold self-start group-hover:bg-blue-700 transition-colors">Acessar Guia</span>
+                            </div>
+                        </a>
+                    </div>
 
-                    <!-- Card Escolas/Aulas -->
-                    <a href="aulas.html" class="text-center card-hover bg-white rounded-2xl p-6 block group">
-                        <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-amarelo-nascente/20 rounded-full transition-colors duration-300 group-hover:bg-amarelo-nascente">
-                            <!-- Ícone SVG Personalizado: Escolas -->
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-amarelo-nascente transition-colors duration-300 group-hover:text-preto-carvao" stroke="currentColor" stroke-width="1.5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">Aulas</h3>
-                        <p class="text-gray-700">Aprenda a dançar K-pop ou o idioma coreano.</p>
-                    </a>
+                    <!-- Card Aulas -->
+                    <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden group flex flex-col">
+                        <a href="aulas.html" class="block">
+                            <img src="https://i.imgur.com/sM1RZKa.jpeg" alt="Aula de dança K-pop" class="w-full h-48 object-cover">
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-2xl font-bold text-preto-carvao mb-2">Aulas</h3>
+                                <p class="text-gray-700 mb-4 flex-grow">Aprenda a dançar K-pop ou o idioma coreano.</p>
+                                <span class="bg-amarelo-nascente text-preto-carvao px-6 py-2 rounded-full font-bold self-start group-hover:bg-yellow-400 transition-colors">Acessar Guia</span>
+                            </div>
+                        </a>
+                    </div>
 
                     <!-- Card Pontos de Encontro -->
-                    <a href="#" class="text-center card-hover bg-white rounded-2xl p-6 block group">
-                        <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-laranja-poente/10 rounded-full transition-colors duration-300 group-hover:bg-laranja-poente">
-                            <!-- Ícone SVG Personalizado: Pontos de Encontro -->
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-laranja-poente transition-colors duration-300 group-hover:text-white">
-                                <path d="M12 13.43C13.7278 13.43 15.13 12.0278 15.13 10.3C15.13 8.57222 13.7278 7.17 12 7.17C10.2722 7.17 8.87 8.57222 8.87 10.3C8.87 12.0278 10.2722 13.43 12 13.43Z" stroke="currentColor" stroke-width="1.5"/>
-                                <path d="M12 21.37C15.89 17.82 19.43 14.44 19.43 10.3C19.43 6.16 16.11 2.84 12 2.84C7.89 2.84 4.57 6.16 4.57 10.3C4.57 14.44 8.11 17.82 12 21.37Z" stroke="currentColor" stroke-width="1.5"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-preto-carvao mb-2">Encontros</h3>
-                        <p class="text-gray-700">Conecte-se com outros fãs da Hallyu.</p>
-                    </a>
+                    <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden group flex flex-col">
+                        <a href="#" class="block">
+                            <img src="https://imgur.com/6JdEjVo.jpeg" alt="Grupo de pessoas em um evento" class="w-full h-48 object-cover">
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-2xl font-bold text-preto-carvao mb-2">Encontros</h3>
+                                <p class="text-gray-700 mb-4 flex-grow">Conecte-se com outros fãs da Hallyu.</p>
+                                <span class="bg-laranja-poente text-white px-6 py-2 rounded-full font-bold self-start group-hover:bg-orange-600 transition-colors">Acessar Guia</span>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1100,5 +1054,6 @@
 
     <!-- JavaScript -->
     <script src="script.js" defer></script>
+    <script src="js/template.js" defer></script>
 </body>
 </html>
