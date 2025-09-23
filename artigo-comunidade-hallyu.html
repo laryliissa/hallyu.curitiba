@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais que um Evento, um Encontro: A Comunidade Por Trás do Hallyu Curitiba</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E165Q6LF5Y"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-E165Q6LF5Y');
+    </script>
+
+    <!-- Google Fonts: Montserrat and Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon-hallyu.png" type="image/png">
+
+    <!-- Estilos Personalizados -->
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        /* Estilos específicos do artigo */
+        .article-content h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--cor-vermelho-paixao);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .article-content p {
+            margin-bottom: 1.2rem;
+            line-height: 1.7;
+        }
+        .article-content ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1.2rem;
+        }
+        .article-content strong {
+            color: var(--cor-azul-guia);
+        }
+        .article-img {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 2rem auto;
+            border-radius: 1rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Cabeçalho Padrão -->
+    <header class="bg-bege-pinhao sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <img src="images/logo-hallyu-transparente.png" alt="Logo HallyuCuritiba" class="w-12 h-12 transition-transform group-hover:scale-105">
+                <span class="text-2xl font-extrabold text-preto-carvao">HallyuCuritiba</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 font-semibold">
+                <a href="index.html#inicio" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Início</a>
+                <a href="index.html#agenda" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Agenda</a>
+                <a href="index.html#artigos" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Artigos</a>
+                <a href="index.html#sobre" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Sobre</a>
+            </nav>
+            <button class="md:hidden text-gray-700 z-50 relative" onclick="toggleMobileMenu()">
+                <svg id="menu-open-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <svg id="menu-close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-bege-pinhao z-40 md:hidden">
+            <nav class="flex flex-col h-full justify-center items-center space-y-8">
+                <a href="index.html#inicio" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Início</a>
+                <a href="index.html#agenda" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Agenda</a>
+                <a href="index.html#artigos" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Artigos</a>
+                <a href="index.html#sobre" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Sobre</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo do Artigo -->
+    <main class="bg-white py-16 px-6">
+        <div class="container mx-auto max-w-3xl article-content">
+            <a href="index.html#artigos" class="font-bold text-azul-guia hover:text-vermelho-paixao transition-colors mb-8 inline-block">&larr; Voltar para todos os artigos</a>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">Mais que um Evento, um Encontro: A Comunidade Por Trás do Hallyu Curitiba</h1>
+            <p class="text-l text-gray-600 mb-8">Publicado em: 23 de Setembro de 2025 | Por: Equipe HallyuCuritiba</p>
+            
+            <p>Você já parou para pensar no que realmente acontece em um evento Hallyu?</p>
+            <p>Sim, tem a música que amamos, a comida que nos transporta para a Coreia, os grupos de dança que nos deixam de queixo caído. Mas se olharmos mais de perto, entre um fanchant e outro, entre uma garfada no tteokbokki e a compra de um photocard, existe algo muito mais profundo acontecendo: a conexão.</p>
+            <p>É a troca de olhares com alguém que usa a camiseta do mesmo grupo que você. É o sorriso que surge quando você ouve o refrão da sua música favorita e percebe que todos ao redor estão cantando junto. É a sensação de, finalmente, encontrar a sua "colmeia", o seu lugar de pertencimento.</p>
+            <p>Para nós, essa sensação não é apenas o resultado do nosso trabalho. Ela é a origem de tudo.</p>
+
+            <h2>A Semente: A História da Kpurple</h2>
+            <p>O HallyuCuritiba não nasceu de uma planilha de negócios ou de uma análise de mercado. Ele nasceu em um grupo de WhatsApp.</p>
+            <p>Esse grupo tem nome: Kpurple.</p>
+            <p>A Kpurple é o nosso ponto de partida. É um pequeno universo formado por um grupo de amigas que se encontraram por uma paixão em comum que mudou nossas vidas: o BTS. Somos um grupo de ARMYs que transformou a admiração por sete artistas em uma amizade sólida e em uma rede de apoio inabalável.</p>
+            <p>Para nós, a Kpurple se tornou um refúgio. Um lugar seguro para surtar com o lançamento de um novo MV à meia-noite, para teorizar sobre as letras, para organizar encontros em cafés e, o mais importante, para celebrar a jornada umas das outras, tanto dentro quanto fora do fandom.</p>
+            <p>Foi dentro dessa nossa pequena comunidade que a grande questão surgiu. A mesma que você provavelmente já se fez dezenas de vezes:</p>
+            <p><em>"Onde a gente vai se encontrar?"</em><br><em>"Onde vende o álbum novo?"</em><br><em>"Será que vai ter algum evento para comemorar o aniversário do bias?"</em></p>
+            <p>A informação estava em todo lugar e, ao mesmo tempo, em lugar nenhum. Passávamos mais tempo procurando do que aproveitando. Foi em meio a essa frustração coletiva que a faísca acendeu.</p>
+
+            <h2>De um Problema Pessoal a um Projeto Coletivo</h2>
+            <p>A ideia do HallyuCuritiba nasceu de uma frase simples: "E se a gente criasse o lugar que sempre procuramos?".</p>
+            <p>E se pudéssemos construir uma ponte? Uma plataforma que conectasse todas as "Kpurples" de Curitiba? Um lugar que não apenas listasse os eventos, mas que celebrasse a comunidade por trás deles?</p>
+            <p>Foi assim que este projeto tomou forma. Cada guia de loja, cada artigo, cada evento listado em nosso site é uma resposta direta a uma necessidade que vivemos na pele. O HallyuCuritiba é a nossa carta de amor a todas as amizades que nasceram por causa de um interesse em comum, a todas as comunidades que, como a nossa, se tornaram uma segunda família.</p>
+            <p>Este não é apenas um site sobre a Onda Coreana em Curitiba. É um convite. Um convite para que você encontre seu lugar, para que se conecte com outras pessoas e para que, juntos, possamos fortalecer ainda mais a nossa incrível comunidade.</p>
+            <p>A Kpurple foi a nossa semente. Agora, o HallyuCuritiba é a árvore que queremos ver crescer, com galhos que alcançam cada fã, cada grupo de amigos, cada pedacinho da Coreia em nossa cidade.</p>
+            <p>Bem-vindo!</p>
+
+            <div class="text-center mt-12">
+                <a href="agenda.html" class="bg-laranja-poente text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-600 transition-all duration-300 shadow-lg btn-hover">
+                    Ver Agenda de Eventos
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé Padrão -->
+    <footer class="bg-preto-carvao text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 HallyuCuritiba. Todos os direitos reservados.</p>
+            <p class="mt-2 text-sm">Feito com ❤️ para a comunidade Hallyu de Curitiba.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
