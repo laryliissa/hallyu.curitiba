@@ -31,6 +31,38 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="antialiased">
+    <header class="bg-black sticky top-0 z-50 shadow-sm border-b border-white">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <img src="images/logo-hallyu-transparente.png" alt="Logo HallyuCuritiba" class="w-12 h-12 transition-transform group-hover:scale-105">
+                <span class="text-2xl font-extrabold text-texto">HallyuCuritiba</span>
+            </a>
+            <nav id="desktop-nav" class="hidden md:flex items-center space-x-8 font-semibold">
+                <a href="index.html" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Início</a>
+                <a href="agenda.html" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Agenda de Eventos</a>
+                <a href="restaurantes.html" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Comida Coreana</a>
+                <a href="guia-k-stores.html" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Guias de Lojas</a>
+                <a href="aulas.html" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Aulas</a>
+                <a href="index.html#artigos" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Artigos</a>
+                <a href="index.html#sobre" class="text-gray-700 hover:text-secundaria transition-colors duration-300">Sobre</a>
+            </nav>
+            <button class="md:hidden text-gray-700 z-50 relative" onclick="toggleMobileMenu()">
+                <svg id="menu-open-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <svg id="menu-close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-black z-40 md:hidden">
+            <nav class="flex flex-col h-full justify-center items-center space-y-8">
+                <a href="index.html" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Início</a>
+                <a href="agenda.html" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Agenda de Eventos</a>
+                <a href="restaurantes.html" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Comida Coreana</a>
+                <a href="guia-k-stores.html" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Guias de Lojas</a>
+                <a href="aulas.html" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Aulas</a>
+                <a href="index.html#artigos" class="text-3xl font-bold text-gray-700 hover:text-secundaria">Artigos</a>
+                <a href="index.html#sobre" class="text-3xl font-bold text-preto-carvao hover:text-secundaria">Sobre</a>
+            </nav>
+        </div>
+    </header>
     
     <main>
         <!-- 2. Seção Inicial (Hero) Embelezada -->
@@ -1072,6 +1104,5 @@
 
     <!-- JavaScript -->
     <script src="script.js" defer></script>
-    <script src="js/template.js" defer></script>
 </body>
 </html>
