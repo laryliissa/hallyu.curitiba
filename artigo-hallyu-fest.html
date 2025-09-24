@@ -62,39 +62,7 @@
 </head>
 <body class="antialiased">
 
-    <!-- Cabeçalho Padrão -->
-    <header class="bg-bege-pinhao sticky top-0 z-50 shadow-sm">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-3 group">
-                <img src="images/logo-hallyu-transparente.png" alt="Logo HallyuCuritiba" class="w-12 h-12 transition-transform group-hover:scale-105">
-                <span class="text-2xl font-extrabold text-preto-carvao">HallyuCuritiba</span>
-            </a>
-            <nav class="hidden md:flex items-center space-x-8 font-semibold">
-                <a href="index.html#inicio" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Início</a>
-                <a href="index.html#agenda" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Agenda</a>
-                <a href="restaurantes.html" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Restaurantes</a>
-                <a href="guia-k-stores.html" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">K-Stores</a>
-                <a href="aulas.html" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Aulas</a>
-                <a href="index.html#artigos" class="text-azul-guia font-bold">Artigos</a>
-                <a href="index.html#sobre" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Sobre</a>
-            </nav>
-            <button class="md:hidden text-gray-700 z-50 relative" onclick="toggleMobileMenu()">
-                <svg id="menu-open-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                <svg id="menu-close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-        </div>
-        <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-bege-pinhao z-40 md:hidden">
-            <nav class="flex flex-col h-full justify-center items-center space-y-8">
-                <a href="index.html#inicio" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Início</a>
-                <a href="index.html#agenda" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Agenda</a>
-                <a href="restaurantes.html" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Restaurantes</a>
-                <a href="guia-k-stores.html" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">K-Stores</a>
-                <a href="aulas.html" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Aulas</a>
-                <a href="index.html#artigos" class="text-3xl font-bold text-azul-guia">Artigos</a>
-                <a href="index.html#sobre" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Sobre</a>
-            </nav>
-        </div>
-    </header>
+    
 
     <!-- Conteúdo do Artigo -->
     <main class="bg-white py-16 px-6">
@@ -153,6 +121,7 @@
         </div>
     </main>
 
+    <script src="js/template.js" defer></script>
     <script src="https://www.tiktok.com/embed.js" async></script>
     <script src="script.js" defer></script>
 </body>

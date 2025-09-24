@@ -61,35 +61,6 @@
 </head>
 <body class="antialiased">
 
-    <!-- Cabeçalho Padrão -->
-    <header class="bg-bege-pinhao sticky top-0 z-50 shadow-sm">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-3 group">
-                <img src="images/logo-hallyu-transparente.png" alt="Logo HallyuCuritiba" class="w-12 h-12 transition-transform group-hover:scale-105">
-                <span class="text-2xl font-extrabold text-preto-carvao">HallyuCuritiba</span>
-            </a>
-            <nav class="hidden md:flex items-center space-x-8 font-semibold">
-                <a href="index.html#inicio" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Início</a>
-                <a href="index.html#agenda" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Agenda</a>
-                <a href="index.html#artigos" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Artigos</a>
-                <a href="index.html#sobre" class="text-gray-700 hover:text-azul-guia transition-colors duration-300">Sobre</a>
-            </nav>
-            <button class="md:hidden text-gray-700 z-50 relative" onclick="toggleMobileMenu()">
-                <svg id="menu-open-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                <svg id="menu-close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-        </div>
-        <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-bege-pinhao z-40 md:hidden">
-            <nav class="flex flex-col h-full justify-center items-center space-y-8">
-                <a href="index.html#inicio" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Início</a>
-                <a href="index.html#agenda" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Agenda</a>
-                <a href="index.html#artigos" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Artigos</a>
-                <a href="index.html#sobre" class="text-3xl font-bold text-gray-700 hover:text-azul-guia">Sobre</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Conteúdo do Artigo -->
     <main class="bg-white py-16 px-6">
         <div class="container mx-auto max-w-3xl article-content">
             <a href="index.html#artigos" class="font-bold text-azul-guia hover:text-vermelho-paixao transition-colors mb-8 inline-block">&larr; Voltar para todos os artigos</a>
@@ -162,71 +133,7 @@
         </div>
     </footer>
 
-    <!-- Conteúdo do Artigo -->
-    <main class="bg-white py-16 px-6">
-        <div class="container mx-auto max-w-3xl article-content">
-            <a href="index.html#artigos" class="font-bold text-azul-guia hover:text-vermelho-paixao transition-colors mb-8 inline-block">&larr; Voltar para todos os artigos</a>
-            <h1 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">Guia Definitivo da Culinária Coreana em Curitiba</h1>
-            <p class="text-xl text-gray-600 mb-8">Annyeong, Hallyu Fam! 🌊✨ Descubra os sabores, pratos e os melhores restaurantes coreanos na nossa cidade.</p>
-            
-            <img src="https://i.imgur.com/cILMh5d.jpg" alt="Mesa coreana com pratos típicos" class="article-img">
-
-            <p>
-                Se você é como a gente, com certeza já pausou um K-drama no meio da cena só pra ficar admirando aquele frango frito crocante ou aquela tigela colorida de Bibimbap e pensou: <strong>"eu PRECISO comer isso!"</strong> A culinária coreana é muito mais do que comida; é uma parte vibrante da cultura, cheia de história, sabor e momentos de partilha.
-            </p>
-            <p>
-                Mas com tantos nomes diferentes, como começar? O que pedir? E o mais importante: onde encontrar essas delícias em Curitiba? Calma, seu guia definitivo chegou!
-            </p>
-
-            <h2>A Base de Tudo: Os Sabores que Definem a Coreia</h2>
-            <img src="https://i.imgur.com/6eVXScr.jpg" alt="Kimchi e outros acompanhamentos (banchan)" class="article-img">
-            <ul>
-                <li><strong>Kimchi (김치):</strong> O astro principal! É uma conserva fermentada de vegetais (geralmente acelga) com pimenta e outros temperos. Existe em centenas de variações e é servido como acompanhamento (banchan) em praticamente todas as refeições.</li>
-                <li><strong>As "Jangs" (장):</strong> Pastas fermentadas que são a base de muitos pratos, como a <strong>Gochujang</strong> (pasta de pimenta), <strong>Doenjang</strong> (pasta de soja) e <strong>Ganjang</strong> (molho de soja).</li>
-                <li><strong>Banchan (반찬):</strong> Pequenos acompanhamentos servidos gratuitamente com o prato principal. A melhor parte é poder provar vários sabores diferentes!</li>
-            </ul>
-
-            <h2>Os Pratos Principais: O Que Pedir Sem Medo</h2>
-
-            <div class="my-8">
-                <img src="https://i.imgur.com/0fx6lIx.jpg" alt="Bulgogi" class="article-img">
-                <h3 class="text-2xl font-bold text-preto-carvao mb-2">Bulgogi (불고기)</h3>
-                <p>O famoso churrasco coreano, com finas fatias de carne marinada e grelhada. É adocicado e perfeito para iniciantes.</p>
-            </div>
-
-            <div class="my-8">
-                <img src="https://i.imgur.com/5ljlwIt.jpg" alt="Bibimbap" class="article-img">
-                <h3 class="text-2xl font-bold text-preto-carvao mb-2">Bibimbap (비빔밥)</h3>
-                <p>"Arroz misturado". Uma tigela de arroz coberta com vegetais, carne, um ovo frito e pasta de pimenta. Lindo e delicioso.</p>
-            </div>
-
-            <div class="my-8">
-                <img src="https://i.imgur.com/nnEjIvX.jpg" alt="Tteokbokki" class="article-img">
-                <h3 class="text-2xl font-bold text-preto-carvao mb-2">Tteokbokki (떡볶이)</h3>
-                <p>Massa de arroz em um molho apimentado e adocicado. Um clássico da comida de rua coreana.</p>
-            </div>
-
-            <div class="my-8">
-                <img src="https://i.imgur.com/hs8Xxd5.jpg" alt="Frango Frito Coreano" class="article-img">
-                <h3 class="text-2xl font-bold text-preto-carvao mb-2">Frango Frito Coreano (치킨)</h3>
-                <p>Famoso por sua crocância inigualável, geralmente servido com molhos agridoces ou apimentados.</p>
-            </div>
-
-            <h2>Onde Viver essa Experiência em Curitiba</h2>
-            <p>Curitiba tem ótimos lugares para mergulhar na culinária coreana. Aqui estão alguns dos nossos favoritos, que você também encontra no nosso <a href="index.html#mapa" class="text-azul-guia font-bold">Mapa Hallyu</a>:</p>
-            
-            <div class="bg-bege-pinhao p-6 rounded-lg my-4 text-center">
-                <h3 class="text-2xl font-bold text-preto-carvao mb-2">Descubra os Melhores Restaurantes Coreanos em Curitiba!</h3>
-                <p class="text-gray-700 mb-4">Preparamos um guia completo com os restaurantes mais autênticos e deliciosos da cidade. Não perca!</p>
-                <a href="restaurantes.html" class="inline-block bg-azul-guia text-white font-bold py-3 px-6 rounded-lg hover:bg-vermelho-paixao transition-colors duration-300">Ver Guia de Restaurantes</a>
-            </div>
-
-            <p class="mt-8">
-                A culinária é uma das melhores maneiras de viajar e se conectar com uma cultura. Esperamos que este guia te inspire a explorar, provar novos sabores e compartilhar momentos deliciosos.
-            </p>
-        </div>
-    </main>
-
+    <script src="js/template.js" defer></script>
     <script src="script.js" defer></script>
 </body>
 </html>
