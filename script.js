@@ -101,16 +101,22 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Destaque de evento
+        // Destaque de evento e scroll
         document.querySelectorAll('.calendar-card div[data-event-id]').forEach(day => {
             day.addEventListener('click', () => {
                 const eventId = day.dataset.eventId;
-                document.querySelectorAll('.event-list .card-hover').forEach(eventCard => {
-                    eventCard.classList.remove('border-blue-500', 'border-2');
-                    if (eventCard.dataset.eventId === eventId) {
-                        eventCard.classList.add('border-blue-500', 'border-2');
-                    }
-                });
+                const eventCard = document.querySelector(`.event-list .card-hover[data-event-id="${eventId}"]`);
+                
+                if (eventCard) {
+                    // Remove o destaque de outros cards
+                    document.querySelectorAll('.event-list .card-hover').forEach(card => {
+                        card.classList.remove('border-blue-500', 'border-2');
+                    });
+                    
+                    // Adiciona destaque e rola para o card
+                    eventCard.classList.add('border-blue-500', 'border-2');
+                    eventCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
             });
         });
 
