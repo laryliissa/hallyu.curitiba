@@ -76,12 +76,12 @@
             </div>
 
             <!-- Check-in Rápido do Evento -->
-            <div class="bg-blue-50 border-l-4 border-blue-400 p-6 my-8 rounded-lg shadow-md">
-                <h3 class="text-xl font-bold text-texto mb-4 flex items-center">
+            <div class="bg-azul-guia/10 border-l-4 border-azul-guia p-6 my-8 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold text-preto-carvao mb-4 flex items-center">
                     <svg class="w-6 h-6 mr-3 text-azul-guia" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     Resumo do Evento
                 </h3>
-                <ul class="space-y-3 text-gray-800">
+                <ul class="space-y-3 text-gray-900">
                     <li class="flex items-start">
                         <svg class="w-5 h-5 mr-3 text-azul-guia flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
                         <div><strong>O quê:</strong> <span class="font-medium">Mostra de Cinema Coreano (KOFF) 2025</span></div>
@@ -121,6 +121,39 @@
             <p>#KOFF2025 #CinemaCoreano #MostraDeCinemaCoreano #CinePasseio #Curitiba #OQueFazerEmCuritiba #HallyuCuritiba #KDramas #CoreiaDoSul</p>
         </div>
 
+        <!-- Seção de Artigos Relacionados -->
+        <div class="container mx-auto max-w-3xl mt-16 border-t pt-12">
+            <h2 class="text-3xl font-bold text-preto-carvao mb-8">Artigos Relacionados</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Card Artigo Relacionado 1 -->
+                <article class="bg-bege-pinhao rounded-2xl shadow-lg overflow-hidden card-hover group">
+                    <a href="artigo-hallyu-fest.html" class="block p-6">
+                        <div class="text-sm text-azul-guia font-semibold mb-2 uppercase tracking-wide">EVENTOS</div>
+                        <h3 class="text-xl font-bold text-preto-carvao mb-3 group-hover:text-vermelho-paixao transition-colors">A Lição do Hallyu Korean Fest: Curitiba e a Força da Sua Onda</h3>
+                        <p class="text-sm text-gray-700">Uma reflexão sobre o impacto e os desafios dos grandes eventos de cultura coreana.</p>
+                    </a>
+                </article>
+
+                <!-- Card Artigo Relacionado 2 -->
+                <article class="bg-bege-pinhao rounded-2xl shadow-lg overflow-hidden card-hover group">
+                    <a href="artigo-gastronomia.html" class="block p-6">
+                        <div class="text-sm text-azul-guia font-semibold mb-2 uppercase tracking-wide">GASTRONOMIA</div>
+                        <h3 class="text-xl font-bold text-preto-carvao mb-3 group-hover:text-vermelho-paixao transition-colors">Guia Definitivo da Culinária Coreana em Curitiba</h3>
+                        <p class="text-sm text-gray-700">Descubra os sabores, pratos e os melhores restaurantes coreanos na nossa cidade.</p>
+                    </a>
+                </article>
+
+                <!-- Card Artigo Relacionado 3 -->
+                <article class="bg-bege-pinhao rounded-2xl shadow-lg overflow-hidden card-hover group">
+                    <a href="artigo-comunidade-hallyu.html" class="block p-6">
+                        <div class="text-sm text-azul-guia font-semibold mb-2 uppercase tracking-wide">COMUNIDADE</div>
+                        <h3 class="text-xl font-bold text-preto-carvao mb-3 group-hover:text-vermelho-paixao transition-colors">Mais que um Evento, um Encontro: A Comunidade Por Trás do Hallyu Curitiba</h3>
+                        <p class="text-sm text-gray-700">Descubra a história por trás do HallyuCuritiba e a comunidade que deu origem a tudo.</p>
+                    </a>
+                </article>
+            </div>
+        </div>
+
         <!-- Seção de Comentários -->
         <div class="container mx-auto max-w-3xl mt-16">
             <div class="bg-bege-pinhao p-8 rounded-2xl shadow-inner">
@@ -146,23 +179,28 @@
 
     <script src="js/template.js" defer></script>
     <script src="script.js" defer></script>
-    <footer class="bg-preto-carvao text-white py-16">
+    <footer class="bg-preto-carvao text-white py-12">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-8">
                 <!-- Logo e Descrição -->
                 <div class="md:col-span-2">
-                    <div class="flex items-center space-x-3 mb-6">
+                    <div class="flex items-center space-x-3 mb-4">
                         <img src="images/logo-hallyu-transparente.png" alt="Logo HallyuCuritiba" class="w-12 h-12">
                         <span class="text-2xl font-bold">HallyuCuritiba</span>
                     </div>
-                    <p class="text-gray-400 mb-6 max-w-md leading-relaxed">
+                    <p class="text-gray-400 mb-4 max-w-md leading-relaxed">
                         Seu guia definitivo para a cultura coreana em Curitiba. Conectando fãs, promovendo eventos e celebrando o Hallyu no Paraná.
                     </p>
+                    <a href="https://www.facebook.com/profile.php?id=61580123090511" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V21.878A10.001 10.001 0 0022 12z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
                 </div>
                 
                 <!-- Links Rápidos -->
                 <div>
-                    <h3 class="text-lg font-bold mb-6">Links Rápidos</h3>
+                    <h3 class="text-lg font-bold mb-4">Links Rápidos</h3>
                     <ul class="space-y-3">
                         <li><a href="index.html#agenda" class="text-gray-400 hover:text-white transition-colors">Agenda de Eventos</a></li>
                         <li><a href="restaurantes.html" class="text-gray-400 hover:text-white transition-colors">Restaurantes</a></li>
@@ -174,7 +212,7 @@
                 
                 <!-- Contato -->
                 <div id="contato">
-                    <h3 class="text-lg font-bold mb-6">Contato</h3>
+                    <h3 class="text-lg font-bold mb-4">Contato</h3>
                     <ul class="space-y-3 text-gray-400">
                         <li class="flex items-center">
                             <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -191,7 +229,7 @@
                 </div>
             </div>
             
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400">
                 <p>&copy; 2025 HallyuCuritiba. Todos os direitos reservados.</p>
                 <p class="mt-2 text-sm">한류 쿠리치바 - Feito com ❤️ para a comunidade Hallyu</p>
             </div>
