@@ -183,28 +183,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Accordion
     const accordionButtons = document.querySelectorAll('.accordion-button');
-    const monthNameToIndex = {
-        'Janeiro': 0, 'Fevereiro': 1, 'Março': 2, 'Abril': 3, 'Maio': 4, 'Junho': 5,
-        'Julho': 6, 'Agosto': 7, 'Setembro': 8, 'Outubro': 9, 'Novembro': 10, 'Dezembro': 11
-    };
 
     accordionButtons.forEach(button => {
         const content = button.nextElementSibling;
-        const monthName = button.querySelector('span').textContent.split(' ')[0];
-        const year = parseInt(button.querySelector('span').textContent.split(' ')[1], 10);
-        const monthIndex = monthNameToIndex[monthName];
-        const today = new Date();
-        const currentMonth = today.getMonth();
-        const currentYear = today.getFullYear();
-
-        if (year > currentYear || (year === currentYear && monthIndex >= currentMonth)) {
-            content.style.maxHeight = content.scrollHeight + "px";
-            button.querySelector('svg').style.transform = 'rotate(180deg)';
-        } else {
-            content.style.maxHeight = null;
-            button.querySelector('svg').style.transform = 'rotate(0deg)';
-        }
-
+        // A lógica para abrir o acordeão por padrão foi movida para agenda.html
+        // para evitar conflitos. Este script agora lida apenas com o clique.
+        
         button.addEventListener('click', () => {
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;
