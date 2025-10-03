@@ -74,7 +74,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     currentMonthDisplay.textContent = monthName;
                 }
 
-                // Não esconde mais as outras listas de eventos
+                Object.values(eventLists).forEach(list => {
+                    if (list) list.classList.add('hidden');
+                });
+
+                const monthKey = monthName.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                if (eventLists[monthKey]) {
+                    eventLists[monthKey].classList.remove('hidden');
+                }
             }
         }
 
