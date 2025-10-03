@@ -74,11 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     currentMonthDisplay.textContent = monthName;
                 }
 
-                Object.values(eventLists).forEach(list => list.classList.add('hidden'));
-                const targetEventList = eventLists[monthName.toLowerCase()];
-                if (targetEventList) {
-                    targetEventList.classList.remove('hidden');
-                }
+                // Não esconde mais as outras listas de eventos
             }
         }
 
