@@ -26,6 +26,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const cards = Array.from(container.children).filter(child => child.matches(cardSelector));
         let currentIndex = 0;
 
+        function initializeToCurrentMonth() {
+            if (!isMonthCarousel) return;
+
+            const now = new Date();
+            const currentMonth = now.getMonth(); // 0-indexed
+            const currentYear = now.getFullYear();
+
+            const currentMonthIndex = cards.findIndex(card => 
+                parseInt(card.dataset.month) === currentMonth && parseInt(card.dataset.year) === currentYear
+            );
+            currentIndex = currentMonthIndex !== -1 ? currentMonthIndex : 0;
+        }
+
         function updateView() {
             const cardWidth = cards[0].offsetWidth;
             const scrollAmount = cardWidth * currentIndex;
@@ -121,7 +134,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Inicialização
-        updateView();
+        if (isMonthCarousel) {
+            initializeToCurrentMonth();
+        }
+        updateView(); // Chamar após definir o índice inicial
     }
 
     // Inicializa o carrossel do calendário
