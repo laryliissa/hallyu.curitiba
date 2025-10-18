@@ -1,19 +1,5 @@
 // script.js
 
-// Função para alternar o menu móvel
-function toggleMobileMenu() {
-    const mobileMenu = document.getElementById('mobileMenu');
-    const menuOpenIcon = document.getElementById('menu-open-icon');
-    const menuCloseIcon = document.getElementById('menu-close-icon');
-
-    mobileMenu.classList.toggle('active');
-    mobileMenu.classList.toggle('hidden');
-    menuOpenIcon.classList.toggle('hidden');
-    menuCloseIcon.classList.toggle('hidden');
-    document.body.classList.toggle('overflow-hidden');
-    document.body.classList.toggle('mobile-menu-active');
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     // Configuração de Carrossel Genérica
     function setupCarousel(containerId, prevBtnId, nextBtnId, cardSelector, isMonthCarousel = false) {
