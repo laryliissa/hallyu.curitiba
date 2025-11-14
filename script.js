@@ -150,4 +150,45 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Event list accordion
+    const eventLists = document.querySelectorAll('.event-list');
+    const currentMonth = new Date().getMonth();
+
+    eventLists.forEach(list => {
+        const month = parseInt(list.dataset.month);
+        const button = list.querySelector('.accordion-toggle-button');
+        const content = list.querySelector('.accordion-content');
+        const chevron = list.querySelector('.chevron');
+
+        if (!button || !content || !chevron) return;
+
+        // Function to expand the content
+        const expandContent = () => {
+            content.style.maxHeight = content.scrollHeight + 'px';
+            chevron.style.transform = 'rotate(180deg)';
+        };
+
+        // Function to collapse the content
+        const collapseContent = () => {
+            content.style.maxHeight = '0px';
+            chevron.style.transform = 'rotate(0deg)';
+        };
+
+        // Collapse past and future months by default, expand only current month
+        if (month === currentMonth) {
+            // Use a timeout to ensure scrollHeight is calculated correctly after the page has rendered
+            setTimeout(expandContent, 100);
+        } else {
+            collapseContent();
+        }
+
+        button.addEventListener('click', () => {
+            if (content.style.maxHeight === '0px' || !content.style.maxHeight) {
+                expandContent();
+            } else {
+                collapseContent();
+            }
+        });
+    });
 });
