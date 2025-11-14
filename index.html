@@ -34,8 +34,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ical.js/1.5.0/ical.min.js"></script>
 </head>
 <body class="antialiased">
-    
-    
+    <header-placeholder></header-placeholder>
     <main>
         <!-- 2. Seção Inicial (Hero) Embelezada -->
         <section id="inicio" class="gradient-hero text-white py-28 px-4 relative overflow-hidden bg-vermelho-paixao">
@@ -82,213 +81,29 @@
                     <h2 class="text-4xl md:text-5xl font-extrabold text-preto-carvao mb-4">Agenda <span class="text-vermelho-paixao">Hallyu</span></h2>
                     <p class="text-xl text-gray-700 max-w-2xl mx-auto">Não perca nenhum evento da cultura coreana em Curitiba.</p>
                 </div>
+                <div class="relative h-0 overflow-hidden mb-16" style="padding-bottom: 75%;">
+                <iframe src="https://calendar.google.com/calendar/embed?src=376d7ff5f2aea3c7491961fdfecc6aaee70fd2137653d183fc826b86b4fc7098%40group.calendar.google.com&ctz=America%2FSao_Paulo" style="border: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" scrolling="no"></iframe>
+            </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
-                    <!-- Calendário com Navegação -->
-                    <div class="lg:col-span-3 relative">
-                        <div class="flex justify-between items-center mb-4 lg:hidden">
-                            <button id="prev-month" class="bg-white/50 hover:bg-white rounded-full p-2 transition-colors z-10 shadow-md">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                            </button>
-                            <h3 id="current-month-display" class="text-2xl font-bold text-preto-carvao"></h3>
-                            <button id="next-month" class="bg-white/50 hover:bg-white rounded-full p-2 transition-colors z-10 shadow-md">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                            </button>
-                        </div>
-                        <div id="calendar-container" class="relative flex flex-nowrap overflow-x-auto scroll-smooth snap-x snap-mandatory -mx-3" style="scrollbar-width: none; -ms-overflow-style: none;">
-                            <!-- Setembro --> 
-                            <div class="calendar-card flex-shrink-0 w-11/12 sm:w-full snap-start bg-white p-6 rounded-2xl shadow-xl mx-3" data-month="8" data-year="2025"> <!-- Mês 8 = Setembro -->
-                                <h3 class="text-2xl font-bold text-preto-carvao text-center mb-6 lg:block hidden">Setembro 2025</h3>
-                                <div class="grid grid-cols-7 gap-2 text-center font-bold text-gray-500 mb-4">
-                                    <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
-                                </div>
-                                <div class="grid grid-cols-7 gap-1 sm:gap-2 text-center text-lg">
-                                    <div class="text-gray-300 p-2">31</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">1</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">2</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">3</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">4</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">5</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">6</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">7</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">8</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">9</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">10</div>
-                                    <div class="p-2 rounded cursor-pointer font-bold text-azul-guia bg-blue-100" data-event-id="11">11</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">12</div>
-                                    <div class="p-2 rounded cursor-pointer font-bold text-laranja-poente bg-orange-100" data-event-id="13">13</div>
-                                    <div class="p-2 rounded cursor-pointer font-bold text-gray-500 bg-gray-400/10" data-event-id="14">14</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">15</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">16</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">17</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">18</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">19</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">20</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">21</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">22</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">23</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">24</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">25</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">26</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">27</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">28</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">29</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">30</div>
-                                </div>
-                            </div>
-                            <!-- Outubro -->
-                            <div class="calendar-card flex-shrink-0 w-11/12 sm:w-full snap-start bg-white p-6 rounded-2xl shadow-xl mx-3" data-month="9" data-year="2025"> <!-- Mês 9 = Outubro -->
-                                <h3 class="text-2xl font-bold text-preto-carvao text-center mb-6 lg:block hidden">Outubro 2025</h3>
-                                <div class="grid grid-cols-7 gap-2 text-center font-bold text-gray-500 mb-4">
-                                    <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
-                                </div>
-                                <div class="grid grid-cols-7 gap-1 sm:gap-2 text-center text-lg">                                    
-                                    <div class="text-gray-300 p-2">28</div>
-                                    <div class="text-gray-300 p-2">29</div>
-                                    <div class="text-gray-300 p-2">30</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">1</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">2</div>
-                                    <div class="p-2 rounded cursor-pointer font-bold text-vermelho-paixao bg-red-100" data-event-id="3">3</div>
-                                    <div class="p-2 rounded cursor-pointer font-bold text-laranja-poente bg-orange-100" data-event-id="4">4</div>
-                                    <div class="p-2 rounded cursor-pointer font-bold text-azul-guia bg-blue-100" data-event-id="5">5</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">6</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">7</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">8</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">9</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">10</div>
-                                    <div class="p-2 rounded cursor-pointer font-bold text-azul-guia bg-blue-100" data-event-id="11">11</div>
-                                    <div class="p-2 rounded cursor-pointer font-bold text-laranja-poente bg-orange-100" data-event-id="12">12</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">13</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">14</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">15</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">16</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">17</div>
-                                    <div class="p-2 rounded cursor-pointer font-bold text-vermelho-paixao bg-red-100" data-event-id="18">18</div>
-                                    <div class="p-2 rounded cursor-pointer font-bold text-vermelho-paixao bg-red-100" data-event-id="19">19</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">20</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">21</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">22</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">23</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">24</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">25</div>
-                                    <div class="p-2 rounded cursor-pointer font-bold text-vermelho-paixao bg-red-100" data-event-id="26">26</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">27</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">28</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">29</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">30</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">31</div>
-                                </div>
-                            </div>
-                            <!-- Novembro -->
-                            <div class="calendar-card flex-shrink-0 w-11/12 sm:w-full snap-start bg-white p-6 rounded-2xl shadow-xl mx-3" data-month="10" data-year="2025"> <!-- Mês 10 = Novembro -->
-                                <h3 class="text-2xl font-bold text-preto-carvao text-center mb-6 lg:block hidden">Novembro 2025</h3>
-                                <div class="grid grid-cols-7 gap-2 text-center font-bold text-gray-500 mb-4">
-                                    <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
-                                </div>
-                                <div class="grid grid-cols-7 gap-1 sm:gap-2 text-center text-lg">
-                                    <div class="text-gray-300 p-2">26</div>
-                                    <div class="text-gray-300 p-2">27</div>
-                                    <div class="text-gray-300 p-2">28</div>
-                                    <div class="text-gray-300 p-2">29</div>
-                                    <div class="text-gray-300 p-2">30</div>
-                                    <div class="text-gray-300 p-2">31</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">1</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">2</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">3</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">4</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">5</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">6</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">7</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">8</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">9</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">10</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">11</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">12</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">13</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">14</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">15</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">16</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">17</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">18</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">19</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">20</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">21</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">22</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">23</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">24</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">25</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">26</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">27</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">28</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">29</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">30</div>
-                                </div>
-                            </div>
-                            <!-- Dezembro -->
-                            <div class="calendar-card flex-shrink-0 w-11/12 sm:w-full snap-start bg-white p-6 rounded-2xl shadow-xl mx-3" data-month="11" data-year="2025"> <!-- Mês 11 = Dezembro -->
-                                <h3 class="text-2xl font-bold text-preto-carvao text-center mb-6 lg:block hidden">Dezembro 2025</h3>
-                                <div class="grid grid-cols-7 gap-2 text-center font-bold text-gray-500 mb-4">
-                                    <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
-                                </div>
-                                <div class="grid grid-cols-7 gap-1 sm:gap-2 text-center text-lg">
-                                    <div class="text-gray-300 p-2">30</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">1</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">2</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">3</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">4</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">5</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">6</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">7</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">8</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">9</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">10</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">11</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">12</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">13</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">14</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">15</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">16</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">17</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">18</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">19</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">20</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">21</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">22</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">23</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">24</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">25</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">26</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">27</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">28</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">29</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">30</div>
-                                    <div class="p-2 hover:bg-gray-50 rounded cursor-pointer">31</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hidden lg:block">
-                            <button id="prev-month-desktop" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white/50 hover:bg-white rounded-full p-2 transition-colors z-10">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                            </button>
-                            <button id="next-month-desktop" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white/50 hover:bg-white rounded-full p-2 transition-colors z-10">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                            </button>
-                        </div>
-                    </div>
 
                     <!-- Lista de Eventos Detalhados -->
                     <div class="lg:col-span-2">
-                        <div id="events-setembro" class="event-list">
-                            <h3 class="text-3xl font-bold text-preto-carvao mb-6">Eventos de Setembro</h3>
-                            <div class="space-y-4">
-                                <!-- Evento: Festival de Cinema Coreano -->
+                        <div id="events-setembro" class="event-list" data-month="8">
+                            <button class="accordion-toggle-button flex justify-between items-center w-full mb-2 text-left focus:outline-none">
+                                <h3 class="text-3xl font-bold text-preto-carvao">Eventos de Setembro</h3>
+                                <svg class="chevron w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="accordion-content overflow-hidden transition-all duration-500 ease-in-out">
+                                <div class="space-y-4 pt-4">
+                                    <!-- Evento: Festival de Cinema Coreano -->
                                 <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-6 card-hover" data-event-id="11">
                                     <div class="text-center bg-azul-guia text-white rounded-lg px-4 py-2 flex-shrink-0 w-full md:w-auto">
                                         <p class="font-black text-2xl">11</p>
                                         <p class="font-bold">SET</p>
                                     </div>
                                     <div class="flex-grow">
-                                        <h2 class="text-2xl font-bold text-preto-carvao">Festival de Cinema Coreano – III Edição ✅</h2>
+                                        <h2 class="text-xl font-bold text-preto-carvao">Festival de Cinema Coreano – III Edição ✅</h2>
                                         <p class="text-gray-600 mt-1">O KOFF - Korean Film Festival é um festival de cinema coreano que acontece anualmente em Curitiba.</p>
                                         <div class="text-sm text-gray-500 mt-4 space-y-1">
                                             <p><a href="https://www.instagram.com/koffko_/" target="_blank" class="text-azul-guia hover:underline flex items-center"><svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>@koffko_</a></p>
@@ -302,7 +117,7 @@
                                         <p class="font-bold">SET</p>
                                     </div>
                                     <div class="flex-grow">
-                                        <h2 class="text-2xl font-bold text-preto-carvao">Namjooning day ✅</h2>
+                                        <h2 class="text-xl font-bold text-preto-carvao">Namjooning day ✅</h2>
                                         <p class="text-gray-600 mt-1">Um evento para comemorar o aniversário do Namjoon, com muita música e diversão.</p>
                                         <div class="text-sm text-gray-500 mt-4 space-y-1">
                                             <p>⏰ 15:30 às 18:00</p>
@@ -317,7 +132,7 @@
                                         <p class="font-bold">SET</p>
                                     </div>
                                     <div class="flex-grow">
-                                        <h2 class="text-2xl font-bold text-preto-carvao">Virgo Boys ✅</h2>
+                                        <h2 class="text-xl font-bold text-preto-carvao">Virgo Boys ✅</h2>
                                         <p class="text-gray-600 mt-1">Um evento especial para os fãs de K-Pop, com muita música e diversão.</p>
                                         <div class="text-sm text-gray-500 mt-4 space-y-1">
                                             <p>⏰ 12:30 às 17:00</p>
@@ -332,7 +147,7 @@
                                         <p class="font-bold">SET</p>
                                     </div>
                                     <div class="flex-grow">
-                                        <h2 class="text-2xl font-bold text-preto-carvao">1º Encontro de ATINY'S em Curitiba 🏴‍☠️ ✅</h2>
+                                        <h2 class="text-xl font-bold text-preto-carvao">1º Encontro de ATINY'S em Curitiba 🏴‍☠️ ✅</h2>
                                         <p class="text-gray-600 mt-1">Muita diversão, interação, sorteios e brindes.</p>
                                         <div class="text-sm text-gray-500 mt-4 space-y-1">
                                             <p>⏰ 12:00 - 16:30</p>
@@ -340,11 +155,16 @@
                                         </div>
                                     </div>
                                 </div>
+                                </div>
                             </div>
                         </div>
-                        <div id="events-outubro" class="event-list mt-8">
-                            <h3 class="text-3xl font-bold text-preto-carvao mb-6">Eventos de Outubro</h3>
-                            <div class="space-y-4">
+                        <div id="events-outubro" class="event-list mt-8" data-month="9">
+                             <button class="accordion-toggle-button flex justify-between items-center w-full mb-2 text-left focus:outline-none">
+                                <h3 class="text-3xl font-bold text-preto-carvao">Eventos de Outubro</h3>
+                                <svg class="chevron w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="accordion-content overflow-hidden transition-all duration-500 ease-in-out">
+                               <div class="space-y-4 pt-4">
                                 <!-- Evento: ALL EYES ON ME -->
                                 <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-6 card-hover" data-event-id="3">
                                     <div class="text-center bg-vermelho-paixao text-white rounded-lg px-4 py-2 flex-shrink-0 w-full md:w-auto">
@@ -352,7 +172,7 @@
                                         <p class="font-bold">OUT</p>
                                     </div>
                                     <div class="flex-grow">
-                                        <h2 class="text-2xl font-bold text-preto-carvao">ALL EYES ON ME - HELLO GLOOM e from20</h2>
+                                        <h2 class="text-xl font-bold text-preto-carvao">ALL EYES ON ME - HELLO GLOOM e from20</h2>
                                         <p class="text-gray-600 mt-1">Show com os artistas sul-coreanos HELLO GLOOM e from20.</p>
                                         <div class="text-sm text-gray-500 mt-4 space-y-1">
                                             <p>⏰ 20:00 às 21:00</p>
@@ -367,7 +187,7 @@
                                         <p class="font-bold">OUT</p>
                                     </div>
                                     <div class="flex-grow">
-                                        <h2 class="text-2xl font-bold text-preto-carvao">ENGENE DAY - (Enhypen)</h2>
+                                        <h2 class="text-xl font-bold text-preto-carvao">ENGENE DAY - (Enhypen)</h2>
                                         <p class="text-gray-600 mt-1">Encontro de fãs dedicado ao grupo Enhypen.</p>
                                         <div class="text-sm text-gray-500 mt-4 space-y-1">
                                             <p>⏰ 13:00 às 17:00</p>
@@ -382,7 +202,7 @@
                                         <p class="font-bold">OUT</p>
                                     </div>
                                     <div class="flex-grow">
-                                        <h2 class="text-2xl font-bold text-preto-carvao">Baby Mochi Day - (BTS)</h2>
+                                        <h2 class="text-xl font-bold text-preto-carvao">Baby Mochi Day - (BTS)</h2>
                                         <p class="text-gray-600 mt-1">Evento temático dedicado ao Jimin.</p>
                                         <div class="text-sm text-gray-500 mt-4 space-y-1">
                                             <p>⏰ 12:30 às 17:00</p>
@@ -397,7 +217,7 @@
                                         <p class="font-bold">OUT</p>
                                     </div>
                                     <div class="flex-grow">
-                                        <h2 class="text-2xl font-bold text-preto-carvao">KOREA DAY</h2>
+                                        <h2 class="text-xl font-bold text-preto-carvao">KOREA DAY</h2>
                                         <p class="text-gray-600 mt-1">Um dia de imersão na cultura coreana com apresentações, workshops e comidas típicas.</p>
                                         <div class="text-sm text-gray-500 mt-4 space-y-1">
                                             <p>⏰ 11:00 - 17:00</p>
@@ -413,7 +233,7 @@
                                         <p class="font-bold">OUT</p>
                                     </div>
                                     <div class="flex-grow">
-                                        <h2 class="text-2xl font-bold text-preto-carvao">JIMIN DANCE CLASS</h2>
+                                        <h2 class="text-xl font-bold text-preto-carvao">JIMIN DANCE CLASS</h2>
                                         <p class="text-gray-600 mt-1">Aula de dança com foco em K-Pop.</p>
                                         <div class="text-sm text-gray-500 mt-4 space-y-1">
                                             <p>🗓️ Data: 19 de Outubro de 2025 (Domingo)</p>
@@ -430,7 +250,7 @@
                                         <p class="font-bold">OUT</p>
                                     </div>
                                     <div class="flex-grow">
-                                        <h2 class="text-2xl font-bold text-preto-carvao">Twice Day - (Twice)</h2>
+                                        <h2 class="text-xl font-bold text-preto-carvao">Twice Day - (Twice)</h2>
                                         <p class="text-gray-600 mt-1">Evento de fãs dedicado ao grupo Twice.</p>
                                         <div class="text-sm text-gray-500 mt-4 space-y-1">
                                             <p>⏰ 14:00 às 17:00</p>
@@ -445,7 +265,7 @@
                                         <p class="font-bold">OUT</p>
                                     </div>
                                     <div class="flex-grow">
-                                        <h2 class="text-2xl font-bold text-preto-carvao">Percent Picnic - (Shinee)</h2>
+                                        <h2 class="text-xl font-bold text-preto-carvao">Percent Picnic - (Shinee)</h2>
                                         <p class="text-gray-600 mt-1">Piquenique temático do grupo Shinee.</p>
                                         <div class="text-sm text-gray-500 mt-4 space-y-1">
                                             <p>⏰ 14:00 às 17:00</p>
@@ -461,7 +281,7 @@
                                         <p class="font-bold">OUT</p>
                                     </div>
                                     <div class="flex-grow">
-                                        <h2 class="text-2xl font-bold text-preto-carvao">Jimin in the Pub - (BTS)</h2>
+                                        <h2 class="text-xl font-bold text-preto-carvao">Jimin in the Pub - (BTS)</h2>
                                         <p class="text-gray-600 mt-1">Evento temático em homenagem ao Jimin.</p>
                                         <div class="text-sm text-gray-500 mt-4 space-y-1">
                                             <p>⏰ 13:00 às 17:00</p>
@@ -476,7 +296,7 @@
                                         <p class="font-bold">OUT</p>
                                     </div>
                                     <div class="flex-grow">
-                                        <h2 class="text-2xl font-bold text-preto-carvao">Smeraldo Garden - Jimin Day - (BTS)</h2>
+                                        <h2 class="text-xl font-bold text-preto-carvao">Smeraldo Garden - Jimin Day - (BTS)</h2>
                                         <p class="text-gray-600 mt-1">Celebração temática inspirada no Jimin.</p>
                                         <div class="text-sm text-gray-500 mt-4 space-y-1">
                                             <p>⏰ 19:00 às 22:00</p>
@@ -492,7 +312,7 @@
                                         <p class="font-bold">OUT</p>
                                     </div>
                                     <div class="flex-grow">
-                                        <h2 class="text-2xl font-bold text-preto-carvao">Momento Secreto com Sunghoon – 2ª temporada</h2>
+                                        <h2 class="text-xl font-bold text-preto-carvao">Momento Secreto com Sunghoon – 2ª temporada</h2>
                                         <p class="text-gray-600 mt-1">Fanmeeting com o ator Sung Hoon.</p>
                                         <div class="text-sm text-gray-500 mt-4 space-y-1">
                                             <p>⏰ 19:00 às 20:00</p>
@@ -500,15 +320,26 @@
                                         </div>
                                     </div>
                                 </div>
+                                </div>
                             </div>
                         </div>
-                        <div id="events-novembro" class="event-list mt-8">
-                            <h3 class="text-3xl font-bold text-preto-carvao mb-6">Eventos de Novembro</h3>
-                            <p class="text-gray-600">Nenhum evento agendado para este mês. Fique de olho para futuras atualizações!</p>
+                        <div id="events-novembro" class="event-list mt-8" data-month="10">
+                            <button class="accordion-toggle-button flex justify-between items-center w-full mb-2 text-left focus:outline-none">
+                                <h3 class="text-3xl font-bold text-preto-carvao">Eventos de Novembro</h3>
+                                <svg class="chevron w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="accordion-content overflow-hidden transition-all duration-500 ease-in-out">
+                                <p class="text-gray-600 pt-4">Nenhum evento agendado para este mês. Fique de olho para futuras atualizações!</p>
+                            </div>
                         </div>
-                        <div id="events-dezembro" class="event-list mt-8">
-                            <h3 class="text-3xl font-bold text-preto-carvao mb-6">Eventos de Dezembro</h3>
-                            <p class="text-gray-600">Nenhum evento agendado para este mês. Fique de olho para futuras atualizações!</p>
+                        <div id="events-dezembro" class="event-list mt-8" data-month="11">
+                            <button class="accordion-toggle-button flex justify-between items-center w-full mb-2 text-left focus:outline-none">
+                                <h3 class="text-3xl font-bold text-preto-carvao">Eventos de Dezembro</h3>
+                                <svg class="chevron w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="accordion-content overflow-hidden transition-all duration-500 ease-in-out">
+                                <p class="text-gray-600 pt-4">Nenhum evento agendado para este mês. Fique de olho para futuras atualizações!</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1165,38 +996,5 @@
     <script src="script.js" defer></script>
     <script src="js/template.js" defer></script>
     <footer-placeholder></footer-placeholder>
-</body>
-</html></li>
-                        <li><a href="guia-k-stores.html" class="text-gray-400 hover:text-white transition-colors">K-Stores</a></li>
-                        <li><a href="aulas.html" class="text-gray-400 hover:text-white transition-colors">Aulas</a></li>
-                        <li><a href="index.html#artigos" class="text-gray-400 hover:text-white transition-colors">Artigos</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Contato -->
-                <div id="contato">
-                    <h3 class="text-lg font-bold mb-4">Contato</h3>
-                    <ul class="space-y-3 text-gray-400">
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-                            </svg>
-                            hallyucuritiba@gmail.com
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                            @hallyucuritiba
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400">
-                <p>&copy; 2025 HallyuCuritiba. Todos os direitos reservados.</p>
-                <p class="mt-2 text-sm">한류 쿠리치바 - Feito com ❤️ para a comunidade Hallyu</p>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>

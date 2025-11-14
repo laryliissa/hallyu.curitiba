@@ -16,7 +16,7 @@ function toggleMobileMenu() {
 
 document.addEventListener('DOMContentLoaded', () => {
     // Configuração de Carrossel Genérica
-    function setupCarousel(containerId, prevBtnId, nextBtnId, cardSelector, isMonthCarousel = false) {
+    function setupCarousel(containerId, prevBtnId, nextBtnId, cardSelector) {
         const container = document.getElementById(containerId);
         const prevBtn = document.getElementById(prevBtnId);
         const nextBtn = document.getElementById(nextBtnId);
@@ -24,20 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!container || !prevBtn || !nextBtn) return;
 
         const cards = Array.from(container.children).filter(child => child.matches(cardSelector));
+        if (cards.length === 0) return;
+
         let currentIndex = 0;
-
-        function initializeToCurrentMonth() {
-            if (!isMonthCarousel) return;
-
-            const now = new Date();
-            const currentMonth = now.getMonth(); // 0-indexed
-            const currentYear = now.getFullYear();
-
-            const currentMonthIndex = cards.findIndex(card => 
-                parseInt(card.dataset.month) === currentMonth && parseInt(card.dataset.year) === currentYear
-            );
-            currentIndex = currentMonthIndex !== -1 ? currentMonthIndex : 0;
-        }
 
         function updateView() {
             const cardWidth = cards[0].offsetWidth;
@@ -47,42 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 behavior: 'smooth'
             });
             updateNavButtons();
-
-            if (isMonthCarousel) {
-                updateMonthInfo(currentIndex);
-            }
         }
 
         function updateNavButtons() {
             prevBtn.disabled = currentIndex === 0;
             nextBtn.disabled = currentIndex >= cards.length - 1;
-        }
-
-        function updateMonthInfo(index) {
-            const currentMonthDisplay = document.getElementById('current-month-display');
-            const monthCards = Array.from(document.querySelectorAll('.calendar-card'));
-            const eventLists = {
-                'setembro': document.getElementById('events-setembro'),
-                'outubro': document.getElementById('events-outubro'),
-                'novembro': document.getElementById('events-novembro'),
-                'dezembro': document.getElementById('events-dezembro')
-            };
-
-            if (monthCards[index]) {
-                const monthName = monthCards[index].querySelector('h3').textContent.split(' ')[0];
-                if (currentMonthDisplay) {
-                    currentMonthDisplay.textContent = monthName;
-                }
-
-                Object.values(eventLists).forEach(list => {
-                    if (list) list.classList.add('hidden');
-                });
-
-                const monthKey = monthName.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-                if (eventLists[monthKey]) {
-                    eventLists[monthKey].classList.remove('hidden');
-                }
-            }
         }
 
         prevBtn.addEventListener('click', () => {
@@ -117,34 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Destaque de evento e scroll
-        document.querySelectorAll('.calendar-card div[data-event-id]').forEach(day => {
-            day.addEventListener('click', () => {
-                const eventId = day.dataset.eventId;
-                const eventCard = document.querySelector(`.event-list .card-hover[data-event-id="${eventId}"]`);
-                
-                if (eventCard) {
-                    // Remove o destaque de outros cards
-                    document.querySelectorAll('.event-list .card-hover').forEach(card => {
-                        card.classList.remove('border-blue-500', 'border-2');
-                    });
-                    
-                    // Adiciona destaque e rola para o card
-                    eventCard.classList.add('border-blue-500', 'border-2');
-                    eventCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
-            });
-        });
-
-        // Inicialização
-        if (isMonthCarousel) {
-            initializeToCurrentMonth();
-        }
-        updateView(); // Chamar após definir o índice inicial
+        updateView();
     }
-
-    // Inicializa o carrossel do calendário
-    setupCarousel('calendar-container', 'prev-month', 'next-month', '.calendar-card', true);
 
     // Inicializa o carrossel de restaurantes
     setupCarousel('restaurantes-container', 'prev-restaurant', 'next-restaurant', '.restaurant-card');
@@ -215,6 +147,47 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 content.style.maxHeight = content.scrollHeight + "px";
                 button.querySelector('svg').style.transform = 'rotate(180deg)';
+            }
+        });
+    });
+
+    // Event list accordion
+    const eventLists = document.querySelectorAll('.event-list');
+    const currentMonth = new Date().getMonth();
+
+    eventLists.forEach(list => {
+        const month = parseInt(list.dataset.month);
+        const button = list.querySelector('.accordion-toggle-button');
+        const content = list.querySelector('.accordion-content');
+        const chevron = list.querySelector('.chevron');
+
+        if (!button || !content || !chevron) return;
+
+        // Function to expand the content
+        const expandContent = () => {
+            content.style.maxHeight = content.scrollHeight + 'px';
+            chevron.style.transform = 'rotate(180deg)';
+        };
+
+        // Function to collapse the content
+        const collapseContent = () => {
+            content.style.maxHeight = '0px';
+            chevron.style.transform = 'rotate(0deg)';
+        };
+
+        // Collapse past and future months by default, expand only current month
+        if (month === currentMonth) {
+            // Use a timeout to ensure scrollHeight is calculated correctly after the page has rendered
+            setTimeout(expandContent, 100);
+        } else {
+            collapseContent();
+        }
+
+        button.addEventListener('click', () => {
+            if (content.style.maxHeight === '0px' || !content.style.maxHeight) {
+                expandContent();
+            } else {
+                collapseContent();
             }
         });
     });
