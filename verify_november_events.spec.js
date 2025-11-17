@@ -1,13 +1,16 @@
 const { test, expect } = require('@playwright/test');
 
-test('Verifica se a aba de Novembro foi atualizada corretamente', async ({ page }) => {
+test('Verifica se as abas de Novembro e Dezembro foram atualizadas corretamente', async ({ page }) => {
   // Navega para a página principal
   await page.goto('http://localhost:3000');
 
-  // Clica na aba de Novembro
+  // Clica na aba de Novembro e tira uma captura de tela
   await page.click('button[data-month="10"]');
-
-  // Tira uma captura de tela da seção de eventos de Novembro
   const novemberEvents = await page.$('#events-novembro');
   await novemberEvents.screenshot({ path: 'november_events_verification.png' });
+
+  // Clica na aba de Dezembro e tira uma captura de tela
+  await page.click('button[data-month="11"]');
+  const decemberEvents = await page.$('#events-dezembro');
+  await decemberEvents.screenshot({ path: 'december_events_verification.png' });
 });
