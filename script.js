@@ -14,9 +14,84 @@ function toggleMobileMenu() {
     document.body.classList.toggle('mobile-menu-active');
 }
 
+// Funções para a Lógica de Abas de Eventos
+function setupEventTabs() {
+    const tabContainer = document.getElementById('event-tabs');
+    if (!tabContainer) return; // Sai se o container de abas não existir
+
+    const tabButtons = tabContainer.querySelectorAll('.tab-button');
+    const tabPanels = document.querySelectorAll('#event-panels .tab-panel');
+
+    // Estilos base e ativos para os botões (usando Tailwind CSS)
+    const baseButtonClasses = ['bg-gray-200', 'text-gray-700', 'hover:bg-gray-300'];
+    const activeButtonClasses = ['bg-vermelho-paixao', 'text-white'];
+
+    // Função para alternar para uma aba específica
+    function switchTab(activeButton) {
+        const targetMonth = activeButton.dataset.month;
+
+        // 1. Redefine todos os botões para o estado base
+        tabButtons.forEach(button => {
+            button.classList.remove(...activeButtonClasses);
+            button.classList.add(...baseButtonClasses);
+        });
+
+        // 2. Esconde todos os painéis de eventos
+        tabPanels.forEach(panel => {
+            panel.classList.add('hidden');
+        });
+
+        // 3. Ativa o botão clicado
+        activeButton.classList.remove(...baseButtonClasses);
+        activeButton.classList.add(...activeButtonClasses);
+
+        // 4. Mostra o painel de evento correspondente
+        const targetPanel = document.querySelector(`#event-panels .tab-panel[data-month="${targetMonth}"]`);
+        if (targetPanel) {
+            targetPanel.classList.remove('hidden');
+        }
+    }
+
+    // Adiciona classes de estilo iniciais e listeners de clique
+    tabButtons.forEach(button => {
+        button.classList.add('px-4', 'py-2', 'rounded-full', 'font-semibold', 'transition-colors', 'duration-200', 'focus:outline-none', 'focus:ring-2', 'focus:ring-offset-2', 'focus:ring-vermelho-paixao');
+        button.addEventListener('click', () => switchTab(button));
+    });
+
+    // Determina a aba inicial a ser exibida
+    const currentMonth = new Date().getMonth(); // 0 = Jan, ..., 8 = Setembro
+    let initialTab = document.querySelector(`.tab-button[data-month="${currentMonth}"]`);
+
+    // Fallback: se o mês atual não tiver uma aba, seleciona a primeira que tiver eventos
+    if (!initialTab) {
+        for (const btn of tabButtons) {
+            const panel = document.querySelector(`.tab-panel[data-month="${btn.dataset.month}"]`);
+            // Verifica se o painel existe e se ele contém algum card de evento
+            if (panel && panel.querySelector('.card-hover')) {
+                initialTab = btn;
+                break;
+            }
+        }
+    }
+
+    // Fallback final: se nenhuma aba tiver eventos, apenas seleciona a primeira aba da lista
+    if (!initialTab && tabButtons.length > 0) {
+        initialTab = tabButtons[0];
+    }
+
+    // Ativa a aba inicial
+    if (initialTab) {
+        switchTab(initialTab);
+    } else {
+        // Caso não haja botões, garante que todos os painéis estejam escondidos
+        tabPanels.forEach(panel => panel.classList.add('hidden'));
+    }
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
     // Configuração de Carrossel Genérica
-    function setupCarousel(containerId, prevBtnId, nextBtnId, cardSelector) {
+    function setupCarousel(containerId, prevBtnId, nextBtnId, cardSelector, isMonthCarousel = false) {
         const container = document.getElementById(containerId);
         const prevBtn = document.getElementById(prevBtnId);
         const nextBtn = document.getElementById(nextBtnId);
@@ -24,9 +99,22 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!container || !prevBtn || !nextBtn) return;
 
         const cards = Array.from(container.children).filter(child => child.matches(cardSelector));
-        if (cards.length === 0) return;
+        if (cards.length === 0) return; // Sai se não houver cards
 
         let currentIndex = 0;
+
+        function initializeToCurrentMonth() {
+            if (!isMonthCarousel) return;
+
+            const now = new Date();
+            const currentMonth = now.getMonth(); // 0-indexed
+            const currentYear = now.getFullYear();
+
+            const currentMonthIndex = cards.findIndex(card =>
+                parseInt(card.dataset.month) === currentMonth && parseInt(card.dataset.year) === currentYear
+            );
+            currentIndex = currentMonthIndex !== -1 ? currentMonthIndex : 0;
+        }
 
         function updateView() {
             const cardWidth = cards[0].offsetWidth;
@@ -36,11 +124,42 @@ document.addEventListener('DOMContentLoaded', () => {
                 behavior: 'smooth'
             });
             updateNavButtons();
+
+            if (isMonthCarousel) {
+                updateMonthInfo(currentIndex);
+            }
         }
 
         function updateNavButtons() {
             prevBtn.disabled = currentIndex === 0;
             nextBtn.disabled = currentIndex >= cards.length - 1;
+        }
+
+        function updateMonthInfo(index) {
+            const currentMonthDisplay = document.getElementById('current-month-display');
+            const monthCards = Array.from(document.querySelectorAll('.calendar-card'));
+            const eventLists = {
+                'setembro': document.getElementById('events-setembro'),
+                'outubro': document.getElementById('events-outubro'),
+                'novembro': document.getElementById('events-novembro'),
+                'dezembro': document.getElementById('events-dezembro')
+            };
+
+            if (monthCards[index]) {
+                const monthName = monthCards[index].querySelector('h3').textContent.split(' ')[0];
+                if (currentMonthDisplay) {
+                    currentMonthDisplay.textContent = monthName;
+                }
+
+                Object.values(eventLists).forEach(list => {
+                    if (list) list.classList.add('hidden');
+                });
+
+                const monthKey = monthName.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                if (eventLists[monthKey]) {
+                    eventLists[monthKey].classList.remove('hidden');
+                }
+            }
         }
 
         prevBtn.addEventListener('click', () => {
@@ -75,8 +194,34 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
+        // Destaque de evento e scroll
+        document.querySelectorAll('.calendar-card div[data-event-id]').forEach(day => {
+            day.addEventListener('click', () => {
+                const eventId = day.dataset.eventId;
+                const eventCard = document.querySelector(`.event-list .card-hover[data-event-id="${eventId}"]`);
+
+                if (eventCard) {
+                    // Remove o destaque de outros cards
+                    document.querySelectorAll('.event-list .card-hover').forEach(card => {
+                        card.classList.remove('border-blue-500', 'border-2');
+                    });
+
+                    // Adiciona destaque e rola para o card
+                    eventCard.classList.add('border-blue-500', 'border-2');
+                    eventCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            });
+        });
+
+        // Inicialização
+        if (isMonthCarousel) {
+            initializeToCurrentMonth();
+        }
         updateView();
     }
+
+    // Inicializa o carrossel do calendário
+    setupCarousel('calendar-container', 'prev-month', 'next-month', '.calendar-card', true);
 
     // Inicializa o carrossel de restaurantes
     setupCarousel('restaurantes-container', 'prev-restaurant', 'next-restaurant', '.restaurant-card');
@@ -132,63 +277,6 @@ document.addEventListener('DOMContentLoaded', () => {
     updateRestaurantStatus();
     setInterval(updateRestaurantStatus, 60000);
 
-    // Accordion
-    const accordionButtons = document.querySelectorAll('.accordion-button');
-
-    accordionButtons.forEach(button => {
-        const content = button.nextElementSibling;
-        // A lógica para abrir o acordeão por padrão foi movida para agenda.html
-        // para evitar conflitos. Este script agora lida apenas com o clique.
-        
-        button.addEventListener('click', () => {
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-                button.querySelector('svg').style.transform = 'rotate(0deg)';
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-                button.querySelector('svg').style.transform = 'rotate(180deg)';
-            }
-        });
-    });
-
-    // Event list accordion
-    const eventLists = document.querySelectorAll('.event-list');
-    const currentMonth = new Date().getMonth();
-
-    eventLists.forEach(list => {
-        const month = parseInt(list.dataset.month);
-        const button = list.querySelector('.accordion-toggle-button');
-        const content = list.querySelector('.accordion-content');
-        const chevron = list.querySelector('.chevron');
-
-        if (!button || !content || !chevron) return;
-
-        // Function to expand the content
-        const expandContent = () => {
-            content.style.maxHeight = content.scrollHeight + 'px';
-            chevron.style.transform = 'rotate(180deg)';
-        };
-
-        // Function to collapse the content
-        const collapseContent = () => {
-            content.style.maxHeight = '0px';
-            chevron.style.transform = 'rotate(0deg)';
-        };
-
-        // Collapse past and future months by default, expand only current month
-        if (month === currentMonth) {
-            // Use a timeout to ensure scrollHeight is calculated correctly after the page has rendered
-            setTimeout(expandContent, 100);
-        } else {
-            collapseContent();
-        }
-
-        button.addEventListener('click', () => {
-            if (content.style.maxHeight === '0px' || !content.style.maxHeight) {
-                expandContent();
-            } else {
-                collapseContent();
-            }
-        });
-    });
+    // Inicializa a lógica de abas de eventos
+    setupEventTabs();
 });
